@@ -1751,7 +1751,8 @@ summary:focus-visible,
   gap: 0.7rem;
 }
 
-a[data-booking-url] {
+a[data-booking-url],
+[data-hamarosan] {
   position: relative;
   overflow: visible;
 }

@@ -489,13 +489,13 @@ const initBlogTitleFit = () => {
 };
 
 const initBookingHamarosanBadges = () => {
-  document.querySelectorAll("a[data-booking-url]").forEach((link) => {
-    if (link.querySelector(".btn-hamarosan-badge")) return;
+  document.querySelectorAll("a[data-booking-url], [data-hamarosan]").forEach((el) => {
+    if (el.querySelector(":scope > .btn-hamarosan-badge")) return;
     const badge = document.createElement("span");
     badge.className = "btn-hamarosan-badge";
     badge.setAttribute("aria-hidden", "true");
     badge.textContent = "Hamarosan";
-    link.appendChild(badge);
+    el.appendChild(badge);
   });
 };
 
