@@ -385,7 +385,18 @@ const initEntityPickers = () => {
       return;
     }
 
-    const setEntity = (value) => {
+    const slugToEntity = new Map();
+    const entityToSlug = new Map();
+    buttons.forEach((button) => {
+      const slug = button.dataset.entitySlug;
+      if (slug) {
+        slugToEntity.set(slug, button.dataset.entity);
+        entityToSlug.set(button.dataset.entity, slug);
+      }
+    });
+    const hasSlugs = slugToEntity.size > 0;
+
+    const setEntity = (value, { updateHash = false } = {}) => {
       buttons.forEach((button) => {
         const isActive = button.dataset.entity === value;
         button.classList.toggle("is-active", isActive);
@@ -400,13 +411,36 @@ const initEntityPickers = () => {
           item.setAttribute("aria-hidden", matches ? "false" : "true");
         });
       }
+
+      if (updateHash && hasSlugs) {
+        const slug = entityToSlug.get(value);
+        if (slug) {
+          history.replaceState(null, "", `#${slug}`);
+        }
+      }
     };
 
     buttons.forEach((button) => {
-      button.addEventListener("click", () => setEntity(button.dataset.entity));
+      button.addEventListener("click", () => setEntity(button.dataset.entity, { updateHash: true }));
     });
 
-    setEntity(buttons[0].dataset.entity);
+    let initial = buttons[0].dataset.entity;
+    if (hasSlugs && window.location.hash) {
+      const matched = slugToEntity.get(window.location.hash.replace(/^#/, ""));
+      if (matched) {
+        initial = matched;
+      }
+    }
+    setEntity(initial);
+
+    if (hasSlugs) {
+      window.addEventListener("hashchange", () => {
+        const matched = slugToEntity.get(window.location.hash.replace(/^#/, ""));
+        if (matched) {
+          setEntity(matched);
+        }
+      });
+    }
   });
 };
 
