@@ -1751,6 +1751,31 @@ summary:focus-visible,
   gap: 0.7rem;
 }
 
+a[data-booking-url] {
+  position: relative;
+  overflow: visible;
+}
+
+.btn-hamarosan-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -45%) rotate(8deg);
+  transform-origin: center;
+  background: #d63b2d;
+  color: var(--white);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .footer-legal-link {
   display: inline-flex;
   align-items: center;
