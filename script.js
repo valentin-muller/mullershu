@@ -499,6 +499,164 @@ const initBookingHamarosanBadges = () => {
   });
 };
 
+const WEATHER_CODE_MAP = {
+  0:  { emoji: "☀️", night: "🌙", label: "Napos" },
+  1:  { emoji: "🌤️", night: "🌙", label: "Túlnyomóan napos" },
+  2:  { emoji: "⛅", night: "☁️", label: "Részben felhős" },
+  3:  { emoji: "☁️", night: "☁️", label: "Borult" },
+  45: { emoji: "🌫️", night: "🌫️", label: "Köd" },
+  48: { emoji: "🌫️", night: "🌫️", label: "Zúzmarás köd" },
+  51: { emoji: "🌦️", night: "🌧️", label: "Enyhe szitálás" },
+  53: { emoji: "🌦️", night: "🌧️", label: "Szitálás" },
+  55: { emoji: "🌧️", night: "🌧️", label: "Sűrű szitálás" },
+  56: { emoji: "🌧️", night: "🌧️", label: "Ónos szitálás" },
+  57: { emoji: "🌧️", night: "🌧️", label: "Ónos szitálás" },
+  61: { emoji: "🌦️", night: "🌧️", label: "Enyhe eső" },
+  63: { emoji: "🌧️", night: "🌧️", label: "Eső" },
+  65: { emoji: "🌧️", night: "🌧️", label: "Erős eső" },
+  66: { emoji: "🌧️", night: "🌧️", label: "Ónos eső" },
+  67: { emoji: "🌧️", night: "🌧️", label: "Ónos eső" },
+  71: { emoji: "🌨️", night: "🌨️", label: "Enyhe havazás" },
+  73: { emoji: "🌨️", night: "🌨️", label: "Havazás" },
+  75: { emoji: "❄️", night: "❄️", label: "Erős havazás" },
+  77: { emoji: "🌨️", night: "🌨️", label: "Hószemcsék" },
+  80: { emoji: "🌦️", night: "🌧️", label: "Záporok" },
+  81: { emoji: "🌧️", night: "🌧️", label: "Záporok" },
+  82: { emoji: "⛈️", night: "⛈️", label: "Heves zápor" },
+  85: { emoji: "🌨️", night: "🌨️", label: "Hózápor" },
+  86: { emoji: "🌨️", night: "🌨️", label: "Erős hózápor" },
+  95: { emoji: "⛈️", night: "⛈️", label: "Zivatar" },
+  96: { emoji: "⛈️", night: "⛈️", label: "Jégesős zivatar" },
+  99: { emoji: "⛈️", night: "⛈️", label: "Heves jégesős zivatar" },
+};
+
+const weatherInfoFor = (code, isDay) => {
+  const info = WEATHER_CODE_MAP[code] ?? { emoji: "·", night: "·", label: "—" };
+  return { emoji: isDay ? info.emoji : info.night, label: info.label };
+};
+
+const formatHour = (isoString) => {
+  const d = new Date(isoString);
+  return `${String(d.getHours()).padStart(2, "0")}h`;
+};
+
+const formatClock = (isoString) => {
+  const d = new Date(isoString);
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+};
+
+// JS-style "day of week" → short Hungarian label (0 = Sunday).
+const HUNGARIAN_DAY_SHORT = ["Vas", "Hét", "Ke", "Sze", "Csü", "Pé", "Szo"];
+
+// Map a Celsius temperature to a color along the iOS-style cool→warm scale.
+const tempToColor = (temp) => {
+  // hue: cyan/blue at cold, red at hot; clamp at the extremes.
+  const hue = Math.max(0, Math.min(220, 200 - temp * 6.5));
+  return `hsl(${hue}, 70%, 58%)`;
+};
+
+const renderWeatherWidget = (root, data) => {
+  const current = data?.current ?? {};
+  const daily = data?.daily ?? {};
+  const isDay = current.is_day === 1;
+
+  root.dataset.isDay = isDay ? "true" : "false";
+
+  const { emoji, label } = weatherInfoFor(current.weather_code, isDay);
+
+  const set = (selector, value) => {
+    const el = root.querySelector(selector);
+    if (el) el.textContent = value;
+  };
+
+  set("[data-weather-icon]", emoji);
+  set("[data-weather-temp]", Math.round(current.temperature_2m ?? 0));
+  set("[data-weather-condition]", label);
+  set("[data-weather-hi]", Math.round(daily.temperature_2m_max?.[0] ?? 0));
+  set("[data-weather-lo]", Math.round(daily.temperature_2m_min?.[0] ?? 0));
+  set("[data-weather-sunrise]", daily.sunrise?.[0] ? formatClock(daily.sunrise[0]) : "—");
+  set("[data-weather-sunset]", daily.sunset?.[0] ? formatClock(daily.sunset[0]) : "—");
+
+  // 10-day forecast list
+  const list = root.querySelector("[data-weather-forecast-list]");
+  if (list && Array.isArray(daily.time) && daily.time.length > 0) {
+    const lows = daily.temperature_2m_min ?? [];
+    const highs = daily.temperature_2m_max ?? [];
+    const codes = daily.weather_code ?? [];
+
+    // Global temperature span across all days, used to position each row's bar.
+    const globalMin = Math.min(...lows);
+    const globalMax = Math.max(...highs);
+    const span = Math.max(1, globalMax - globalMin); // guard against degenerate span
+
+    list.innerHTML = "";
+    const count = Math.min(10, daily.time.length);
+    const currentTemp = current.temperature_2m;
+
+    for (let i = 0; i < count; i++) {
+      const date = new Date(daily.time[i]);
+      const low = lows[i];
+      const high = highs[i];
+      const code = codes[i];
+
+      const dayLabel = i === 0
+        ? "Ma"
+        : HUNGARIAN_DAY_SHORT[date.getDay()];
+
+      const leftPct = ((low - globalMin) / span) * 100;
+      const rightPct = ((high - globalMin) / span) * 100;
+      const widthPct = Math.max(2, rightPct - leftPct); // minimum visible width
+      const colorLow = tempToColor(low);
+      const colorHigh = tempToColor(high);
+
+      const row = document.createElement("li");
+      row.className = "weather-forecast-row";
+      if (i === 0) row.classList.add("weather-forecast-row--today");
+
+      // Today's marker — current temp position on the global scale.
+      let markerHtml = "";
+      if (i === 0 && typeof currentTemp === "number" && Number.isFinite(currentTemp)) {
+        const markerPct = Math.max(0, Math.min(100, ((currentTemp - globalMin) / span) * 100));
+        markerHtml = `<span class="weather-forecast-today-dot" style="left: ${markerPct}%"></span>`;
+      }
+
+      const dayInfo = weatherInfoFor(code, true); // forecast icons always use day variant
+      row.innerHTML = `
+        <span class="weather-forecast-day">${dayLabel}</span>
+        <span class="weather-forecast-icon" aria-hidden="true">${dayInfo.emoji}</span>
+        <span class="weather-forecast-temp weather-forecast-temp--lo">${Math.round(low)}°</span>
+        <span class="weather-forecast-bar-track">
+          <span class="weather-forecast-bar" style="left: ${leftPct}%; width: ${widthPct}%; background: linear-gradient(to right, ${colorLow}, ${colorHigh});"></span>
+          ${markerHtml}
+        </span>
+        <span class="weather-forecast-temp weather-forecast-temp--hi">${Math.round(high)}°</span>
+      `;
+      list.appendChild(row);
+    }
+  }
+};
+
+const initWeatherWidget = async () => {
+  const root = document.querySelector("[data-weather-widget]");
+  if (!root) return;
+
+  const url = "https://api.open-meteo.com/v1/forecast"
+    + "?latitude=46.9097&longitude=18.0594"
+    + "&current=temperature_2m,weather_code,wind_speed_10m,is_day"
+    + "&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset"
+    + "&timezone=Europe%2FBudapest&forecast_days=10";
+
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const data = await r.json();
+    renderWeatherWidget(root, data);
+  } catch (err) {
+    console.warn("Weather widget fetch failed:", err);
+    // Leave skeleton placeholders in place; do not break the page.
+  }
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initAccordions();
@@ -510,4 +668,5 @@ window.addEventListener("DOMContentLoaded", () => {
   initGalleryLightbox();
   initBlogTitleFit();
   initBookingHamarosanBadges();
+  initWeatherWidget();
 });
