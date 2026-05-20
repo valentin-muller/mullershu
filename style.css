@@ -1631,15 +1631,15 @@ summary:focus-visible,
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  color: var(--white);
+  color: var(--blue-900);
 }
 
 .coming-hero .hero-kicker {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(11, 43, 74, 0.6);
 }
 
 .coming-hero p {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(11, 43, 74, 0.78);
   max-width: 520px;
 }
 
