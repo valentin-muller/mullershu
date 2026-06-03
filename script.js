@@ -67,7 +67,10 @@ const initScrollReveal = () => {
         }
       });
     },
-    { threshold: 0.2 }
+    // threshold: 0 fires on any intersection. We can't use 0.2 because
+    // tall legal-section elements on short phone viewports may never
+    // reach a 20% intersection ratio, leaving the page invisible.
+    { threshold: 0 }
   );
 
   elements.forEach((el) => observer.observe(el));
