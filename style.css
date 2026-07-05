@@ -1634,16 +1634,36 @@ summary:focus-visible,
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  color: var(--blue-900);
-}
-
-.coming-hero .hero-kicker {
-  color: rgba(11, 43, 74, 0.6);
 }
 
 .coming-hero p {
-  color: rgba(11, 43, 74, 0.78);
   max-width: 520px;
+}
+
+/* blog-page has a light cream background → dark navy text. */
+.blog-page .coming-hero {
+  color: var(--blue-900);
+}
+
+.blog-page .coming-hero .hero-kicker {
+  color: rgba(11, 43, 74, 0.6);
+}
+
+.blog-page .coming-hero p {
+  color: rgba(11, 43, 74, 0.78);
+}
+
+/* blog-coming has a dark navy gradient background → white text. */
+.blog-coming .coming-hero {
+  color: var(--white);
+}
+
+.blog-coming .coming-hero .hero-kicker {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.blog-coming .coming-hero p {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero-badge {
