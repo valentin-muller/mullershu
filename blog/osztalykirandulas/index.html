@@ -316,11 +316,6 @@ colgroup{display:none;}
       trimEmptyParagraphs('d107');
     }
 
-    var path = window.location.pathname;
-    if (path.endsWith('/blog/osztalykirandulas/')) {
-      var newPath = path.slice(0, -1);
-      window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
-    }
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', reorderActivityBlocksForMobile);
