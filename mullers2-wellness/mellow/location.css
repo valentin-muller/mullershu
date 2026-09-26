@@ -1,0 +1,55 @@
+.location-proof .house-art{inset:27% 0 10%}
+.location-composition{position:relative;height:100%;aspect-ratio:3/2;max-width:100%}
+.location-proof .house-art img{width:100%;height:100%;object-fit:contain;mask-image:linear-gradient(to bottom,transparent,#000 8%,#000 88%,transparent),linear-gradient(to right,transparent,#000 3%,#000 97%,transparent);mask-composite:intersect}
+.location-label{position:absolute;display:grid;justify-items:center;gap:3px;text-align:center;font-size:12px;line-height:1.4;color:var(--ink)}
+.location-label svg{height:22px;width:16px;transform:rotate(-90deg)}.location-label small{font-size:11px;color:var(--muted,#655746)}
+.location-tower{left:8%;top:52%}.location-lake{right:2%;top:63%}
+@media(max-width:700px){.location-proof .house-art{inset:31% 0 21%}.location-composition{height:auto;width:100%;flex-shrink:0}.location-proof .house-art img{height:auto;aspect-ratio:3/2}.location-label{font-size:10px;gap:1px}.location-label small{font-size:9px}.location-label svg{height:15px;width:12px}.location-tower{left:1%;top:54%}.location-lake{right:1%;top:65%}}
+/* Refined, opt-in composition; tower rises alongside the title. */
+.location-refined .house-art{inset:0 0 7%;align-items:flex-end}
+.location-refined .location-composition{height:100%;max-width:100%;width:auto;aspect-ratio:3/2}
+.location-refined .house-art img{mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent),linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+.location-refined .location-tower{left:6%;top:67%}
+.location-refined .location-lake{right:3%;top:37%}
+@media(max-width:700px){.location-refined .house-art{inset:10% 0 auto;align-items:flex-start}.location-refined .location-composition{width:100%;height:auto;aspect-ratio:2/3}.location-refined .house-art img{aspect-ratio:2/3;width:100%;height:auto;mask-image:linear-gradient(to bottom,transparent,#000 7%,#000 88%,transparent),linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}.location-refined .house-title{top:14%;left:29%;right:3%;z-index:2}.location-refined .house-title h1{font-size:60px;white-space:nowrap}.location-refined .house-title p{font-size:12px;line-height:1.55;padding:0;max-width:23ch}.location-refined .location-tower{left:29%;top:31%} .location-refined .location-tower svg{transform:rotate(180deg)}.location-refined .location-lake{right:2%;top:43%}.location-refined .location-label{font-size:10px}.location-refined .location-label small{font-size:10px}}
+@media(max-width:700px) and (max-height:700px){.location-refined .house-art{top:10%}.location-refined .location-composition{width:calc((100svh - 180px)*.66667);max-width:100%}.location-refined .house-title{top:13%;left:31%;right:3%}.location-refined .house-title h1{font-size:50px}.location-refined .house-title p{font-size:11px}}
+
+/* Independent landmarks follow the viewport edges, never a shared ground plane. */
+.location-separated .house-art{inset:0;display:block}
+.location-separated .house-art .location-house-image{position:absolute;width:min(58%,87svh);height:auto;max-height:none;object-fit:contain;left:50%;transform:translateX(-50%);bottom:10%;aspect-ratio:3/2;z-index:2}
+.location-separated .landmark{position:absolute;pointer-events:none}
+.location-separated .landmark img{width:100%;height:100%;object-fit:contain;aspect-ratio:auto;mask-image:linear-gradient(to bottom,transparent,#000 4%,#000 91%,transparent),linear-gradient(to right,transparent,#000 22%,#000 78%,transparent);mask-composite:intersect}
+.location-separated .landmark-tower{left:-5%;top:9%;width:30%;height:64%}
+.location-separated .landmark-shore{right:-4%;top:29%;width:35%;height:43%}
+.location-separated .landmark-shore img{mask-image:linear-gradient(to bottom,transparent,#000 13%,#000 82%,transparent),linear-gradient(to right,transparent,#000 13%,#000 85%,transparent)}
+.landmark-label{position:absolute;display:grid;gap:4px;font-size:12px;line-height:1.4;z-index:3;text-align:center;color:var(--ink);text-decoration:none;padding:8px}
+.landmark-label svg{width:14px;height:14px;justify-self:center;transform:rotate(-45deg)}
+.landmark-label small{font-size:11px}
+.landmark-label:hover span{text-decoration:underline;text-underline-offset:4px}
+.landmark-label:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+.landmark-label-tower{left:4%;top:75%}
+.landmark-label-harbor{right:3%;top:25%}
+.landmark-label-garden{right:3%;top:66%}
+@media(max-width:700px){
+ .location-separated .house-title{top:14%;left:28%;right:3%}
+ .location-separated .house-title h1{font-size:clamp(46px,15vw,70px);white-space:nowrap}
+ .location-separated .house-title p{font-size:11px;line-height:1.6;max-width:24ch;margin:10px auto 0;padding:0}
+ .location-separated .house-art .location-house-image{left:50%;width:84%;bottom:17%;max-height:none}
+ .location-separated .landmark-tower{left:-11%;top:12%;width:46%;height:39%}
+ .location-separated .landmark-shore{right:-9%;top:30%;width:65%;height:25%}
+ .landmark-label{font-size:10px;padding:5px;gap:2px}
+ .landmark-label small{font-size:10px}
+ .landmark-label-tower{left:2%;top:51%}
+ .landmark-label-harbor{right:3%;top:27%}
+ .landmark-label-garden{right:2%;top:54%}
+}
+@media(max-width:700px) and (max-height:700px){
+ .location-separated .house-title{top:14%}
+ .location-separated .house-title h1{font-size:48px}
+ .location-separated .house-title p{font-size:10px}
+ .location-separated .landmark-tower{top:16%;height:36%}
+ .location-separated .house-art .location-house-image{bottom:19%;width:min(84%,65svh);max-height:none}
+}
+
+.landmark-label svg{transform:rotate(-90deg)}
+.landmark-label-harbor svg{transform:rotate(90deg)}
