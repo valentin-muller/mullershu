@@ -5,8 +5,8 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-he
 .neighborhood-fan .entry-door,.neighborhood-fan .entry-veil{display:none!important}
 .neighborhood-fan .house-title{top:96px;left:0;right:0;z-index:3;pointer-events:none}
 .neighborhood-fan .house-title h1{font:400 108px/1.05 'Pinyon Script',cursive;letter-spacing:0}
-.neighborhood-fan .house-title .house-promise{font-size:17px;letter-spacing:.04em;margin:8px auto 0;max-width:none;font-weight:500}
-.neighborhood-fan .house-title .house-location{font-size:14px;letter-spacing:.02em;margin:7px auto 0;max-width:none}
+.neighborhood-fan .hero-sidecopy .house-promise{font-size:17px;letter-spacing:.04em;margin:8px auto 0;max-width:none;font-weight:500}
+.neighborhood-fan .hero-sidecopy .house-location{font-size:14px;letter-spacing:.02em;margin:7px auto 0;max-width:none}
 .neighborhood-fan .house-art{position:absolute;inset:290px auto auto 50%;width:1240px;height:760px;display:block;isolation:isolate;transform:translateX(-50%)!important}
 .neighborhood-cards{position:absolute;inset:0;z-index:1;perspective:1500px}
 .place-card{position:absolute;width:200px;height:540px;top:0;transform:rotate(var(--tilt));transform-origin:50% 90%;color:#fff8eb;border:0;background:transparent;isolation:isolate;filter:drop-shadow(5px 12px 9px #3525152b)}
@@ -55,8 +55,8 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-he
  .hero-composition{display:block;position:absolute;left:50%;top:76px;width:340px;height:980px;transform:translateX(-50%);transform-origin:50% 0}
  .neighborhood-fan .house-title{top:0;left:-15px;right:-15px}
  .neighborhood-fan .house-title h1{font-size:84px;line-height:1.05;white-space:nowrap}
- .neighborhood-fan .house-title .house-promise{font-size:14px;margin:6px auto 0;letter-spacing:.01em}
- .neighborhood-fan .house-title .house-location{font-size:11px;margin:6px auto 0;letter-spacing:0;max-width:none}
+ .neighborhood-fan .hero-sidecopy .house-promise{font-size:14px;margin:6px auto 0;letter-spacing:.01em}
+ .neighborhood-fan .hero-sidecopy .house-location{font-size:11px;margin:6px auto 0;letter-spacing:0;max-width:none}
  .neighborhood-fan .house-art{top:150px;width:340px;height:830px}
  .place-card{width:120px;height:250px;top:410px;filter:drop-shadow(2px 4px 3px #35251526)}
  .place-lake{left:63px;top:0;width:214px;height:235px;--tilt:-3deg;z-index:1}
@@ -88,3 +88,18 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-he
 
 /* Let the tall opening composition scroll without a header covering ticket titles. */
 .neighborhood-fan.in-neighborhood .header{position:absolute}
+
+/* Copy uses the empty flanks; foliage frames the taller cards without covering their labels. */
+.hero-foliage{display:none}
+.hero-sidecopy{position:absolute;top:217px;left:0;right:0;text-align:center;z-index:6;pointer-events:none}
+@media(min-width:761px) and (max-width:1399px){.hero-sidecopy{top:206px}}
+@media(max-width:760px){
+ .neighborhood-fan .house-art{top:100px}
+ .neighborhood-fan .house-art .fan-house{top:540px;width:500px}
+ .hero-sidecopy{top:calc(76px + 140px * var(--hero-scale, .75));left:14px;right:14px;display:flex;align-items:flex-start;justify-content:space-between;text-align:left}
+ .neighborhood-fan .hero-sidecopy .house-promise{width:78px;max-width:78px;font:400 24px/1.12 'Pinyon Script',cursive;margin:0;color:#574632}
+ .neighborhood-fan .hero-sidecopy .house-location{width:78px;max-width:78px;font:400 10px/1.65 'Work Sans',sans-serif;letter-spacing:.07em;text-transform:uppercase;text-align:right;margin:4px 0 0;color:#574632}
+ .neighborhood-fan .house-art .hero-foliage{display:block;position:absolute;width:290px;height:460px;object-fit:contain;aspect-ratio:auto;mask-image:none;mix-blend-mode:normal;z-index:0;pointer-events:none;filter:saturate(.72)}
+ .foliage-left{left:-128px;top:175px;transform:rotate(-14deg)}
+ .foliage-right{right:-128px;top:190px;transform:scaleX(-1) rotate(-12deg)}
+}

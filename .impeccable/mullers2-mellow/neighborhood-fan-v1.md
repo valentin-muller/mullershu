@@ -76,3 +76,10 @@ The prior 1220px phone hero made the house invisible in the initial viewport. Th
 
 ## Proportional portrait correction — 2026-09-27
 User rejected the squashed first-screen cards and supplied Photo 2 as proportional authority. The phone version now has a fixed 340×980 title/art composition and a 370px full house silhouette. A single uniform transform fits the complete composition within the small viewport height; no height breakpoints change individual card geometry. Source art geometry: Balaton 214×235, middle tickets 170×270 at y192, lower tickets 120×250 at y410–430, house 370px wide at y580. Middle order is Petőfi left and PLÁZS right as in the latest reference. Shorter devices therefore have wider side margins, preserving proportions and a visible building base together. Verified CSS viewports 390×844 and 360×667, with house bottoms 813 and 637px. Desktop/tablet use display:contents for the new wrapper.
+
+## Larger house and side framing — 2026-09-27
+Owner requested a substantially larger building, side-positioned copy and optional plants. Mobile house source width increases from 370 to 500px (about 35%); its roof begins at y540, while the unchanged portrait tickets move up with the art container from y150 to y100. The promise is now a left-aligned Pinyon Script note and the location copy a small uppercase right-aligned note beside the top card. Desktop and tablet keep their centered copy. Two decorative alpha foliage sprites frame the tickets on mobile only.
+
+Foliage was generated with built-in imagegen, not Blender. Source: ~/.codex/generated_images/01a0befc-3884-7f50-913d-9385165af6dc/exec-3ddcedd0-3f3d-4e9b-a12b-b3dbfcee1d1c.png. Prompt: photoreal miniature upright silver-green small-leaf shrub, cream blossoms, warm afternoon light, transparent alpha, no scene/pot/text. Web asset assets/foliage-v1.webp is 129KB and preserves alpha. Decorative images have empty alt and aria-hidden.
+
+Checked CSS viewports 390×844 and 360×667, and desktop 1440px: house fully visible, imagery loaded, no horizontal overflow. At 390px the house image spans x6–384px. Syntax and diff checks passed.
