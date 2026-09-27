@@ -1,13 +1,14 @@
 /* Three art-directed, fixed-size compositions. No viewport-driven card crops. */
-.neighborhood-fan .entry-journey{height:auto!important}
-.neighborhood-fan .entry-stage{position:relative!important;height:auto!important;overflow:hidden}
-body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-height:1160px;background:var(--sand)}
-.neighborhood-fan .entry-door,.neighborhood-fan .entry-veil{display:none!important}
+body.neighborhood-fan{--entry-height:1160px}
+.neighborhood-fan .entry-journey{height:auto}
+.neighborhood-fan .entry-stage{position:relative;height:var(--entry-height);overflow:hidden}
+body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-height);min-height:0;background:var(--sand)}
+.neighborhood-fan .entry-door,.neighborhood-fan .entry-veil{display:none}
 .neighborhood-fan .house-title{top:96px;left:0;right:0;z-index:3;pointer-events:none}
 .neighborhood-fan .house-title h1{font:400 108px/1.05 'Pinyon Script',cursive;letter-spacing:0}
 .neighborhood-fan .hero-sidecopy .house-promise{font-size:17px;letter-spacing:.04em;margin:8px auto 0;max-width:none;font-weight:500}
 .neighborhood-fan .hero-sidecopy .house-location{font-size:14px;letter-spacing:.02em;margin:7px auto 0;max-width:none}
-.neighborhood-fan .house-art{position:absolute;inset:290px auto auto 50%;width:1240px;height:760px;display:block;isolation:isolate;transform:translateX(-50%)!important}
+.neighborhood-fan .house-art{position:absolute;inset:290px auto auto 50%;width:1240px;height:760px;display:block;isolation:isolate;transform:translateX(-50%) translate3d(var(--entry-pan-x,0px),var(--entry-pan-y,0px),0) scale(var(--entry-zoom,1))!important}
 .neighborhood-cards{position:absolute;inset:0;z-index:1;perspective:1500px}
 .place-card{position:absolute;width:200px;height:540px;top:0;transform:rotate(var(--tilt));transform-origin:50% 90%;color:#fff8eb;border:0;background:transparent;isolation:isolate;filter:drop-shadow(5px 12px 9px #3525152b)}
 /* Gentle curved paper edges and a directional fold highlight, not a white rim. */
@@ -31,7 +32,7 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-he
 .neighborhood-fan .entry-chapters a{padding:12px 22px;font-size:12px}
 /* Tablet: 760px artboard, two above four. House overlaps only the card feet. */
 @media(min-width:761px) and (max-width:1399px){
- body.neighborhood-fan .entry-stage .house{height:1370px;min-height:1370px}
+ body.neighborhood-fan{--entry-height:1370px}
  .neighborhood-fan .house-title{top:98px}
  .neighborhood-fan .house-title h1{font-size:96px}
  .neighborhood-fan .house-art{top:290px;width:740px;height:980px}
@@ -48,30 +49,28 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-he
  .neighborhood-fan .entry-chapters a{padding:12px 16px}
 }
 .hero-composition{display:contents}
-/* One immutable portrait composition: title and artwork scale together. */
+/* The initial portrait fit is CSS-only: no late fitting class or resize script. */
 @media(max-width:760px){
- body.neighborhood-fan .entry-stage .house{height:1100px;min-height:0}
- body.neighborhood-fan.mobile-fitted .entry-stage .house{height:100svh}
- .hero-composition{display:block;position:absolute;left:50%;top:76px;width:340px;height:980px;transform:translateX(-50%);transform-origin:50% 0}
- .neighborhood-fan .house-title{top:0;left:-15px;right:-15px}
- .neighborhood-fan .house-title h1{font-size:84px;line-height:1.05;white-space:nowrap}
- .neighborhood-fan .hero-sidecopy .house-promise{font-size:14px;margin:6px auto 0;letter-spacing:.01em}
- .neighborhood-fan .hero-sidecopy .house-location{font-size:11px;margin:6px auto 0;letter-spacing:0;max-width:none}
- .neighborhood-fan .house-art{top:150px;width:340px;height:830px}
- .place-card{width:120px;height:250px;top:410px;filter:drop-shadow(2px 4px 3px #35251526)}
- .place-lake{left:63px;top:0;width:214px;height:235px;--tilt:-3deg;z-index:1}
- .place-promenade{left:16px;top:192px;width:170px;height:270px;--tilt:-5deg;z-index:2}
- .place-plazs{left:158px;top:192px;width:170px;height:270px;--tilt:5deg;z-index:2}
- .place-tower{left:14px;top:430px;--tilt:-5deg;z-index:3}
- .place-garden{left:110px;--tilt:0deg;z-index:4}
- .place-pier{left:207px;top:430px;--tilt:5deg;z-index:3}
- .place-caption{top:22px;left:2px;right:2px;gap:8px;flex-direction:column-reverse;text-shadow:0 1px 3px #09182680}
- .place-time{font-size:12px;letter-spacing:.05em}
- .place-name{font-size:32px;line-height:1.1}
- .place-lake .place-name{font-size:48px}
- .place-promenade .place-name{font-size:34px;white-space:nowrap;max-width:none}
- .place-plazs .place-name{font-size:40px}
- .neighborhood-fan .house-art .fan-house{top:580px;width:370px;z-index:5}
+ body.neighborhood-fan{--entry-height:100svh;--portrait-width:min(340px,calc((100vw + 12px)*.68),calc((100svh - 104px)*.3469387755))}
+ body.neighborhood-fan .entry-stage .house{height:var(--entry-height);min-height:0}
+ .hero-composition{display:block;position:absolute;left:50%;top:76px;width:var(--portrait-width);aspect-ratio:340/980;transform:translateX(-50%);container-type:inline-size}
+ .neighborhood-fan .house-title{top:0;left:-4.4118cqw;right:-4.4118cqw}
+ .neighborhood-fan .house-title h1{font-size:24.7059cqw;line-height:1.05;white-space:nowrap}
+ .neighborhood-fan .house-art{top:29.4118cqw;width:100cqw;height:244.1176cqw}
+ .place-card{width:35.2941cqw;height:73.5294cqw;top:120.5882cqw;filter:drop-shadow(2px 4px 3px #35251526)}
+ .place-lake{left:18.5294cqw;top:0;width:62.9412cqw;height:69.1176cqw;--tilt:-3deg;z-index:1}
+ .place-promenade{left:4.7059cqw;top:56.4706cqw;width:50cqw;height:79.4118cqw;--tilt:-5deg;z-index:2}
+ .place-plazs{left:46.4706cqw;top:56.4706cqw;width:50cqw;height:79.4118cqw;--tilt:5deg;z-index:2}
+ .place-tower{left:4.1176cqw;top:126.4706cqw;--tilt:-5deg;z-index:3}
+ .place-garden{left:32.3529cqw;--tilt:0deg;z-index:4}
+ .place-pier{left:60.8824cqw;top:126.4706cqw;--tilt:5deg;z-index:3}
+ .place-caption{top:6.4706cqw;left:.5882cqw;right:.5882cqw;gap:2.3529cqw;flex-direction:column-reverse;text-shadow:0 1px 3px #09182680}
+ .place-time{font-size:3.5294cqw;letter-spacing:.05em}
+ .place-name{font-size:9.4118cqw;line-height:1.1}
+ .place-lake .place-name{font-size:14.1176cqw}
+ .place-promenade .place-name{font-size:10cqw;white-space:nowrap;max-width:none}
+ .place-plazs .place-name{font-size:11.7647cqw}
+ .neighborhood-fan .house-art .fan-house{top:158.8235cqw;width:147.0588cqw;z-index:5}
  .neighborhood-fan .house-art .place-lake img{object-position:50% 65%}
  .neighborhood-fan .house-art .place-garden img{object-position:50% 75%}
  .neighborhood-fan .house-art .place-plazs img{object-position:50% 75%}
@@ -94,12 +93,15 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-he
 .hero-sidecopy{position:absolute;top:217px;left:0;right:0;text-align:center;z-index:6;pointer-events:none}
 @media(min-width:761px) and (max-width:1399px){.hero-sidecopy{top:206px}}
 @media(max-width:760px){
- .neighborhood-fan .house-art{top:100px}
- .neighborhood-fan .house-art .fan-house{top:540px;width:500px}
- .hero-sidecopy{top:calc(76px + 140px * var(--hero-scale, .75));left:14px;right:14px;display:flex;align-items:flex-start;justify-content:space-between;text-align:left}
+ .hero-sidecopy{top:calc(76px + var(--portrait-width)*.4117647);left:14px;right:14px;display:flex;align-items:flex-start;justify-content:space-between;text-align:left}
  .neighborhood-fan .hero-sidecopy .house-promise{width:78px;max-width:78px;font:400 24px/1.12 'Pinyon Script',cursive;margin:0;color:#574632}
  .neighborhood-fan .hero-sidecopy .house-location{width:78px;max-width:78px;font:400 10px/1.65 'Work Sans',sans-serif;letter-spacing:.07em;text-transform:uppercase;text-align:right;margin:4px 0 0;color:#574632}
- .neighborhood-fan .house-art .hero-foliage{display:block;position:absolute;width:290px;height:460px;object-fit:contain;aspect-ratio:auto;mask-image:none;mix-blend-mode:normal;z-index:0;pointer-events:none;filter:saturate(.72)}
- .foliage-left{left:-128px;top:175px;transform:rotate(-14deg)}
- .foliage-right{right:-128px;top:190px;transform:scaleX(-1) rotate(-12deg)}
+ .neighborhood-fan .house-art .hero-foliage{display:block;position:absolute;width:85.2941cqw;height:135.2941cqw;object-fit:contain;aspect-ratio:auto;mask-image:none;mix-blend-mode:normal;z-index:0;pointer-events:none;filter:saturate(.72)}
+ .foliage-left{left:-37.6471cqw;top:51.4706cqw;transform:rotate(-14deg)}
+ .foliage-right{right:-37.6471cqw;top:55.8824cqw;transform:scaleX(-1) rotate(-12deg)}
 }
+/* Reserve the entrance scroll range before images or deferred scripts finish loading. */
+html.entry-animated .neighborhood-fan .entry-journey{height:calc(var(--entry-height) + 150svh)}
+html.entry-animated .neighborhood-fan .entry-stage{position:sticky;top:0;height:var(--entry-height)}
+html.entry-animated .neighborhood-fan .entry-door{display:block;position:absolute;inset:0;opacity:0;pointer-events:none;transform-origin:50% 62%;z-index:10;will-change:transform,opacity}
+html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolute;inset:0;background:var(--private);opacity:0;pointer-events:none;z-index:11}
