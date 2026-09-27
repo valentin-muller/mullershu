@@ -65,3 +65,7 @@ Supersedes the fluid fan layout after user feedback. Desktop (1400px+) uses a ce
 Tickets use a shared SVG curved clip and subtle directional shading, without borders. Explicit row stacking protects lower-row labels. The house overlaps ticket feet only. Header scrolls away in the opening scene, then resumes its existing fixed behavior.
 
 Verified visually at 360px, 390px, 820px and 3440px widths. A 1280px boundary check exposed cropping at the desktop boundary; desktop now starts at 1400px. Checked mobile label bounds and horizontal overflow, image loading, and syntax with node --check (this checkout has no npm check script). Existing copy, booking targets, and other sections preserved. Not published in this revision.
+
+
+## Mobile bouquet correction — 2026-09-27
+User rejected separated rows and undersized house. Latest supplied reference is Screenshot 2026-09-27 at 09.02.19.png. Mobile now uses one tightly nested bouquet: Balaton above PLÁZS / Petőfi, above Víztorony / Rózsakert / Móló. The fixed 340px artwork is 835px tall; row tops 0, 192 and 397–413px. House is 415px wide and overlaps the card bases at 591px. Captions put place name above walking time. Current approved copy remains. Desktop/tablet unaffected. Mobile hero 1220px, with CTA below the house. Checked 390 and 360px, image loading and horizontal overflow; no production release.
