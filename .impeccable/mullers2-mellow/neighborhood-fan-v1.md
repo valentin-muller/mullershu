@@ -90,3 +90,7 @@ Restores the owner-approved camera approach after the fixed-composition implemen
 Mobile fit is CSS-only, using a stable small-viewport width expression and container-relative coordinates. Removed late JS fitting, `mobile-fitted`, and the inline scale transform. Initial geometry therefore does not depend on image decoding or `.motion` activation. Resize measurements affect only camera targeting and ignore toolbar events when the stage dimensions stay constant. Static/reduced-motion retain normal flow and the fitted illustration.
 
 Verified mobile 390×844 start, approach, doorway, veil, and reverse scroll. At 360×667 a fresh #haz load has building width 287.29px and bottom635.23px; the first 28.57px scroll retains width287.29px and zoom1. The animation-off control removes the sticky entrance and hides door/veil. Syntax checks and diff check pass.
+
+
+### Mobile bouquet proportions — 2026-09-27
+Owner supplied a wider bouquet reference (6B7426D8 attachment). Replaced the narrow 340×980 coordinate system with a viewport-width composition: lake 42%, middle cards 45%, bottom cards 34%, house 104%. Angled rows overlap as one bouquet, with the large house closing the lower edge and the CTA directly beneath. CSS small-viewport fitting remains first-paint stable; entrance.js and its door journey are unchanged. Original imagery and factual copy retained.
