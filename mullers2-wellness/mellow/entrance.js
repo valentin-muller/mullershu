@@ -18,9 +18,10 @@
     const phone = window.matchMedia('(max-width:760px)').matches;
     body.classList.toggle('mobile-fitted', phone);
     if (!phone) { composition.style.removeProperty('transform'); return; }
-    // Fit the same 370 × 980 silhouette; never shorten an individual card.
-    const scale = Math.min(1, (house.clientWidth - 16) / 370, (house.clientHeight - 104) / 980);
+    // Keep card proportions; let the larger house use the available page width.
+    const scale = Math.min(1, (house.clientWidth + 12) / 500, (house.clientHeight - 104) / 980);
     composition.style.transform = `translateX(-50%) scale(${Math.max(.1, scale)})`;
+    body.style.setProperty('--hero-scale', scale);
   };
   fitComposition();
   window.addEventListener('resize', fitComposition);
