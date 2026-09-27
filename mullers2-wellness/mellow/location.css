@@ -1,83 +1,93 @@
-/* Six independently readable destination tickets; imagery is illustrative. */
-.neighborhood-fan .house{height:100svh;min-height:760px;background:var(--sand)}
-.neighborhood-fan .house-art{inset:0;display:block;isolation:isolate}
-.neighborhood-fan .house-title{top:55px;left:15%;right:15%;pointer-events:none;z-index:3}
-.neighborhood-fan .house-title h1{font:400 clamp(76px,8vw,108px)/1.05 'Pinyon Script',cursive;letter-spacing:0}
-.neighborhood-fan .house-title .house-promise{font-size:17px;letter-spacing:.07em;margin:8px auto 0;max-width:none;font-weight:500}
-.neighborhood-fan .house-title .house-location{font-size:14px;letter-spacing:.035em;margin:7px auto 0;max-width:none}
-.neighborhood-cards{position:absolute;inset:0 7%;z-index:1}
-.place-card{position:absolute;top:32%;width:18%;height:53%;min-height:300px;transform:translateY(var(--drop)) rotate(var(--tilt));transform-origin:50% 90%;background:#37586b;box-shadow:0 12px 25px #35251524;border:3px solid var(--sand);color:#fff8eb;isolation:isolate;transition:translate .25s;mask-image:linear-gradient(#000 0%,#000 85%,transparent 100%);}
-.place-card::after{content:'';position:absolute;inset:0;background:linear-gradient(#12273494,transparent 38%);pointer-events:none;z-index:1}
-.neighborhood-fan .house-art .place-card img{width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:center;mask-image:none;mix-blend-mode:normal}
-.place-caption{position:absolute;inset:22px 6px auto;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;z-index:2;text-shadow:0 2px 5px #091826}
-.place-time{font:500 12px/1.3 'Work Sans',sans-serif;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
-.place-name{font:400 clamp(29px,3.3vw,49px)/1.1 'Pinyon Script',cursive;white-space:nowrap}
-.place-tower{left:-1%;--tilt:-12deg;--drop:35px}
-.place-garden{left:15.5%;--tilt:-7deg;--drop:10px}
-.place-lake{left:32%;--tilt:-2deg;--drop:0px}
-.place-promenade{left:48.5%;--tilt:2deg;--drop:0px}
-.place-plazs{left:65%;--tilt:7deg;--drop:10px}
-.place-pier{left:81.5%;--tilt:12deg;--drop:35px}
-.place-card:hover{translate:0 -6px}
-.place-card:focus-visible{outline:3px solid #533924;outline-offset:4px;z-index:8}
-.neighborhood-fan .house-art .fan-house{position:absolute;left:50%;bottom:95px;width:min(53%,64svh);height:auto;aspect-ratio:3/2;transform:translateX(-50%);mask-image:none;mix-blend-mode:normal;z-index:4;pointer-events:none}
-.neighborhood-fan .enter{bottom:72px;left:0;right:0;justify-content:center;font-size:14px;z-index:6}
-.neighborhood-fan .walking-note{position:absolute;left:0;right:0;bottom:47px;text-align:center;font-size:10px;color:#655746;z-index:6;pointer-events:none;margin:0}
+/* Three art-directed, fixed-size compositions. No viewport-driven card crops. */
+.neighborhood-fan .entry-journey{height:auto!important}
+.neighborhood-fan .entry-stage{position:relative!important;height:auto!important;overflow:hidden}
+body.neighborhood-fan .entry-stage .house{position:relative;height:1160px;min-height:1160px;background:var(--sand)}
+.neighborhood-fan .entry-door,.neighborhood-fan .entry-veil{display:none!important}
+.neighborhood-fan .house-title{top:96px;left:0;right:0;z-index:3;pointer-events:none}
+.neighborhood-fan .house-title h1{font:400 108px/1.05 'Pinyon Script',cursive;letter-spacing:0}
+.neighborhood-fan .house-title .house-promise{font-size:17px;letter-spacing:.04em;margin:8px auto 0;max-width:none;font-weight:500}
+.neighborhood-fan .house-title .house-location{font-size:14px;letter-spacing:.02em;margin:7px auto 0;max-width:none}
+.neighborhood-fan .house-art{position:absolute;inset:290px auto auto 50%;width:1240px;height:760px;display:block;isolation:isolate;transform:translateX(-50%)!important}
+.neighborhood-cards{position:absolute;inset:0;z-index:1;perspective:1500px}
+.place-card{position:absolute;width:200px;height:540px;top:0;transform:rotate(var(--tilt));transform-origin:50% 90%;color:#fff8eb;border:0;background:transparent;isolation:isolate;filter:drop-shadow(5px 12px 9px #3525152b)}
+/* Gentle curved paper edges and a directional fold highlight, not a white rim. */
+.neighborhood-fan .house-art .place-card img{width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:50% 0%;mask-image:none;mix-blend-mode:normal;clip-path:url(#ticket-curve)}
+.place-card::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0002,transparent 27%,#fff2 53%,#0001 78%,transparent),linear-gradient(#10263480,transparent 29%);clip-path:url(#ticket-curve);pointer-events:none;z-index:1}
+.place-caption{position:absolute;inset:27px 4px auto;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;z-index:2;text-shadow:0 2px 5px #091826}
+.place-time{font:500 11px/1.4 'Work Sans',sans-serif;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+.place-name{font:400 39px/1.1 'Pinyon Script',cursive;white-space:nowrap}
+.place-tower{left:24px;top:48px;--tilt:-10deg}
+.place-garden{left:222px;top:16px;--tilt:-6deg}
+.place-lake{left:421px;--tilt:-2deg}
+.place-promenade{left:620px;--tilt:2deg}
+.place-plazs{left:819px;top:16px;--tilt:6deg}
+.place-pier{left:1017px;top:48px;--tilt:10deg}
+.place-promenade .place-name{font-size:35px}
+.place-card:focus-visible{outline:3px solid #533924;outline-offset:6px;z-index:8}
+.neighborhood-fan .house-art .fan-house{position:absolute;left:50%;top:425px;bottom:auto;width:530px;height:auto;aspect-ratio:3/2;transform:translateX(-50%);mask-image:none;mix-blend-mode:normal;z-index:4;pointer-events:none}
+.neighborhood-fan .enter{bottom:74px;left:0;right:0;justify-content:center;font-size:14px;z-index:6}
+.neighborhood-fan .walking-note{position:absolute;left:0;right:0;bottom:48px;text-align:center;font-size:10px;color:#655746;z-index:6;pointer-events:none;margin:0}
 .neighborhood-fan .entry-chapters{bottom:0}
 .neighborhood-fan .entry-chapters a{padding:12px 22px;font-size:12px}
-/* Short viewports and touch layouts use the whole composition in native flow. */
-.neighborhood-fan.entry-natural .entry-journey{height:auto}
-.neighborhood-fan.entry-natural .entry-stage{position:relative;height:auto;overflow:hidden}
-.neighborhood-fan.entry-natural .entry-stage .house{height:max(760px,100svh);min-height:760px}
-.neighborhood-fan.entry-natural .entry-door,.neighborhood-fan.entry-natural .entry-veil{display:none}
-@media(min-width:1101px) and (min-height:1000px){
- .neighborhood-fan .house-title{top:8%}
- .place-card{top:28%;height:57%}
- .neighborhood-fan .house-art .fan-house{width:min(62%,1050px)}
-}
-/* Tablet: two upper tickets; four interleaved below. */
-@media(min-width:601px) and (max-width:1100px){
- .neighborhood-fan .house,.neighborhood-fan.entry-natural .entry-stage .house{height:max(1040px,100svh);min-height:1040px}
- .neighborhood-fan .house-title{top:85px;left:7%;right:7%}
+/* Tablet: 760px artboard, two above four. House overlaps only the card feet. */
+@media(min-width:761px) and (max-width:1399px){
+ body.neighborhood-fan .entry-stage .house{height:1370px;min-height:1370px}
+ .neighborhood-fan .house-title{top:98px}
  .neighborhood-fan .house-title h1{font-size:96px}
- .place-card{top:40%;width:27%;height:36%;min-height:0;--drop:0px}
- .place-tower{left:19%;top:24%;width:33%;height:34%;--tilt:-9deg}
- .place-garden{left:48%;top:24%;width:33%;height:34%;--tilt:9deg}
- .place-lake{left:0%;--tilt:-10deg}
- .place-promenade{left:24.3%;--tilt:-3deg}
- .place-plazs{left:48.6%;--tilt:3deg}
- .place-pier{left:73%;--tilt:10deg}
- .place-name{font-size:clamp(31px,4.7vw,46px)}
- .place-caption{top:20px}
- .neighborhood-fan .house-art .fan-house{bottom:105px;width:min(82%,780px)}
- .neighborhood-fan .enter{bottom:74px}
- .neighborhood-fan .walking-note{bottom:50px}
- .neighborhood-fan .entry-chapters{inset:auto 10px 0;overflow:auto;justify-content:flex-start}
- .neighborhood-fan .entry-chapters a{padding:13px 16px;white-space:nowrap}
+ .neighborhood-fan .house-art{top:290px;width:740px;height:980px}
+ .place-card{width:178px;height:440px;top:310px}
+ .place-tower{left:132px;top:0;width:240px;height:385px;--tilt:-6deg}
+ .place-garden{left:368px;top:0;width:240px;height:385px;--tilt:6deg}
+ .place-lake{left:13px;--tilt:-3deg}
+ .place-promenade{left:191px;--tilt:-1.5deg}
+ .place-plazs{left:369px;--tilt:1.5deg}
+ .place-pier{left:547px;--tilt:3deg}
+ .place-name{font-size:36px}
+ .place-promenade .place-name{font-size:31px}
+ .neighborhood-fan .house-art .fan-house{top:650px;width:530px}
+ .neighborhood-fan .entry-chapters a{padding:12px 16px}
 }
-/* Phone: three plus three, never a shrunken six-card desktop strip. */
-@media(max-width:600px){
- .neighborhood-fan .house,.neighborhood-fan.entry-natural .entry-stage .house{height:max(930px,100svh);min-height:930px}
- .neighborhood-fan .house-title{top:104px;left:16px;right:16px}
- .neighborhood-fan .house-title h1{font-size:76px;line-height:1.06;white-space:nowrap}
- .neighborhood-fan .house-title .house-promise{font-size:14px;letter-spacing:.01em;margin-top:8px}
- .neighborhood-fan .house-title .house-location{font-size:12px;line-height:1.6;letter-spacing:0;max-width:29ch;margin:7px auto 0}
- .neighborhood-cards{inset:0 10%}
- .place-card{width:35%;height:31%;min-height:0;top:30%;--drop:0px;border-width:2px}
- .place-tower{left:0%;--tilt:-8deg}
- .place-garden{left:32.5%;--tilt:0deg}
- .place-lake{left:65%;--tilt:8deg}
- .place-promenade{left:0%;top:49%;--tilt:-8deg}
- .place-plazs{left:32.5%;top:49%;--tilt:0deg}
- .place-pier{left:65%;top:49%;--tilt:8deg}
- .place-caption{top:15px;left:2px;right:2px;gap:7px}
- .place-time{font-size:10px;letter-spacing:.04em}
- .place-name{font-size:clamp(25px,7.1vw,39px);line-height:1.1}
- .place-promenade .place-name{white-space:normal;max-width:6ch}
- .neighborhood-fan .house-art .fan-house{bottom:126px;width:107%;max-width:590px}
- .neighborhood-fan .enter{bottom:91px;font-size:13px;gap:12px}
- .neighborhood-fan .walking-note{bottom:66px;font-size:9px}
- .neighborhood-fan .entry-chapters{inset:auto 12px 13px;overflow-x:auto;justify-content:flex-start}
+/* Phone bouquet: tightly nested silhouettes, measured from the supplied reference. */
+@media(max-width:760px){
+ body.neighborhood-fan .entry-stage .house{height:1220px;min-height:1220px}
+ .neighborhood-fan .house-title{top:96px;left:10px;right:10px}
+ .neighborhood-fan .house-title h1{font-size:80px;line-height:1.06;white-space:nowrap}
+ .neighborhood-fan .house-title .house-promise{font-size:13px;letter-spacing:.01em;margin-top:6px}
+ .neighborhood-fan .house-title .house-location{font-size:11px;line-height:1.5;letter-spacing:0;max-width:none;margin:6px auto 0}
+ .neighborhood-fan .house-art{top:240px;width:340px;height:835px}
+ .place-card{width:120px;height:280px;top:397px;filter:drop-shadow(2px 4px 3px #35251526)}
+ .place-lake{left:63px;top:0;width:214px;height:252px;--tilt:-3deg;z-index:1}
+ .place-plazs{left:16px;top:192px;width:170px;height:277px;--tilt:-5deg;z-index:2}
+ .place-promenade{left:158px;top:192px;width:170px;height:277px;--tilt:5deg;z-index:2}
+ .place-tower{left:14px;top:413px;--tilt:-5deg;z-index:3}
+ .place-garden{left:110px;--tilt:0deg;z-index:4}
+ .place-pier{left:207px;top:413px;--tilt:5deg;z-index:3}
+ .place-caption{top:21px;left:2px;right:2px;gap:6px;flex-direction:column-reverse;text-shadow:0 1px 3px #09182680}
+ .place-time{font-size:9px;letter-spacing:.08em}
+ .place-name{font-size:30px;line-height:1.1}
+ .place-lake .place-name{font-size:46px}
+ .place-promenade .place-name{font-size:31px;white-space:nowrap;max-width:none}
+ .place-plazs .place-name{font-size:38px}
+ .neighborhood-fan .house-art .fan-house{top:591px;width:415px;z-index:5}
+ .neighborhood-fan .house-art .place-lake img{object-position:50% 65%}
+ .neighborhood-fan .house-art .place-garden img{object-position:50% 75%}
+ .neighborhood-fan .house-art .place-plazs img{object-position:50% 75%}
+ .neighborhood-fan .house-art .place-promenade img{object-position:50% 70%}
+ .neighborhood-fan .enter{bottom:78px;font-size:13px;gap:12px}
+ .neighborhood-fan .walking-note{bottom:53px;font-size:9px}
+ .neighborhood-fan .entry-chapters{inset:auto 12px 5px;overflow-x:auto;justify-content:flex-start}
  .neighborhood-fan .entry-chapters a{white-space:nowrap;padding:12px 16px;font-size:11px}
 }
-@media(prefers-reduced-motion:reduce){.place-card{transition:none}.place-card:hover{translate:none}}
+@media(max-width:359px){
+ .neighborhood-fan .house-art{scale:.9;transform-origin:50% 0}
+ .neighborhood-fan .house-title h1{font-size:70px}
+ body.neighborhood-fan .entry-stage .house{height:1140px;min-height:1140px}
+}
+@media(min-width:761px) and (max-width:1399px){
+ .neighborhood-fan .house-art .place-garden img{object-position:50% 70%}
+ .place-tower,.place-garden{z-index:1}
+ .place-lake,.place-promenade,.place-plazs,.place-pier{z-index:2}
+}
+
+/* Let the tall opening composition scroll without a header covering ticket titles. */
+.neighborhood-fan.in-neighborhood .header{position:absolute}

@@ -17,8 +17,9 @@
   let queued = false;
   function draw() {
     queued = false;
-    const natural = innerWidth <= 1100 || innerHeight < 760;
+    const natural = body.classList.contains('neighborhood-fan');
     body.classList.toggle('entry-natural', natural);
+    body.classList.toggle('in-neighborhood', natural && track.getBoundingClientRect().bottom > 80);
     if (!body.classList.contains('motion') || natural) {
       [art,title,enter,door,veil,chapterNav,...art.querySelectorAll('.neighborhood-cards'),track.querySelector('.walking-note')].forEach(node => node.removeAttribute('style'));
       chapterNav.inert = false;
