@@ -12,6 +12,18 @@
   const chapterNav = document.querySelector('.chapters').cloneNode(true);
   chapterNav.classList.add('entry-chapters');
   track.querySelector('.house').append(chapterNav);
+  const composition = track.querySelector('.hero-composition');
+  const house = track.querySelector('.house');
+  const fitComposition = () => {
+    const phone = window.matchMedia('(max-width:760px)').matches;
+    body.classList.toggle('mobile-fitted', phone);
+    if (!phone) { composition.style.removeProperty('transform'); return; }
+    // Fit the same 370 × 980 silhouette; never shorten an individual card.
+    const scale = Math.min(1, (house.clientWidth - 16) / 370, (house.clientHeight - 104) / 980);
+    composition.style.transform = `translateX(-50%) scale(${Math.max(.1, scale)})`;
+  };
+  fitComposition();
+  window.addEventListener('resize', fitComposition);
   const clamp = v => Math.max(0, Math.min(1, v));
   const ease = v => { const t = clamp(v); return t*t*(3-2*t); };
   let queued = false;
