@@ -83,3 +83,10 @@ Owner requested a substantially larger building, side-positioned copy and option
 Foliage was generated with built-in imagegen, not Blender. Source: ~/.codex/generated_images/01a0befc-3884-7f50-913d-9385165af6dc/exec-3ddcedd0-3f3d-4e9b-a12b-b3dbfcee1d1c.png. Prompt: photoreal miniature upright silver-green small-leaf shrub, cream blossoms, warm afternoon light, transparent alpha, no scene/pot/text. Web asset assets/foliage-v1.webp is 129KB and preserves alpha. Decorative images have empty alt and aria-hidden.
 
 Checked CSS viewports 390×844 and 360×667, and desktop 1440px: house fully visible, imagery loaded, no horizontal overflow. At 390px the house image spans x6–384px. Syntax and diff checks passed.
+
+## Entrance and first-paint repair — 2026-09-27
+Restores the owner-approved camera approach after the fixed-composition implementation incorrectly bypassed it. Entry scroll space is now reserved by a head-time motion preference class; door and taupe veil are visible layers only in animated mode. Camera zoom targets the house image's brown front door (58.5%,76.5%) and crossfades to the existing doorway render before the introduction. Scroll reverses the same path.
+
+Mobile fit is CSS-only, using a stable small-viewport width expression and container-relative coordinates. Removed late JS fitting, `mobile-fitted`, and the inline scale transform. Initial geometry therefore does not depend on image decoding or `.motion` activation. Resize measurements affect only camera targeting and ignore toolbar events when the stage dimensions stay constant. Static/reduced-motion retain normal flow and the fitted illustration.
+
+Verified mobile 390×844 start, approach, doorway, veil, and reverse scroll. At 360×667 a fresh #haz load has building width 287.29px and bottom635.23px; the first 28.57px scroll retains width287.29px and zoom1. The animation-off control removes the sticky entrance and hides door/veil. Syntax checks and diff check pass.
