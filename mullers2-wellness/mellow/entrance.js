@@ -17,10 +17,14 @@
   let queued = false;
   function draw() {
     queued = false;
-    if (!body.classList.contains('motion')) {
-      [art,title,enter,door,veil,chapterNav,...art.querySelectorAll('.landmark,.landmark-label')].forEach(node => node.removeAttribute('style'));
+    const natural = innerWidth <= 1100 || innerHeight < 760;
+    body.classList.toggle('entry-natural', natural);
+    if (!body.classList.contains('motion') || natural) {
+      [art,title,enter,door,veil,chapterNav,...art.querySelectorAll('.neighborhood-cards'),track.querySelector('.walking-note')].forEach(node => node.removeAttribute('style'));
       chapterNav.inert = false;
-      body.classList.remove('is-entry');
+      art.querySelector('.neighborhood-cards').inert = false;
+      const introRect = intro.getBoundingClientRect();
+      body.classList.toggle('is-entry', introRect.top <= 80 && introRect.bottom > 80);
       return;
     }
     const p = clamp(-track.getBoundingClientRect().top / Math.max(1, track.offsetHeight-stage.offsetHeight));
@@ -32,7 +36,9 @@
     title.style.opacity = 1-ease(p/.2);
     enter.style.opacity = 1-ease(p/.12);
     enter.style.visibility = p>.2 ? 'hidden' : '';
-    art.querySelectorAll('.landmark,.landmark-label').forEach(node => {
+    art.querySelector('.neighborhood-cards').inert = p > .2;
+    track.querySelector('.walking-note').style.opacity = 1-ease(p/.12);
+    art.querySelectorAll('.neighborhood-cards').forEach(node => {
       node.style.opacity = 1-ease(p/.23);
       node.style.visibility = p>.25 ? 'hidden' : '';
     });
