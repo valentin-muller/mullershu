@@ -94,3 +94,9 @@ Verified mobile 390×844 start, approach, doorway, veil, and reverse scroll. At 
 
 ### Mobile bouquet proportions — 2026-09-27
 Owner supplied a wider bouquet reference (6B7426D8 attachment). Replaced the narrow 340×980 coordinate system with a viewport-width composition: lake 42%, middle cards 45%, bottom cards 34%, house 104%. Angled rows overlap as one bouquet, with the large house closing the lower edge and the CTA directly beneath. CSS small-viewport fitting remains first-paint stable; entrance.js and its door journey are unchanged. Original imagery and factual copy retained.
+
+
+### Independent mobile layout — 2026-10-02
+Replaced the common portrait scale with independent width-led cards and a bottom-anchored 104%-width house. Mobile header booking and side copy hidden; hero title aligned beside logo without moving it into header. Row spacing and card heights derive from remaining roof space; short-view labels remain >=10px.
+Chrome screenshots checked at exact CSS viewports 360×640, 390×664, 390×844, 430×932. House bottoms: 600, 624, 804, 892; CTA bottoms: 632, 656, 836, 924. No horizontal page overflow. Tablet 820×1180 and desktop 1440×1000 retain prior layout.
+At 390×664 initial scroll40 zoom1.00084 (no shrink); scroll664 shows doorway opacity1; reverse returns scroll0/zoom1. Static toggle disables camera. Screenshots saved /tmp/mullers-mobile-qa/. Physical iPhone not tested.

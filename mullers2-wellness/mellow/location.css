@@ -49,36 +49,40 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-h
  .neighborhood-fan .entry-chapters a{padding:12px 16px}
 }
 .hero-composition{display:contents}
-/* The initial portrait fit is CSS-only: no late fitting class or resize script. */
+/* Mobile: independent width-led objects, height-led row spacing. */
 @media(max-width:760px){
- body.neighborhood-fan{--entry-height:100svh;--portrait-width:min(100vw,calc((100svh - 100px)/1.765))}
- body.neighborhood-fan .entry-stage .house{height:var(--entry-height);min-height:0}
- .hero-composition{display:block;position:absolute;left:50%;top:62px;width:var(--portrait-width);height:calc(1.47 * var(--portrait-width) + 48px);transform:translateX(-50%);container-type:inline-size}
- .neighborhood-fan .house-title{top:0;left:15cqw;right:15cqw}
- .neighborhood-fan .house-title h1{font-size:20cqw;line-height:1;white-space:nowrap}
- .neighborhood-fan .house-art{top:22cqw;width:100cqw;height:147cqw}
- .place-card{width:34cqw;height:48cqw;top:56cqw;filter:drop-shadow(2px 4px 3px #35251526)}
- .place-lake{left:29cqw;top:0;width:42cqw;height:44cqw;--tilt:-2deg;z-index:1}
- .place-promenade{left:7cqw;top:29cqw;width:45cqw;height:44cqw;--tilt:-9deg;z-index:2}
- .place-plazs{left:49cqw;top:29cqw;width:45cqw;height:44cqw;--tilt:9deg;z-index:2}
- .place-tower{left:9cqw;top:59cqw;--tilt:-9deg;z-index:3}
- .place-garden{left:33cqw;--tilt:0deg;z-index:4}
- .place-pier{left:57cqw;top:59cqw;--tilt:9deg;z-index:3}
- .place-caption{top:4cqw;left:.5cqw;right:.5cqw;gap:1cqw;flex-direction:column-reverse;text-shadow:0 1px 3px #09182680}
- .place-time{font-size:1.9cqw;letter-spacing:.09em}
- .place-name{font-size:6.8cqw;line-height:1.1}
- .place-lake .place-name{font-size:9cqw}
- .place-promenade .place-name{font-size:7.5cqw;white-space:nowrap;max-width:none}
- .place-plazs .place-name{font-size:8cqw}
- .neighborhood-fan .house-art .fan-house{top:85cqw;width:104cqw;z-index:5}
-
- .neighborhood-fan .house-art .place-lake img{object-position:50% 65%}
+ body.neighborhood-fan{--entry-height:100svh;--roof:calc(100svh - 116px - 69.333vw)}
+ .neighborhood-fan .header{height:76px;padding:12px 16px}
+ .neighborhood-fan .header .booking{display:none}
+ .neighborhood-fan .header .brand img{width:52px;height:42px}
+ .hero-composition{display:contents}
+ .neighborhood-fan .house-title{top:8px;left:86px;right:16px;text-align:right}
+ .neighborhood-fan .house-title h1{font-size:clamp(52px,16vw,90px);line-height:1;white-space:nowrap}
+ .neighborhood-fan .house-art{top:76px;width:100%;height:calc(100svh - 116px)}
+ .place-card{transform-origin:50% 50%;filter:drop-shadow(2px 4px 3px #35251526)}
+ .place-lake{left:18%;top:0;width:64%;height:calc(var(--roof)*.43 + 64px);--tilt:-2deg;z-index:1}
+ .place-promenade{left:3%;top:calc(var(--roof)*.32);width:50%;height:calc(var(--roof)*.52 + 54px);--tilt:-4deg;z-index:2}
+ .place-plazs{left:47%;top:calc(var(--roof)*.32);width:50%;height:calc(var(--roof)*.52 + 54px);--tilt:4deg;z-index:2}
+ .place-tower{left:3%;top:calc(var(--roof)*.65);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:-6deg;z-index:3}
+ .place-garden{left:32.5%;top:calc(var(--roof)*.63);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:0deg;z-index:4}
+ .place-pier{left:62%;top:calc(var(--roof)*.65);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:6deg;z-index:3}
+ .place-caption{top:12px;left:2px;right:2px;gap:4px;flex-direction:column-reverse;text-shadow:0 1px 3px #091826}
+ .place-time{font-size:10px;letter-spacing:.04em}
+ .place-name{font-size:clamp(28px,7.5vw,42px);line-height:1.1}
+ .place-lake .place-name{font-size:clamp(40px,12vw,58px)}
+ .place-promenade .place-name{font-size:clamp(28px,8vw,44px)}
+ .place-plazs .place-name{font-size:clamp(34px,10vw,50px)}
+ .neighborhood-fan .house-art .fan-house{top:auto;bottom:0;width:104%;z-index:5}
+ .neighborhood-fan .house-art .place-lake img{object-position:50% 85%}
  .neighborhood-fan .house-art .place-garden img{object-position:50% 75%}
  .neighborhood-fan .house-art .place-plazs img{object-position:50% 75%}
  .neighborhood-fan .house-art .place-promenade img{object-position:50% 70%}
- .neighborhood-fan .enter{top:calc(76px + var(--portrait-width)*1.765);bottom:auto;font-size:11px;gap:8px}
+ .neighborhood-fan .enter{top:auto;bottom:8px;font-size:12px;gap:8px;min-height:28px}
  .neighborhood-fan .enter svg{height:20px}
  .neighborhood-fan .walking-note,.neighborhood-fan .entry-chapters{display:none}
+}
+@media(max-width:760px) and (max-height:699px), (max-width:760px) and (min-aspect-ratio:10/17){
+ .neighborhood-fan .place-caption{top:9px;gap:2px}
 }
 @media(min-width:761px) and (max-width:1399px){
  .neighborhood-fan .house-art .place-garden img{object-position:50% 70%}
@@ -94,12 +98,10 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-h
 .hero-sidecopy{position:absolute;top:217px;left:0;right:0;text-align:center;z-index:6;pointer-events:none}
 @media(min-width:761px) and (max-width:1399px){.hero-sidecopy{top:206px}}
 @media(max-width:760px){
- .hero-sidecopy{top:calc(62px + var(--portrait-width)*.28);left:14px;right:14px;display:flex;align-items:flex-start;justify-content:space-between;text-align:left}
- .neighborhood-fan .hero-sidecopy .house-promise{width:18vw;max-width:78px;font:400 20px/1.12 'Pinyon Script',cursive;margin:0;color:#574632}
- .neighborhood-fan .hero-sidecopy .house-location{width:18vw;max-width:78px;font:400 8px/1.65 'Work Sans',sans-serif;letter-spacing:.07em;text-transform:uppercase;text-align:right;margin:4px 0 0;color:#574632}
- .neighborhood-fan .house-art .hero-foliage{display:block;position:absolute;width:50cqw;height:80cqw;object-fit:contain;aspect-ratio:auto;mask-image:none;mix-blend-mode:normal;z-index:0;pointer-events:none;filter:saturate(.72)}
- .foliage-left{left:-8cqw;top:20cqw;transform:rotate(-14deg)}
- .foliage-right{right:-8cqw;top:24cqw;transform:scaleX(-1) rotate(-12deg)}
+ .hero-sidecopy{display:none}
+ .neighborhood-fan .house-art .hero-foliage{display:block;position:absolute;width:48vw;height:65vw;object-fit:contain;aspect-ratio:auto;mask-image:none;mix-blend-mode:normal;z-index:0;pointer-events:none;filter:saturate(.72)}
+ .foliage-left{left:-7%;top:calc(var(--roof)*.12);transform:rotate(-14deg)}
+ .foliage-right{right:-7%;top:calc(var(--roof)*.16);transform:scaleX(-1) rotate(-12deg)}
 }
 /* Reserve the entrance scroll range before images or deferred scripts finish loading. */
 html.entry-animated .neighborhood-fan .entry-journey{height:calc(var(--entry-height) + 150svh)}
