@@ -35,3 +35,9 @@ Local preview: `http://127.0.0.1:8000/blog/programajanlo/` using `npm run dev`. 
 At the owner’s explicit request, removed DetActive from both web and PDF recommendations; the remaining list has ten programs. Production release is now authorized. A clean managed worktree based on current origin/main preserves concurrent published work and unrelated local changes.
 
 Release QA: removed all DetActive text and hyperlinks from the ten-program HTML/PDF; six PDF pages rendered and inspected. Clean-worktree JavaScript syntax and whitespace checks passed. Supplementary Chrome checks at 375×667, 820×1180 and desktop found no horizontal overflow or warning/error logs. Blog card reflects ten programs. Actual iPhone 17 Pro Simulator Safari initial rendering checked; native interaction still unavailable.
+
+## Header logo refinement — 2026-10-02
+
+Replace the top-left text wordmark with the existing `assets/logo.png` used by the homepage. Keep a 48px high, aspect-preserved logo linked to the homepage, visible on small phones as well. Header action links and all recommendation content remain unchanged; update the HTML builder to preserve the change on rebuild.
+
+Header QA: actual iPhone 17 Pro iOS 26.4 Simulator Safari initial rendering inspected. Chrome at 320px, 375px, 820px and desktop: logo loaded at its natural aspect ratio, stays visible, no header overlap or horizontal overflow, no console warnings/errors. Shared syntax and whitespace checks pass.
