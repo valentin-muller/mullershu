@@ -108,3 +108,24 @@ html.entry-animated .neighborhood-fan .entry-journey{height:calc(var(--entry-hei
 html.entry-animated .neighborhood-fan .entry-stage{position:sticky;top:0;height:var(--entry-height)}
 html.entry-animated .neighborhood-fan .entry-door{display:block;position:absolute;inset:0;opacity:0;pointer-events:none;transform-origin:50% 62%;z-index:10;will-change:transform,opacity}
 html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolute;inset:0;background:var(--private);opacity:0;pointer-events:none;z-index:11}
+
+/* Each mobile illustration is composed for its exposed area, not the hidden card tail. */
+.place-card picture{display:block;width:100%;height:100%}
+@media(max-width:760px){
+ .place-card{height:calc(var(--roof)*.36 + 55px);clip-path:url(#ticket-curve)}
+ .place-card picture{position:absolute;inset:0;height:100%}
+ .place-lake{height:calc(var(--roof)*.32 + 26px)}
+ .place-promenade,.place-plazs{height:calc(var(--roof)*.33 + 26px)}
+ .neighborhood-fan .house-art .place-card img{object-position:50% 58%;clip-path:none}
+ .neighborhood-fan .house-art .place-lake img{object-position:50% 68%}
+ .neighborhood-fan .house-art .place-garden img{object-position:48% 65%}
+ .neighborhood-fan .house-art .place-promenade img{object-position:50% 67%}
+ .neighborhood-fan .house-art .place-plazs img{object-position:50% 62%}
+ .place-card::after{background:linear-gradient(180deg,#101e29d9 0,#15232c99 46px,transparent 82px),linear-gradient(90deg,#0001,transparent 25%,#fff1 65%,transparent)}
+ .neighborhood-fan .place-caption{top:7px;gap:3px;left:4px;right:4px;text-shadow:0 1px 3px #07121dcc}
+ .place-time{font-size:12px;line-height:1.25;font-weight:600;letter-spacing:.01em;text-transform:none}
+ .place-name{font-size:clamp(27px,7.2vw,34px);line-height:1.05}
+ .place-lake .place-name{font-size:clamp(36px,10vw,44px)}
+ .place-promenade .place-name{font-size:clamp(29px,7.8vw,36px)}
+ .place-plazs .place-name{font-size:clamp(30px,8.3vw,38px)}
+}
