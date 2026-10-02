@@ -60,9 +60,9 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-h
  .neighborhood-fan .house-title h1{font-size:clamp(52px,16vw,90px);line-height:1;white-space:nowrap}
  .neighborhood-fan .house-art{top:76px;width:100%;height:calc(100svh - 116px)}
  .place-card{transform-origin:50% 50%;filter:drop-shadow(2px 4px 3px #35251526)}
- .place-lake{left:23%;top:0;width:54%;height:calc(var(--roof)*.43 + 64px);--tilt:-2deg;z-index:1}
- .place-promenade{left:7%;top:calc(var(--roof)*.32);width:42%;height:calc(var(--roof)*.52 + 54px);--tilt:-4deg;z-index:2}
- .place-plazs{left:51%;top:calc(var(--roof)*.32);width:42%;height:calc(var(--roof)*.52 + 54px);--tilt:4deg;z-index:2}
+ .place-lake{left:32.5%;top:0;width:35%;height:calc(var(--roof)*.43 + 64px);--tilt:-2deg;z-index:1}
+ .place-promenade{left:16.5%;top:calc(var(--roof)*.32);width:35%;height:calc(var(--roof)*.52 + 54px);--tilt:-4deg;z-index:2}
+ .place-plazs{left:48.5%;top:calc(var(--roof)*.32);width:35%;height:calc(var(--roof)*.52 + 54px);--tilt:4deg;z-index:2}
  .place-tower{left:3%;top:calc(var(--roof)*.65);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:-6deg;z-index:3}
  .place-garden{left:32.5%;top:calc(var(--roof)*.63);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:0deg;z-index:4}
  .place-pier{left:62%;top:calc(var(--roof)*.65);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:6deg;z-index:3}
@@ -153,8 +153,8 @@ html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolut
  .neighborhood-fan .house-art .fan-house{bottom:-10px}
  .neighborhood-fan .place-caption{top:5px;gap:2px}
  .neighborhood-fan .place-name{font-size:clamp(29px,7.8vw,34px);line-height:1}
- .neighborhood-fan .place-lake .place-name{font-size:clamp(36px,9.5vw,42px)}
- .neighborhood-fan .place-promenade .place-name{font-size:clamp(29px,7.8vw,34px)}
+ .neighborhood-fan .place-lake .place-name{font-size:min(9vw,40px)}
+ .neighborhood-fan .place-promenade .place-name{font-size:min(6.5vw,29px)}
  .neighborhood-fan .place-plazs .place-name{font-size:clamp(34px,9vw,40px)}
  .neighborhood-fan .place-time{font-size:13px;line-height:1.25;letter-spacing:.015em}
  .place-card::after{background:linear-gradient(180deg,#101e29db 0,#15232c8c 40px,transparent 68px),linear-gradient(90deg,#0001,transparent 25%,#fff1 65%,transparent)}
