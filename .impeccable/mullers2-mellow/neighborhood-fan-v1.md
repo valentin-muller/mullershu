@@ -114,3 +114,7 @@ Browser screenshots reviewed at exact CSS sizes 360x640, 390x664, 390x844, 430x9
 
 ### Landmark label polish — 2026-10-02
 Owner approved the mobile art and requested more readable PLÁZS, Víztorony and walking times. PLÁZS uses local Sora capitals (23px mobile,28px desktop); Víztorony retains Pinyon Script with a light .25px stroke and larger30–35px mobile size. All walking times use13px Work Sans on a quiet dark label. Layout, imagery, copy and camera code untouched. Screenshots reviewed at360x640,390x664 and1440x1100; no horizontal overflow, all walking times13px. CSS detector and diff checks pass.
+
+
+### Unified lettering correction — 2026-10-02
+Owner rejected the isolated sans-serif PLÁZS title and boxed walking times. Every destination returns to the same Pinyon Script family with consistent slight stroke, enlarged lower-row names and restrained shadow. Display name Plázs uses normal capitalization to avoid ornate uppercase tangles; official uppercase brand remains in accessible descriptions. Walking times retain13px, without boxes; a smooth top photo shade provides contrast. Approved image/layout/camera remain. Mobile390x844 and360x640, desktop1440x1100 checked; all six computed title families match.
