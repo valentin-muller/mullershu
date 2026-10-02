@@ -8,6 +8,7 @@
 <link rel="preload" href="assets/pinyon-script.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="location.css?v=framing9">
 <link rel="stylesheet" href="desktop.css?v=foliage12" media="(min-width:1100px), (min-width:761px) and (min-aspect-ratio:4/3)">
+<link rel="stylesheet" href="booking.css?v=calendar1"><script src="booking.js?v=calendar1" defer></script>
 <link rel="stylesheet" href="entrance.css"><script src="entrance.js?v=entrance-repair1" defer></script>
 <script src="mellow.js" defer></script><script src="salt.js" defer></script><script src="../../assets/consent.js" defer></script>
 </head>
@@ -94,8 +95,58 @@
 <a href="#vege" class="salt-discover">A mi hétvégénk <svg><use href="#down"/></svg></a>
 </section>
 
-<section class="ending" id="vege"><a class="restart" href="#haz">Vissza az elejére <svg><use href="#arrow"/></svg></a><h2>Melyik hétvége<br>legyen a tiétek?</h2><a class="end-book" href="../../blog/hamarosan.html" data-booking-url="https://ibe.sabeeapp.com/v3/p/Müllers-Panzió-Siófok?p=a81c8f0208486761&amp;lang=Hu">Időpontok hamarosan <svg><use href="#arrow"/></svg></a><p>Online foglalás hamarosan.</p></section>
+<section class="ending booking-ending" id="vege" aria-labelledby="booking-title">
+<a class="restart" href="#haz">Vissza az elejére <svg><use href="#arrow"/></svg></a>
+<div class="booking-layout">
+<div class="booking-intro">
+<h2 id="booking-title">Melyik hétvége<br>legyen a tiétek?</h2>
+<p>Válasszatok egy érkezési napot. A részleteket személyesen egyeztetjük veletek.</p>
+<p class="booking-personal">Egy név, egy dátum, egy közös hétvége. Hagyjátok meg az elérhetőségeteket; mi felvesszük veletek a kapcsolatot.</p>
+</div>
+<div class="booking-calendar-wrap">
+<div class="booking-calendar" hidden>
+<p class="booking-demo-label">Bemutató · Mintaidőpontok</p>
+<div class="booking-calendar-header">
+<button class="booking-month-control" data-month="-1" type="button" aria-label="Előző hónap" disabled><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+<h3 id="booking-month" aria-live="polite" aria-atomic="true"></h3>
+<button class="booking-month-control" data-month="1" type="button" aria-label="Következő hónap" disabled><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+</div>
+<p class="booking-status" role="status" aria-live="polite"></p>
+<button class="booking-retry" type="button" hidden>Újrapróbálás</button>
+<div class="booking-weekdays" aria-hidden="true"><abbr title="Hétfő">H</abbr><abbr title="Kedd">K</abbr><abbr title="Szerda">Sze</abbr><abbr title="Csütörtök">Cs</abbr><abbr title="Péntek">P</abbr><abbr title="Szombat">Szo</abbr><abbr title="Vasárnap">V</abbr></div>
+<p class="booking-sr-only" id="booking-keys">A nyílbillentyűkkel léphettek a napok között. Page Up és Page Down: hónapváltás. Enter: érkezési nap kiválasztása.</p>
+<div class="booking-days" role="group" aria-describedby="booking-keys booking-data-note"></div>
+<div class="booking-legend" aria-hidden="true"><span><i></i>Választható</span><span><i class="is-unavailable"></i>Nem választható</span></div>
+</div>
+<p class="booking-data-note" id="booking-data-note"></p>
+<div class="booking-no-script booking-fallback"><p>Az időpontot személyesen is egyeztethetitek velünk.</p><a href="tel:+36204131146">Hívjatok: +36 20 413 1146</a><br><a href="mailto:mullers106@gmail.com">Írjatok nekünk</a></div>
+</div>
+</div>
+</section>
 </main>
+<dialog id="booking-dialog" class="booking-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-intro" data-clarity-mask="true">
+<div class="booking-dialog-inner">
+<button class="booking-close" type="button" aria-label="Adatlap bezárása"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+<h2 id="inquiry-title" tabindex="-1">A ti hétvégétek</h2>
+<p class="inquiry-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm-2 5h18M8 2v4m8-4v4"/></svg><span class="inquiry-date-label"></span></p>
+<p class="inquiry-intro" id="inquiry-intro">Hagyjátok meg az elérhetőségeteket, és személyesen egyeztetünk veletek.</p>
+<form class="inquiry-form" novalidate>
+<p class="inquiry-disclosure inquiry-demo-note">Bemutató: az adatokat nem küldjük el és nem tároljuk. Használjatok kitalált adatokat.</p>
+<div class="inquiry-fields">
+<div class="inquiry-field"><label for="inquiry-name">Teljes név</label><input id="inquiry-name" name="name" autocomplete="name" maxlength="120" required aria-describedby="inquiry-error-name"><p class="inquiry-error" id="inquiry-error-name"></p></div>
+<div class="inquiry-field"><label for="inquiry-address">Lakcím</label><textarea id="inquiry-address" name="address" rows="2" autocomplete="street-address" maxlength="300" required aria-describedby="inquiry-address-hint inquiry-error-address"></textarea><p class="inquiry-hint" id="inquiry-address-hint">Irányítószám, település, utca és házszám.</p><p class="inquiry-error" id="inquiry-error-address"></p></div>
+<div class="inquiry-field"><label for="inquiry-phone">Telefonszám</label><input id="inquiry-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" required aria-describedby="inquiry-error-phone"><p class="inquiry-error" id="inquiry-error-phone"></p></div>
+<div class="inquiry-field"><label for="inquiry-email">E-mail-cím</label><input id="inquiry-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required aria-describedby="inquiry-error-email"><p class="inquiry-error" id="inquiry-error-email"></p></div>
+<div class="inquiry-field"><label for="inquiry-guests">Hány fővel érkeznétek?</label><input id="inquiry-guests" name="guests" type="number" inputmode="numeric" min="1" max="999" step="1" required aria-describedby="inquiry-error-guests"><p class="inquiry-error" id="inquiry-error-guests"></p></div>
+</div>
+<button class="inquiry-submit" type="submit"><span>Érdeklődés küldése</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+<p class="inquiry-feedback" role="alert"></p>
+<p class="inquiry-disclosure">Ez érdeklődés, nem végleges foglalás. <a href="../../adatkezeles.html" target="_blank" rel="noopener">Adatkezelési tájékoztató</a></p>
+
+</form>
+<div class="inquiry-result" hidden><h3 tabindex="-1"></h3><p></p><button type="button" class="inquiry-submit">Vissza a naptárhoz <svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
+</div>
+</dialog>
 <footer><a href="../../">Müller's · Siófok</a><button id="motion-toggle" type="button" hidden>Animáció kikapcsolása</button><a href="../../adatkezeles.html">Adatkezelés</a></footer>
 </body>
 </html>
