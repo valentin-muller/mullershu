@@ -60,9 +60,9 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-h
  .neighborhood-fan .house-title h1{font-size:clamp(52px,16vw,90px);line-height:1;white-space:nowrap}
  .neighborhood-fan .house-art{top:76px;width:100%;height:calc(100svh - 116px)}
  .place-card{transform-origin:50% 50%;filter:drop-shadow(2px 4px 3px #35251526)}
- .place-lake{left:18%;top:0;width:64%;height:calc(var(--roof)*.43 + 64px);--tilt:-2deg;z-index:1}
- .place-promenade{left:3%;top:calc(var(--roof)*.32);width:50%;height:calc(var(--roof)*.52 + 54px);--tilt:-4deg;z-index:2}
- .place-plazs{left:47%;top:calc(var(--roof)*.32);width:50%;height:calc(var(--roof)*.52 + 54px);--tilt:4deg;z-index:2}
+ .place-lake{left:21%;top:0;width:58%;height:calc(var(--roof)*.43 + 64px);--tilt:-2deg;z-index:1}
+ .place-promenade{left:5%;top:calc(var(--roof)*.32);width:46%;height:calc(var(--roof)*.52 + 54px);--tilt:-4deg;z-index:2}
+ .place-plazs{left:49%;top:calc(var(--roof)*.32);width:46%;height:calc(var(--roof)*.52 + 54px);--tilt:4deg;z-index:2}
  .place-tower{left:3%;top:calc(var(--roof)*.65);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:-6deg;z-index:3}
  .place-garden{left:32.5%;top:calc(var(--roof)*.63);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:0deg;z-index:4}
  .place-pier{left:62%;top:calc(var(--roof)*.65);width:35%;height:calc(var(--roof)*.5 + 40px);--tilt:6deg;z-index:3}
