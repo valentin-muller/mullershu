@@ -141,3 +141,23 @@ html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolut
  .neighborhood-fan .place-caption{top:6px;gap:3px}
  .place-card::after{background:linear-gradient(180deg,#101e29ed 0,#15232cb3 47px,transparent 86px),linear-gradient(90deg,#0001,transparent 25%,#fff1 65%,transparent)}
 }
+
+/* Safari-first balance: spend the usable height on visible images, not empty margins. */
+@media(max-width:760px){
+ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ body.neighborhood-fan{--roof:calc(100svh - 106px - 62vw)}
+ .neighborhood-fan .header{height:62px;padding:8px 16px}
+ .neighborhood-fan .house-title{top:3px}
+ .neighborhood-fan .house-title h1{font-size:clamp(52px,15.4vw,82px)}
+ .neighborhood-fan .house-art{top:62px;height:calc(100svh - 106px)}
+ .neighborhood-fan .house-art .fan-house{bottom:-10px}
+ .neighborhood-fan .place-caption{top:5px;gap:2px}
+ .neighborhood-fan .place-name{font-size:clamp(29px,7.8vw,34px);line-height:1}
+ .neighborhood-fan .place-lake .place-name{font-size:clamp(36px,9.5vw,42px)}
+ .neighborhood-fan .place-promenade .place-name{font-size:clamp(29px,7.8vw,34px)}
+ .neighborhood-fan .place-plazs .place-name{font-size:clamp(34px,9vw,40px)}
+ .neighborhood-fan .place-time{font-size:13px;line-height:1.25;letter-spacing:.015em}
+ .place-card::after{background:linear-gradient(180deg,#101e29db 0,#15232c8c 40px,transparent 68px),linear-gradient(90deg,#0001,transparent 25%,#fff1 65%,transparent)}
+ .neighborhood-fan .enter{bottom:4px;min-height:34px}
+ .neighborhood-fan .house-art .place-lake img{object-position:50% 75%}
+}
