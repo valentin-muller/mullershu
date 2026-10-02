@@ -29,20 +29,20 @@
  .neighborhood-fan .entry-chapters{display:none}
  .desktop-garden{display:block;position:absolute;inset:0;pointer-events:none}
  .garden-back{z-index:0}
- .garden-front{z-index:4}
+ .garden-front{z-index:3}
  .desktop-garden .sprig{position:absolute;display:block;background:url(assets/desktop/olive-blossom-v1.webp) center/contain no-repeat;filter:drop-shadow(3px 9px 6px #35251516)}
- .edge-left{left:-9%;top:8%;width:30%;height:85%;transform:rotate(-24deg)}
- .edge-right{right:-9%;top:11%;width:30%;height:85%;transform:scaleX(-1) rotate(-24deg)}
- .crown-left{left:13%;top:0;width:26%;height:65%;transform:rotate(-20deg)}
- .crown-right{right:13%;top:0;width:26%;height:65%;transform:scaleX(-1) rotate(-20deg)}
- .base-left{left:9%;bottom:-1%;width:30%;height:49%;transform:rotate(-42deg)}
- .base-right{right:9%;bottom:-1%;width:30%;height:49%;transform:scaleX(-1) rotate(-42deg)}
+ .edge-left{left:-8%;top:9%;width:29%;height:83%;transform:rotate(-21deg)}
+ .edge-right{right:-8%;top:15%;width:28%;height:79%;transform:scaleX(-1) rotate(-29deg)}
+ .crown-left{left:11%;top:1%;width:27%;height:66%;transform:rotate(-12deg)}
+ .crown-right{right:12%;top:3%;width:24%;height:62%;transform:scaleX(-1) rotate(-26deg)}
+ .base-left{left:13%;bottom:0;width:27%;height:44%;transform:rotate(-34deg)}
+ .base-right{right:8%;bottom:3%;width:28%;height:41%;transform:scaleX(-1) rotate(-49deg)}
  @media(max-height:750px){
   body.neighborhood-fan{--fan-top:162px;--scene-height:calc(var(--desktop-height) - var(--fan-top) - 72px)}
   .neighborhood-fan .hero-sidecopy{top:calc(var(--desktop-offset) + 96px)}
   .neighborhood-fan .enter{bottom:calc(var(--desktop-offset) + 20px)}
-  .edge-left{left:-12%}
-  .edge-right{right:-12%}
+  .edge-left{left:-10%}
+  .edge-right{right:-10%}
   .neighborhood-fan .house-title{top:calc(var(--desktop-offset) + 14px)}
   .neighborhood-fan .house-wordmark{width:300px}
   .neighborhood-fan .place-name{font-size:min(34px,calc(var(--scene-height)*.08))}
