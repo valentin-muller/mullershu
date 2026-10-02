@@ -1,0 +1,138 @@
+[
+  {
+    "id": "varos",
+    "title": "Siófok, amit együtt fedeztek fel",
+    "emoji": "🏙️",
+    "intro": "Kezdjétek a belvárosban: kilátás, egy jó séta és az első közös csoportkép. Ezekből könnyen összeáll egy érkezés utáni délután.",
+    "image": "viztorony",
+    "alt": "A siófoki Víztorony és a körülötte fekvő belváros",
+    "items": [
+      {
+        "name": "Víztorony és kiállítások",
+        "emoji": "🗼",
+        "meta": "Siófok · kilátó és múzeum",
+        "text": "Nézzétek meg felülről a várost, aztán fedezzétek fel Varga Imre alkotásait és Siófok történetét! A panoráma jó indítás egy balatoni kiránduláshoz, a kiállítások pedig tartalmat adnak a látogatásnak.",
+        "note": "A lift a középső kiállítószintre érkezik; a kilátóhoz és a felső tárlathoz lépcsők is vezetnek. A csoportos belépést előre egyeztessétek.",
+        "url": "https://www.konyvtar-siofok.hu/viztorony/",
+        "link": "Víztorony: jegyek és nyitvatartás"
+      },
+      {
+        "name": "Rózsakert és parti séta",
+        "emoji": "🌹",
+        "meta": "Siófok · szabadtéri program",
+        "text": "A kikötő melletti Rózsakertben jöhet egy ráérős séta, közös fotó és egy kis szusszanás a Balaton mellett. Jó választás két belépős program közé, vagy az első nap levezetésére.",
+        "note": "Saját játékötletünk: kis csapatokban keressetek három érdekes növényt és egy köztéri alkotást, majd mutassátok meg egymásnak, mit találtatok!",
+        "url": "https://siofok.hu/latnivalok/siofok-latnivalok/rozsakert-2",
+        "link": "Rózsakert: helyszín és látnivalók"
+      }
+    ]
+  },
+  {
+    "id": "viz",
+    "title": "Irány a Balaton!",
+    "emoji": "⛵",
+    "intro": "A tó akkor is élmény, ha nem strandolós az idő. Egy hajóút vagy egy vizes felfedezőprogram új nézőpontból mutatja meg a Balatont.",
+    "items": [
+      {
+        "name": "BAHART sétahajózás",
+        "emoji": "🚢",
+        "meta": "Siófoki hajóállomás · szezonális",
+        "text": "Szálljatok hajóra, és nézzétek meg a partot a vízről! Az egyórás sétahajózás után ugyanabba a kikötőbe érkeztek vissza, így egyszerűen beilleszthető a városi programok mellé.",
+        "note": "Őszi lehetőség: a BAHART jelenlegi tájékoztatója szerint 2026. október 25-ig naponta indulnak sétahajók Siófokról. Az adott dátum indulását és a csoport feltételeit a szolgáltatónál ellenőrizzétek.",
+        "url": "https://bahart.hu/hu/setahajo-0",
+        "link": "BAHART: aktuális hajózási lehetőségek"
+      },
+      {
+        "name": "Vizek Háza élménypark",
+        "emoji": "💧",
+        "meta": "Siófok–Zamárdi határa · szezonális",
+        "text": "Hogyan jut el hozzánk az ivóvíz, és miért fontos vigyázni rá? A víz útját bemutató sétány és a vizes játszótér élménnyé teszi a környezeti nevelést. Jó téma egy természetismereti kiránduláshoz.",
+        "note": "Szezonra tervezzétek: a közzétett 2026-os nyitvatartás szeptember 30-ig tart. Októberi vagy későbbi látogatáshoz, illetve a következő szezonra kérjetek külön visszaigazolást: +36 30 321 8358.",
+        "url": "https://www.drv.hu/vizek-haza",
+        "link": "Vizek Háza: szezon és időpont-egyeztetés"
+      }
+    ]
+  },
+  {
+    "id": "termeszet",
+    "title": "Egy kis természet, sok közös élmény",
+    "emoji": "🌿",
+    "intro": "Ha a tanterem helyett most az erdő, a madarak és az állatok mesélnek, a tanulás is más ritmust kap.",
+    "image": "toreki",
+    "alt": "Zöldellő táj és tavak a Töreki tanösvénynél",
+    "items": [
+      {
+        "name": "Töreki természetvédelmi tanösvény",
+        "emoji": "🥾",
+        "meta": "Siófok–Töreki · szabadtéri túra",
+        "text": "Tavak, rétek, erdők és madármegfigyelő torony: itt tényleg van mit felfedezni. A teljes tanösvény 8,5 km, de rövidebb sétát is választhattok, az osztály tempójához igazítva.",
+        "note": "Kényelmes túracipővel készüljetek, és előre válasszátok ki a bejárandó szakaszt. Saját feladatötletünk: gyűjtsetek megfigyeléseket a vizes élőhelyekről, majd készítsetek közös élménytérképet!",
+        "url": "https://www.bfnp.hu/hu/tanosveny/siofok-toreki-termeszetvedelmi-tanosveny",
+        "link": "Töreki: útvonal és tudnivalók"
+      },
+      {
+        "name": "Bella Állatpark",
+        "emoji": "🦙",
+        "meta": "Siófok · iskolai csoportoknak is",
+        "text": "Állatparki séta és állatsimogató, ahol a közös felfedezésé a főszerep. A Bella külön ajánlatot kínál óvodáknak és iskoláknak; lovaglásról, tevegelésről vagy más kiegészítő élményről külön érdeklődhettek.",
+        "note": "Ősztől tavaszig hétfőn szünnap van a jelenlegi tájékoztató szerint. A csoportárat, a választott programokat és az esetleges transzfert előre egyeztessétek.",
+        "url": "https://www.bellapuszta.hu/szolgaltatasok-ovodak-es-iskolak",
+        "link": "Bella: óvodai és iskolai programok"
+      }
+    ]
+  },
+  {
+    "id": "kaland",
+    "title": "Kaland, amiben mindenki hozzátesz",
+    "emoji": "🧩",
+    "intro": "Együtt megoldott feladvány vagy leküzdött akadály: ezekből lesznek azok a történetek, amelyeket még hazafelé is meséltek.",
+    "image": "kalandpark",
+    "alt": "Fák között vezető kötélpálya a Zamárdi Kalandparkban",
+    "items": [
+      {
+        "name": "Zamárdi Kalandpark",
+        "emoji": "🌳",
+        "meta": "Zamárdi · előzetes bejelentkezéssel",
+        "text": "Kötélpályák, csúszópályák és közös kihívások várnak a fák között. A park osztálykirándulásos ajánlatában csapatépítő pálya és tananyaghoz kapcsolható kincskeresés is szerepel.",
+        "note": "Fontos őszi változás: 2026. szeptember 1-től kizárólag hétvégén fogadnak csoportokat, előzetes bejelentkezéssel. A magassághoz illő pályákat és a választott programot egyeztessétek; az oktatás kötelező.",
+        "url": "https://zamardikalandpark.hu/osztalykirandulas/",
+        "link": "Kalandpark: osztálykirándulás egyeztetése"
+      }
+    ]
+  },
+  {
+    "id": "eso",
+    "title": "Esik? Legyen ez a B terv!",
+    "emoji": "☔",
+    "intro": "Ne az időjárás döntse el, milyen lesz a kirándulás. Válasszatok előre egy beltéri programot, és kérjetek hozzá csoportos időpontot.",
+    "items": [
+      {
+        "name": "Kálmán Imre Emlékház",
+        "emoji": "🎼",
+        "meta": "Siófok · beltéri kiállítás",
+        "text": "Ismerjétek meg az operettszerző életét a szülőházában! Az állandó tárlat mellé időszaki kiállítások társulnak. Zenei vagy helytörténeti témához érdemes a múzeumpedagógussal is egyeztetni.",
+        "note": "A jelenlegi őszi–tavaszi rendben hétfőn és vasárnap zárva tart. Tárlatvezetésről vagy foglalkozásról előzetesen érdeklődjetek.",
+        "url": "https://www.konyvtar-siofok.hu/kalman-imre-emlekhaz/",
+        "link": "Emlékház: látogatás és kapcsolat"
+      },
+      {
+        "name": "Siófoki Ásványmúzeum",
+        "emoji": "💎",
+        "meta": "Siófok · beltéri gyűjtemény",
+        "text": "A Kálmán Imre sétányon mintegy 3000 ásvány vár rátok. Egy földrajzi témájú kirándulásban különösen jó helye lehet ennek a színes, apró részletekkel teli gyűjteménynek.",
+        "note": "Kisebb kiállítótér: egy teljes osztály látogatásához előre kérjetek időpontot és egyeztessetek csoportbeosztást. Az aktuális nyitvatartást külön ellenőrizzétek.",
+        "url": "https://asvanymuzeum.hu/",
+        "link": "Ásványmúzeum: a gyűjtemény bemutatása"
+      },
+      {
+        "name": "Balatonföldvári Hajózástörténeti Látogatóközpont",
+        "emoji": "⚓",
+        "meta": "Balatonföldvár · külön utazással",
+        "text": "Hajó alakú épület, interaktív hajózástörténeti kiállítás és mozi: tartalmas kirándulás a Balaton történetéhez. Jó időben a kilátóval is kiegészíthetitek; a látogatóközpont akadálymentesített.",
+        "note": "A siófoki szállás mellé külön szervezzétek meg az oda-vissza utat. II. fokú viharjelzésnél a kilátótorony nem látogatható, a kiállítótermek viszont a szolgáltató tájékoztatója szerint igénybe vehetők.",
+        "url": "https://balatonfoldvarikilato.hu/",
+        "link": "Látogatóközpont: aktuális látogatási információk"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+# Local development files and offline rendering sources are not website assets.
+.git/
+.vercel/
+.env
+.env.*
+node_modules/
+.venv/
+__pycache__/
+**/*.pyc
+.DS_Store
+**/.DS_Store
+.claude/
+.vscode/
+.idea/
+.impeccable/
+**/.impeccable/
+/*.md
+mullers2-wellness/DESIGN.md
+mullers2-wellness/proba/DESIGN.md
+mullers2-wellness/proba/source/
+mullers2-wellness/koncepcio/DESIGN.md
