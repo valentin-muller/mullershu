@@ -129,3 +129,13 @@ html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolut
  .place-promenade .place-name{font-size:clamp(29px,7.8vw,36px)}
  .place-plazs .place-name{font-size:clamp(30px,8.3vw,38px)}
 }
+
+/* Clear landmark labels retain the handwritten character without ornate all-caps. */
+.neighborhood-fan .place-plazs .place-name{font-family:'Sora',sans-serif;font-size:28px;line-height:1.2;letter-spacing:.06em;font-weight:400}
+.neighborhood-fan .place-tower .place-name{-webkit-text-stroke:.25px currentColor}
+.neighborhood-fan .place-time{font-size:13px;line-height:1.35;font-weight:500;letter-spacing:.01em;text-transform:none;background:#10212dde;padding:2px 6px;border-radius:2px;text-shadow:none;color:#fff}
+@media(max-width:760px){
+ .neighborhood-fan .place-plazs .place-name{font-size:23px;line-height:1.28;letter-spacing:.07em}
+ .neighborhood-fan .place-tower .place-name{font-size:clamp(30px,8vw,35px);line-height:1.05}
+ .neighborhood-fan .place-caption{gap:4px}
+}

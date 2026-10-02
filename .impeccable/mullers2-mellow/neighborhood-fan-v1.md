@@ -110,3 +110,7 @@ Generated illustrations, not documentary photography. Built-in ImageGen edited t
 Source PNGs under ~/.codex/generated_images/01a0befc-3884-7f50-913d-9385165af6dc/: lake exec-73c6c753-66b3-4737-8fec-7f2131a576b5.png; tower exec-448300ca-c2d9-454a-b84a-9db86914c3ad.png; garden exec-4a5c3b39-e2a0-401b-84cf-d21b7f298bee.png; promenade exec-150993d6-2211-40b2-901f-c6151aadbf85.png; plazs exec-dade3c0b-ea9a-46c3-b20c-363c77a2dcca.png; pier exec-3b2123ce-ff8f-4e06-98e0-d986ee91ba0a.png. Browser assets: assets/neighborhood/{name}-mobile-v2.webp.
 
 Browser screenshots reviewed at exact CSS sizes 360x640, 390x664, 390x844, 430x932; all six times computed at12px, full house and CTA visible, no horizontal overflow. At390x664 first40px scroll gives zoom1.00084 (no shrinking); scroll664 shows doorway opacity1. Desktop1440x1100 still selects original images. One batched correction removes exposed blank card tails. Physical iPhone not tested. Screenshots retained locally under output/mobile-art2 (not published).
+
+
+### Landmark label polish — 2026-10-02
+Owner approved the mobile art and requested more readable PLÁZS, Víztorony and walking times. PLÁZS uses local Sora capitals (23px mobile,28px desktop); Víztorony retains Pinyon Script with a light .25px stroke and larger30–35px mobile size. All walking times use13px Work Sans on a quiet dark label. Layout, imagery, copy and camera code untouched. Screenshots reviewed at360x640,390x664 and1440x1100; no horizontal overflow, all walking times13px. CSS detector and diff checks pass.
