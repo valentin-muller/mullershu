@@ -1,5 +1,5 @@
 # Local development files and offline rendering sources are not website assets.
-.git/
+.git
 .vercel/
 .env
 .env.*
