@@ -130,12 +130,14 @@ html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolut
  .place-plazs .place-name{font-size:clamp(30px,8.3vw,38px)}
 }
 
-/* Clear landmark labels retain the handwritten character without ornate all-caps. */
-.neighborhood-fan .place-plazs .place-name{font-family:'Sora',sans-serif;font-size:28px;line-height:1.2;letter-spacing:.06em;font-weight:400}
-.neighborhood-fan .place-tower .place-name{-webkit-text-stroke:.25px currentColor}
-.neighborhood-fan .place-time{font-size:13px;line-height:1.35;font-weight:500;letter-spacing:.01em;text-transform:none;background:#10212dde;padding:2px 6px;border-radius:2px;text-shadow:none;color:#fff}
+/* One handwritten family for every destination; contrast belongs to the photo. */
+.neighborhood-fan .place-name{-webkit-text-stroke:.2px currentColor;text-shadow:0 1px 2px #07121d,0 2px 6px #07121d80}
+.neighborhood-fan .place-time{font-size:13px;line-height:1.35;font-weight:600;letter-spacing:.02em;text-transform:none;color:#fff;text-shadow:0 1px 3px #07121d}
 @media(max-width:760px){
- .neighborhood-fan .place-plazs .place-name{font-size:23px;line-height:1.28;letter-spacing:.07em}
- .neighborhood-fan .place-tower .place-name{font-size:clamp(30px,8vw,35px);line-height:1.05}
- .neighborhood-fan .place-caption{gap:4px}
+ .neighborhood-fan .place-name{font-size:clamp(30px,8vw,35px);line-height:1.05}
+ .neighborhood-fan .place-lake .place-name{font-size:clamp(37px,10vw,44px)}
+ .neighborhood-fan .place-promenade .place-name{font-size:clamp(30px,8vw,35px)}
+ .neighborhood-fan .place-plazs .place-name{font-size:clamp(36px,10vw,43px)}
+ .neighborhood-fan .place-caption{top:6px;gap:3px}
+ .place-card::after{background:linear-gradient(180deg,#101e29ed 0,#15232cb3 47px,transparent 86px),linear-gradient(90deg,#0001,transparent 25%,#fff1 65%,transparent)}
 }
