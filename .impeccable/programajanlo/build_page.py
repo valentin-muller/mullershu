@@ -25,7 +25,9 @@ head='''<!doctype html>
 '''
 page=head+f'''  <header class="blog-top-bar">
     <div class="blog-top-bar-inner">
-      <a class="blog-top-bar-title" href="../../index.html" aria-label="Müller's Panzió főoldal">Müller's</a>
+      <a class="blog-top-bar-logo" href="../../index.html" aria-label="Müller's Panzió főoldal">
+        <img src="../../assets/logo.png" width="1289" height="1078" alt="Müller's Panzió Siófok logó">
+      </a>
       <nav class="blog-top-bar-actions" aria-label="Cikk navigáció">
         <a class="blog-top-btn" href="../index.html">← Blog</a>
         <a class="blog-top-btn blog-top-btn-primary" href="{e(mail)}">Ajánlatkérés</a>
