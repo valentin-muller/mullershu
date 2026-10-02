@@ -161,3 +161,39 @@ html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolut
  .neighborhood-fan .enter{bottom:4px;min-height:34px}
  .neighborhood-fan .house-art .place-lake img{object-position:50% 75%}
 }
+
+/* The exact Pinyon outlines include the swashes in their responsive image bounds. */
+.neighborhood-fan .house-wordmark{display:block;width:420px;max-width:100%;height:auto;margin:0 auto}
+@media(max-width:760px){
+ body.neighborhood-fan{--roof:calc(100svh - 76px - 62vw)}
+ .neighborhood-fan .house-title{left:82px;right:28px;top:7px}
+ .neighborhood-fan .house-wordmark{width:min(54vw,260px);margin:0 0 0 auto}
+ .neighborhood-fan .house-art{height:calc(100svh - 76px)}
+ .neighborhood-fan .house-art .fan-house{bottom:-4px}
+ .neighborhood-fan .house-art .place-tower img{transform:translateY(8px) scale(1.12)}
+ .neighborhood-fan .house-art .place-promenade img,.neighborhood-fan .house-art .place-plazs img{transform:translateY(-8px) scale(1.12)}
+ .neighborhood-fan .enter{top:86px;bottom:auto;left:auto;right:12px;width:min(110px,calc(32.5vw - 24px));min-height:44px;flex-direction:column;align-items:flex-end;text-align:right;font-size:11px;line-height:1.45;gap:5px}
+ .neighborhood-fan .foliage-right{top:calc(var(--roof)*.26)}
+}
+/* Laptop and wide-screen fan: keep the full opening within the usable viewport. */
+@media(min-width:1100px){
+ body.neighborhood-fan{--entry-height:100svh;--fan-top:clamp(180px,26svh,270px)}
+ .neighborhood-fan .house-title{top:min(7svh,80px)}
+ .neighborhood-fan .house-wordmark{width:min(420px,44svh,40vw)}
+ .neighborhood-fan .hero-sidecopy{top:calc(var(--fan-top) - 62px)}
+ .neighborhood-fan .hero-sidecopy .house-promise{font-size:16px}
+ .neighborhood-fan .hero-sidecopy .house-location{font-size:13px}
+ .neighborhood-fan .house-art{top:var(--fan-top);width:min(1240px,calc(100vw - 80px));height:calc(100svh - var(--fan-top) - 118px)}
+ .neighborhood-fan .place-card{width:15.2%;height:calc((100svh - var(--fan-top) - 154px)*.74);top:0;z-index:1}
+ .neighborhood-fan .place-tower{left:2%;top:24px;--tilt:-7deg}
+ .neighborhood-fan .place-garden{left:18%;top:10px;--tilt:-4deg}
+ .neighborhood-fan .place-lake{left:34%;--tilt:-1.5deg}
+ .neighborhood-fan .place-promenade{left:50%;--tilt:1.5deg}
+ .neighborhood-fan .place-plazs{left:66%;top:10px;--tilt:4deg}
+ .neighborhood-fan .place-pier{left:82%;top:24px;--tilt:7deg}
+ .neighborhood-fan .place-name{font-size:clamp(30px,2.5vw,39px)}
+ .neighborhood-fan .place-promenade .place-name{font-size:clamp(26px,2.2vw,35px)}
+ .neighborhood-fan .house-art .fan-house{top:auto;bottom:-10px;width:min(530px,44%,calc((100svh - var(--fan-top) - 86px)*.75))}
+ .neighborhood-fan .enter{bottom:62px;font-size:14px}
+ .neighborhood-fan .walking-note{bottom:42px}
+}
