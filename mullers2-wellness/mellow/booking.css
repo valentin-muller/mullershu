@@ -88,3 +88,17 @@
  .booking-dialog h2{font-size:56px}
 }
 @media(prefers-reduced-motion:reduce){.booking-dialog[open]{animation:none}}
+
+.booking-date-selection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.booking-date-control{padding:10px 6px 12px;min-height:64px;text-align:left;background:none;border:0;border-bottom:1px solid #c3b49e;color:var(--ink);font:400 14px/1.5 'Work Sans',sans-serif;cursor:pointer}
+.booking-date-control span,.booking-date-control strong{display:block}
+.booking-date-control span{color:#655746;font-size:12px}
+.booking-date-control strong{font-weight:500;font-size:15px}
+.booking-date-control[aria-pressed=true]{border-bottom:2px solid var(--ink)}
+.booking-date-control:disabled{cursor:default}
+.booking-date-control:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.booking-selection-hint{font-size:13px;line-height:1.5;color:#655746;margin:0 0 14px}
+.booking-day.is-in-range{background:#e7dccb80;border-radius:8px}
+.booking-day.is-arrival,.booking-day.is-departure{background:var(--ink);color:var(--cream)}
+.booking-day.is-arrival::before,.booking-day.is-departure::before{display:none}
+.booking-dialog .inquiry-date-label{white-space:pre-line;font-size:14px;line-height:1.65}

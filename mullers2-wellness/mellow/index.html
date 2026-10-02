@@ -8,7 +8,7 @@
 <link rel="preload" href="assets/pinyon-script.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="location.css?v=framing9">
 <link rel="stylesheet" href="desktop.css?v=foliage12" media="(min-width:1100px), (min-width:761px) and (min-aspect-ratio:4/3)">
-<link rel="stylesheet" href="booking.css?v=calendar1"><script src="booking.js?v=calendar1" defer></script>
+<link rel="stylesheet" href="booking.css?v=calendar2"><script src="booking.js?v=calendar2" defer></script>
 <link rel="stylesheet" href="entrance.css"><script src="entrance.js?v=entrance-repair1" defer></script>
 <script src="mellow.js" defer></script><script src="salt.js" defer></script><script src="../../assets/consent.js" defer></script>
 </head>
@@ -100,12 +100,17 @@
 <div class="booking-layout">
 <div class="booking-intro">
 <h2 id="booking-title">Melyik hétvége<br>legyen a tiétek?</h2>
-<p>Válasszatok egy érkezési napot. A részleteket személyesen egyeztetjük veletek.</p>
-<p class="booking-personal">Egy név, egy dátum, egy közös hétvége. Hagyjátok meg az elérhetőségeteket; mi felvesszük veletek a kapcsolatot.</p>
+<p>Válasszátok ki az érkezés és a távozás napját. A részleteket személyesen egyeztetjük veletek.</p>
+<p class="booking-personal">Egy név, egy időszak, egy közös hétvége. Hagyjátok meg az elérhetőségeteket; mi felvesszük veletek a kapcsolatot.</p>
 </div>
 <div class="booking-calendar-wrap">
 <div class="booking-calendar" hidden>
 <p class="booking-demo-label">Bemutató · Mintaidőpontok</p>
+<div class="booking-date-selection" aria-label="A tartózkodás dátumai">
+<button type="button" class="booking-date-control" data-select="arrival" aria-pressed="true"><span>Érkezés</span><strong>Válasszatok napot</strong></button>
+<button type="button" class="booking-date-control" data-select="departure" aria-pressed="false" disabled><span>Távozás</span><strong>Válasszatok napot</strong></button>
+</div>
+<p class="booking-selection-hint" role="status" aria-live="polite">Először válasszátok ki az érkezés napját.</p>
 <div class="booking-calendar-header">
 <button class="booking-month-control" data-month="-1" type="button" aria-label="Előző hónap" disabled><svg aria-hidden="true"><use href="#arrow"/></svg></button>
 <h3 id="booking-month" aria-live="polite" aria-atomic="true"></h3>
@@ -114,7 +119,7 @@
 <p class="booking-status" role="status" aria-live="polite"></p>
 <button class="booking-retry" type="button" hidden>Újrapróbálás</button>
 <div class="booking-weekdays" aria-hidden="true"><abbr title="Hétfő">H</abbr><abbr title="Kedd">K</abbr><abbr title="Szerda">Sze</abbr><abbr title="Csütörtök">Cs</abbr><abbr title="Péntek">P</abbr><abbr title="Szombat">Szo</abbr><abbr title="Vasárnap">V</abbr></div>
-<p class="booking-sr-only" id="booking-keys">A nyílbillentyűkkel léphettek a napok között. Page Up és Page Down: hónapváltás. Enter: érkezési nap kiválasztása.</p>
+<p class="booking-sr-only" id="booking-keys">A nyílbillentyűkkel léphettek a napok között. Page Up és Page Down: hónapváltás. Enter: először az érkezési, majd a távozási nap kiválasztása.</p>
 <div class="booking-days" role="group" aria-describedby="booking-keys booking-data-note"></div>
 <div class="booking-legend" aria-hidden="true"><span><i></i>Választható</span><span><i class="is-unavailable"></i>Nem választható</span></div>
 </div>

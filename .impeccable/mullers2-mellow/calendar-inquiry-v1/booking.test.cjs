@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {dateOf, shiftDay, monthOf, shiftMonth, gridDays, validateFields, withinDeadline} = require('../../../mullers2-wellness/mellow/booking.js');
+const {dateOf, shiftDay, monthOf, shiftMonth, gridDays, validateFields, withinDeadline, stayAvailable} = require('../../../mullers2-wellness/mellow/booking.js');
 const valid = {name:'Teszt Vendég', address:'0000 Tesztváros, Példa utca 1.', phone:'+36 20 000 0000', email:'teszt@example.com', guests:'12'};
 test('rejects calendar rollover and accepts leap day', () => {
  assert.equal(dateOf('2026-02-29'), null);
@@ -44,4 +44,18 @@ test('closing cancels in-flight request and does not affect a subsequent request
  const second=new AbortController();
  assert.deepEqual(await withinDeadline(()=>Promise.resolve({inquiryId:'test-only'}),second),{inquiryId:'test-only'});
  assert.equal(second.signal.aborted,false);
+});
+
+test('stay requires a later departure and every occupied night, but not the checkout day',()=>{
+ const nights=new Set(['2026-10-07','2026-10-08']);
+ assert.equal(stayAvailable('2026-10-07','2026-10-09',nights),true);
+ assert.equal(stayAvailable('2026-10-08','2026-10-09',nights),true);
+ assert.equal(stayAvailable('2026-10-07','2026-10-10',nights),false);
+ for(const end of ['2026-10-07','2026-10-06','invalid']) assert.equal(stayAvailable('2026-10-07',end,nights),false);
+});
+test('stay range crosses month, year and DST boundaries without skipping unavailable nights',()=>{
+ const nights=new Set(['2026-12-31','2027-01-01']);
+ assert.equal(stayAvailable('2026-12-31','2027-01-02',nights),true);
+ assert.equal(stayAvailable('2026-12-31','2027-01-03',nights),false);
+ assert.equal(stayAvailable('2026-10-25','2026-10-27',new Set(['2026-10-25','2026-10-26'])),true);
 });

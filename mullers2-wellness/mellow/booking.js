@@ -18,6 +18,13 @@
     const count = Math.ceil((offset + days) / 7) * 7;
     return Array.from({length: count}, (_, i) => keyOf(new Date(month.getTime() + (i - offset) * DAY)));
   }
+  function stayAvailable(arrival, departure, nights) {
+    if (!dateOf(arrival) || !dateOf(departure) || departure <= arrival) return false;
+    for (let key = arrival; key < departure; key = shiftDay(key, 1)) {
+      if (!nights.has(key)) return false;
+    }
+    return true;
+  }
   function budapestToday() {
     const parts = new Intl.DateTimeFormat('en-CA', {timeZone:'Europe/Budapest', year:'numeric', month:'2-digit', day:'2-digit'}).formatToParts(new Date());
     const value = type => parts.find(part => part.type === type).value;
@@ -47,7 +54,7 @@
   }
   // Node-only export for date/validation checks; no browser global containing guest data.
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {dateOf, shiftDay, monthOf, shiftMonth, gridDays, validateFields, withinDeadline};
+    module.exports = {dateOf, shiftDay, monthOf, shiftMonth, gridDays, validateFields, withinDeadline, stayAvailable};
     return;
   }
   const section = document.querySelector('.booking-ending');
@@ -60,6 +67,9 @@
   const previous = calendar.querySelector('[data-month="-1"]');
   const next = calendar.querySelector('[data-month="1"]');
   const retry = calendar.querySelector('.booking-retry');
+  const arrivalControl = calendar.querySelector('[data-select="arrival"]');
+  const departureControl = calendar.querySelector('[data-select="departure"]');
+  const selectionHint = calendar.querySelector('.booking-selection-hint');
   const dialog = document.querySelector('#booking-dialog');
   const form = dialog.querySelector('.inquiry-form');
   const resultPanel = dialog.querySelector('.inquiry-result');
@@ -78,6 +88,9 @@
   const dateFormat = new Intl.DateTimeFormat('hu-HU', {timeZone:'UTC', year:'numeric', month:'long', day:'numeric', weekday:'long'});
   let month = firstMonth;
   let selected = null;
+  let departure = null;
+  let choosing = 'arrival';
+  let nights = new Set();
   let activeDay = null;
   let available = new Set();
   let sending = false;
@@ -86,7 +99,20 @@
   let sendController;
   let sendAttempt = 0;
 
-  function selectable(key) { return key >= today && key <= lastDate && available.has(key); }
+  function arrivalSelectable(key) { return key >= today && key < lastDate && available.has(key) && nights.has(key); }
+  function selectable(key) {
+    if (choosing === 'departure' && selected) return key <= lastDate && stayAvailable(selected, key, nights);
+    return arrivalSelectable(key);
+  }
+  const shortDateFormat = new Intl.DateTimeFormat('hu-HU', {timeZone:'UTC', month:'short', day:'numeric'});
+  function renderSelection() {
+    arrivalControl.setAttribute('aria-pressed', String(choosing === 'arrival'));
+    departureControl.setAttribute('aria-pressed', String(choosing === 'departure'));
+    departureControl.disabled = !selected;
+    arrivalControl.querySelector('strong').textContent = selected ? shortDateFormat.format(dateOf(selected)) : 'Válasszatok napot';
+    departureControl.querySelector('strong').textContent = departure ? shortDateFormat.format(dateOf(departure)) : 'Válasszatok napot';
+    selectionHint.textContent = choosing === 'arrival' ? 'Válasszátok ki az érkezés napját.' : departure ? 'Az időszak kijelölve. A dátumokat fent módosíthatjátok.' : 'Most válasszátok ki a távozás napját.';
+  }
   function dayButton(key) { return grid.querySelector(`[data-date="${key}"]`); }
   function focusDay(key) {
     if (grid.querySelector('[tabindex="0"]')) grid.querySelector('[tabindex="0"]').tabIndex = -1;
@@ -95,7 +121,8 @@
   }
   function render() {
     monthLabel.textContent = monthFormat.format(month);
-    grid.setAttribute('aria-label', `${monthLabel.textContent} – választható érkezési napok`);
+    renderSelection();
+    grid.setAttribute('aria-label', `${monthLabel.textContent} – választható ${choosing === 'arrival' ? 'érkezési' : 'távozási'} napok`);
     previous.disabled = month <= firstMonth;
     next.disabled = month >= lastMonth;
     const keys = gridDays(month);
@@ -111,11 +138,14 @@
       button.className = 'booking-day';
       button.disabled = !inMonth(key) || !selectable(key);
       button.tabIndex = key === focusKey ? 0 : -1;
-      button.setAttribute('aria-pressed', String(key === selected));
+      button.setAttribute('aria-pressed', String(key === selected || key === departure));
+      if (selected && departure && key > selected && key < departure && inMonth(key)) button.classList.add('is-in-range');
+      if (key === selected) button.classList.add('is-arrival');
+      if (key === departure) button.classList.add('is-departure');
       if (!inMonth(key)) { button.classList.add('is-outside'); button.setAttribute('aria-hidden', 'true'); }
       else if (key < today) button.setAttribute('aria-label', `${dateFormat.format(date)} – elmúlt nap`);
       else {
-        const state = selectable(key) ? 'választható érkezés' : 'nem választható';
+        const state = key === selected ? 'kijelölt érkezés' : key === departure ? 'kijelölt távozás' : selectable(key) ? `választható ${choosing === 'arrival' ? 'érkezés' : 'távozás'}` : 'nem választható';
         button.setAttribute('aria-label', `${dateFormat.format(date)} – ${state}${demo ? ' (minta)' : ''}`);
         if (!selectable(key)) button.classList.add('is-unavailable');
       }
@@ -132,12 +162,26 @@
     render();
     if (focus) grid.querySelector('[tabindex="0"]')?.focus({preventScroll:true});
   }
-  function openInquiry(key) {
+  function chooseDate(key) {
     if (!selectable(key)) return;
-    selected = key;
     activeDay = key;
+    if (choosing === 'arrival') {
+      selected = key;
+      departure = null;
+      choosing = 'departure';
+      render();
+      const firstDeparture = gridDays(month).find(day => selectable(day));
+      if (firstDeparture) focusDay(firstDeparture);
+      else departureControl.focus({preventScroll:true});
+      return;
+    }
+    departure = key;
     render();
-    dialog.querySelector('.inquiry-date-label').textContent = `Érkezés: ${dateFormat.format(dateOf(key))}`;
+    openInquiry();
+  }
+  function openInquiry() {
+    if (!selected || !departure || !stayAvailable(selected, departure, nights)) return;
+    dialog.querySelector('.inquiry-date-label').textContent = `Érkezés: ${dateFormat.format(dateOf(selected))}\nTávozás: ${dateFormat.format(dateOf(departure))}`;
     dialog.querySelector('.inquiry-demo-note').hidden = !demo;
     submit.querySelector('span').textContent = demo ? 'Űrlap kipróbálása' : 'Érdeklődés küldése';
     document.documentElement.classList.add('booking-modal-open');
@@ -160,16 +204,19 @@
     try {
       if (demo) {
         available = new Set();
+        nights = new Set();
         for (let key = today; key <= lastDate; key = shiftDay(key, 1)) {
-          if (![9, 10, 23, 24].includes(dateOf(key).getUTCDate())) available.add(key);
+          if (![9, 10, 23, 24].includes(dateOf(key).getUTCDate())) { available.add(key); nights.add(key); }
         }
       } else {
         if (!hasAdapter) throw new Error('Incomplete booking adapter');
         const data = await withinDeadline(signal => adapter.loadAvailability({from:today, to:lastDate, signal}), loadController);
         if (attempt !== loadAttempt) return;
-        if (!Array.isArray(data?.availableArrivalDates)) throw new Error('Invalid availability response');
+        if (!Array.isArray(data?.availableArrivalDates) || !Array.isArray(data?.availableNights)) throw new Error('Invalid availability response');
         if (data.availableArrivalDates.some(key => typeof key !== 'string' || !dateOf(key))) throw new Error('Invalid arrival date');
-        available = new Set(data.availableArrivalDates.filter(key => key >= today && key <= lastDate));
+        if (data.availableNights.some(key => typeof key !== 'string' || !dateOf(key))) throw new Error('Invalid stay date');
+        available = new Set(data.availableArrivalDates.filter(key => key >= today && key < lastDate));
+        nights = new Set(data.availableNights.filter(key => key >= today && key <= lastDate));
       }
       calendar.classList.remove('is-unavailable');
       status.textContent = available.size ? '' : 'Jelenleg nincs választható érkezési nap. Keressetek bennünket telefonon, és egyeztetünk veletek.';
@@ -178,6 +225,7 @@
     } catch (error) {
       if (attempt !== loadAttempt) return;
       available.clear();
+      nights.clear();
       section.querySelector('.booking-no-script').hidden = false;
       status.textContent = 'Az elérhetőségeket most nem tudtuk betölteni. Próbáljátok újra, vagy keressetek bennünket telefonon.';
       retry.hidden = false;
@@ -210,8 +258,8 @@
     const errors = validateFields(values);
     if (!form.elements.email.validity.valid) errors.email = 'Ellenőrizzétek az e-mail-címet.';
     if (Object.keys(errors).length) { showErrors(errors); return; }
-    if (!selected || !selectable(selected)) { feedback.textContent = 'Válasszatok egy elérhető érkezési napot a naptárban.'; return; }
-    const payload = {arrivalDate:selected, fullName:values.name, address:values.address, phone:values.phone, email:values.email, guests:Number(values.guests), source:'mullers2-mellow'};
+    if (!selected || !departure || !arrivalSelectable(selected) || !stayAvailable(selected, departure, nights)) { feedback.textContent = 'Válasszatok elérhető érkezési és távozási napot a naptárban.'; return; }
+    const payload = {arrivalDate:selected, departureDate:departure, fullName:values.name, address:values.address, phone:values.phone, email:values.email, guests:Number(values.guests), source:'mullers2-mellow'};
     if (demo) {
       // Validate the complete flow without sending or persisting personal details.
       form.reset();
@@ -260,9 +308,11 @@
   previous.addEventListener('click', () => monthChange(-1));
   next.addEventListener('click', () => monthChange(1));
   retry.addEventListener('click', load);
+  arrivalControl.addEventListener('click', () => { choosing = 'arrival'; activeDay = selected; if (selected) month = monthOf(selected); render(); });
+  departureControl.addEventListener('click', () => { if (selected) { choosing = 'departure'; activeDay = departure; month = monthOf(departure || selected); render(); } });
   grid.addEventListener('click', event => {
     const button = event.target.closest('[data-date]');
-    if (button && !button.disabled) openInquiry(button.dataset.date);
+    if (button && !button.disabled) chooseDate(button.dataset.date);
   });
   grid.addEventListener('keydown', event => {
     const button = event.target.closest('[data-date]');
@@ -296,7 +346,7 @@
     resultPanel.hidden = true;
     clearErrors();
     document.documentElement.classList.remove('booking-modal-open');
-    if (selected) focusDay(selected);
+    if (departure) focusDay(departure);
   });
   form.addEventListener('submit', send);
   load();
