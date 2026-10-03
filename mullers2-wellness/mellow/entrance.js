@@ -74,6 +74,23 @@
     measure();
     update();
   });
+  function goToIntro(behavior='smooth') {
+    if (!root.classList.contains('entry-animated')) {
+      intro.scrollIntoView({behavior});
+      return;
+    }
+    // Anchor destinations use the normal-flow arrival, never the temporary
+    // transition transform (which deliberately holds the intro at top: 0).
+    window.scrollTo({top:window.scrollY+track.getBoundingClientRect().bottom-stage.offsetHeight,behavior});
+  }
+  document.querySelectorAll('a[href="#elmeny"]').forEach(link => link.addEventListener('click',event => {
+    if (!root.classList.contains('entry-animated') || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    goToIntro();
+    history.pushState(null,'','#elmeny');
+  }));
+  window.addEventListener('mellow-intro',event => goToIntro(event.detail || 'instant'));
+  window.addEventListener('hashchange',() => { if (location.hash==='#elmeny') goToIntro('instant'); });
   measure();
   draw();
 })();
