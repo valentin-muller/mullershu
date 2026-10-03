@@ -90,7 +90,6 @@
     setMode();
     const index = scenes.findIndex(scene => `#${scene.id}` === location.hash);
     if (index >= 0) chapter(index, 'instant');
-    else if (location.hash==='#elmeny') window.dispatchEvent(new CustomEvent('mellow-intro',{detail:'instant'}));
     else if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView({behavior:'instant'});
     draw();
   }).catch(() => {

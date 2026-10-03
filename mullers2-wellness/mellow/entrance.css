@@ -1,5 +1,7 @@
 :root{--private:#654938;--private-background:linear-gradient(#35262266,#35262266),url(assets/sunset-clouds-v1.webp)}
 .entry-stage{position:relative;background:var(--private)}
+.private-anchor{display:flow-root;height:0;scroll-margin-top:0}
+html.entry-animated .neighborhood-fan .private-anchor{position:relative;top:calc(-1 * var(--entry-height))}
 .private-intro{position:relative;background-color:var(--private);background-image:var(--private-background);background-position:center;background-size:cover;color:#fff8eb;padding:40px max(6vw,24px) 36px;min-height:100svh;scroll-margin-top:0}
 .private-opening{max-width:1060px;margin:0 auto 30px;text-align:center}
 .private-opening h2{font:400 clamp(52px,8svh,76px)/1.06 'Pinyon Script',cursive;margin:0 0 20px;letter-spacing:0}
