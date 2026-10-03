@@ -1,0 +1,90 @@
+/* Chapters fill the usable Safari viewport; the approved hero is untouched. */
+.courtyard-studio{position:absolute;left:6vw;bottom:7%;width:min(680px,65%);color:var(--cream)}
+.courtyard-detail{display:flex;align-items:center;gap:24px;margin-top:20px}
+.courtyard-detail .parajd-sack{display:block;width:140px;height:190px;object-fit:contain;flex:none;filter:drop-shadow(6px 10px 12px #30291f26)}
+.courtyard-detail p{font-size:18px;line-height:1.6;max-width:28ch;margin:0}
+.room-title,.lounge .room-title,.salt-room-heading{bottom:8%}
+.booking-layout{margin-top:0}
+.booking-ending{min-height:100svh;display:flex;justify-content:center;align-items:stretch;padding-block:48px}
+.booking-intro h2{margin-bottom:16px}
+.booking-intro p{margin-bottom:0}
+.booking-ending .booking-data-note{font-size:12px;margin-top:8px}
+
+@media(min-width:761px) and (max-height:750px){
+ .booking-ending{padding-block:24px}
+ .booking-calendar{padding:12px 16px}
+ .booking-demo-label{margin-bottom:4px}
+ .booking-date-selection{margin-bottom:4px}
+ .booking-date-control{min-height:44px;padding:3px 6px 5px}
+ .booking-selection-hint{margin-bottom:4px}
+ .booking-calendar-header{margin-bottom:0}
+ .booking-weekdays abbr{padding:3px 0}
+ .booking-day{min-height:44px;margin:0}
+ .booking-legend{padding-top:8px;margin-top:6px}
+ .booking-intro h2{font-size:64px}
+}
+
+@media(max-width:760px){
+ body{--chapter-bleed:calc(100lvh - 100dvh)}
+ .motion .stage{height:100lvh}
+ .scene.bedroom,.scene.lounge{min-height:100lvh}
+ .motion .scene.bedroom,.motion .scene.lounge{min-height:0}
+ .salt-room.wellness-photo{height:100lvh;min-height:0}
+ .room-title,.lounge .room-title,.salt-room-heading{bottom:calc(max(28px,7%) + var(--chapter-bleed))}
+ .room-title h2,.salt-room-heading h2{font-size:clamp(36px,10vw,44px)}
+ .lounge .room-title h2{font-size:clamp(34px,9.5vw,42px)}
+ .room-title p,.salt-room-heading p{font-size:16px;line-height:1.55}
+ .lounge .room-title p{font-size:15px}
+
+ .courtyard{height:100lvh;min-height:0;display:flex;flex-direction:column;color:var(--ink);padding-bottom:var(--chapter-bleed)}
+ .courtyard>img{height:54%;width:100%;object-fit:cover;object-position:50% 50%;flex:none}
+ .courtyard-studio{position:relative;inset:auto;width:auto;flex:1;padding:20px 22px 16px;display:flex;flex-direction:column;color:var(--ink)}
+ .courtyard h2{font-size:clamp(31px,8.7vw,40px)}
+ .courtyard-detail{flex:1;min-height:0;gap:18px;margin-top:10px}
+ .courtyard-detail .parajd-sack{width:34%;height:100%;max-height:210px}
+ .courtyard-detail p{margin:0;max-width:none;font-size:16px;line-height:1.6}
+
+ .salt-feature{height:100lvh;min-height:0;display:flex;flex-direction:column;padding-bottom:var(--chapter-bleed)}
+ .salt-room-overview{height:34%;flex:none;overflow:hidden}
+ .salt-room-overview>img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+ .salt-feature .salt-studio{flex:1;min-height:0;padding:18px 18px 12px;display:flex;flex-direction:column}
+ .salt-feature .salt-studio>h2{font-size:36px}
+ .salt-feature .salt-experience{flex:1;min-height:0;max-height:none;height:auto;margin-top:12px}
+ .salt-model{left:-13%;top:0;bottom:0;width:58%;height:100%}
+ .salt-model img{object-fit:contain;object-position:center top;max-height:100%}
+ .salt-cloud-copy{left:36%;top:0;width:64%;max-width:none}
+ .salt-cloud-copy p{font-size:15px;line-height:1.6;margin:0}
+ .salt-air-caption{font-size:10px;margin:4px 0 0;text-align:right}
+
+ .booking-ending{height:auto;min-height:100dvh;padding:18px 14px 22px;display:block}
+ .booking-layout{display:grid;gap:12px;margin:0 auto;max-width:440px}
+ .booking-intro{padding:0 8px}
+ .booking-intro h2{font-size:clamp(38px,10.8vw,48px);line-height:1.03;margin:0 0 8px;max-width:none}
+ .booking-intro p{font-size:14px;line-height:1.5;max-width:none}
+ .booking-calendar{padding:10px 10px 12px}
+ .booking-demo-label{font-size:11px;margin:0 0 3px}
+ .booking-date-selection{gap:8px;margin-bottom:4px}
+ .booking-date-control{min-height:44px;padding:3px 4px 5px}
+ .booking-date-control strong{font-size:13px}
+ .booking-date-control span{font-size:11px}
+ .booking-selection-hint{font-size:12px;margin:0 0 3px;line-height:1.4}
+ .booking-calendar-header{margin-bottom:0}
+ .booking-calendar-header h3{font-size:17px}
+ .booking-weekdays{margin:0;font-size:11px}
+ .booking-weekdays abbr{padding:3px 0}
+ .booking-day{min-height:44px;margin:0;font-size:15px}
+ .booking-legend{display:none}
+ .booking-ending .booking-data-note{margin:6px 4px 0;font-size:11px;line-height:1.4}
+}
+@media(max-width:760px) and (max-height:700px){
+ .room-title p,.salt-room-heading p{font-size:15px}
+ .lounge .room-title p{font-size:14px;line-height:1.5}
+ .salt-room-overview{height:30%}
+ .salt-cloud-copy p{font-size:14px;line-height:1.55}
+ .salt-feature .salt-studio{padding-top:14px}
+ .courtyard>img{height:52%}
+ .courtyard-studio{padding-top:16px}
+ .booking-ending{padding-top:10px;padding-bottom:10px}
+ .booking-layout{gap:6px}
+ .booking-intro h2{font-size:36px}
+}

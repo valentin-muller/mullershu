@@ -200,7 +200,7 @@
     section.querySelector('.booking-no-script').hidden = true;
     previous.disabled = next.disabled = true;
     status.textContent = demo ? '' : 'Az elérhető érkezési napok betöltése…';
-    dataNote.textContent = demo ? 'Minta naptár. A jelölt napok nem valós elérhetőségek; az érdeklődést még nem továbbítjuk.' : 'A dátumválasztás érdeklődés. A foglalást személyes egyeztetés után véglegesítjük.';
+    dataNote.textContent = demo ? 'Mintaidőpontok; az érdeklődést még nem továbbítjuk.' : 'A dátumválasztás érdeklődés. A foglalást személyes egyeztetés után véglegesítjük.';
     try {
       if (demo) {
         available = new Set();

@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="location.css?v=simple-scroll1">
 <link rel="stylesheet" href="mobile-hero-copy.css?v=centered-copy1" media="(max-width:760px)">
 <link rel="stylesheet" href="desktop.css?v=hero-copy1" media="(min-width:1100px), (min-width:761px) and (min-aspect-ratio:4/3)">
-<link rel="stylesheet" href="booking.css?v=calendar2"><script src="booking.js?v=calendar2" defer></script>
-<link rel="stylesheet" href="entrance.css?v=room-copy1"><script src="entrance.js?v=simple-scroll1" defer></script>
-<script src="mellow.js?v=stable-anchor1" defer></script><script src="salt.js" defer></script><script src="../../assets/consent.js" defer></script>
+<link rel="stylesheet" href="booking.css?v=calendar2"><script src="booking.js?v=full-screen1" defer></script>
+<link rel="stylesheet" href="entrance.css?v=room-copy1"><link rel="stylesheet" href="chapters.css?v=full-screen1"><script src="entrance.js?v=full-screen1" defer></script>
+<script src="mellow.js?v=full-screen1" defer></script><script src="salt.js" defer></script><script src="../../assets/consent.js" defer></script>
 </head>
 <body class="neighborhood-fan">
 <a class="skip" href="#szobak" data-chapter="1">Ugrás a szobákhoz</a>
@@ -56,20 +56,16 @@
 <section class="scene bedroom" id="szobak" aria-labelledby="bedroom-title">
 <img class="room-photo" src="../assets/szobak-960.webp" width="960" height="1280" alt="Tetőtéri szoba két ággyal, fa tetőgerendákkal és meleg esti fényekkel">
 <div class="room-shade"></div><div class="room-title reveal-copy"><h2 id="bedroom-title">Szobák</h2><p>A közös kikapcsolódás után panziónkban négy négyfős, egy hatfős szoba és két apartman vár Benneteket. Az egyik négyágyas, a másik két szinten nyolcágyas.</p></div>
-<a class="room-next" href="#tarsalgo" data-chapter="2"><span>Kandallós társalgó</span><svg><use href="#arrow"/></svg></a>
 </section>
 <section class="scene lounge" id="tarsalgo" aria-labelledby="lounge-title">
 <img class="room-photo" src="../assets/tarsalgo-960.webp" width="960" height="1280" alt="Égő kandalló, bőrkanapék és márványlapos asztal a közös társalgóban">
 <div class="room-shade"></div><div class="room-title reveal-copy"><h2 id="lounge-title">Kandallós<br>társalgó</h2><h3>Egy légtér, több lehetőség</h3><p>Beszélgetés a kandalló előtt vagy a teraszon, a tévésarokban közös filmnézés, egy másik asztalnál társasjáték, sakk- vagy kártyaparti.</p><p>De itt lehetnek a közös reggelik, vacsorák is. Hűtőszekrény, kávéfőző, vízforraló, mikrosütő is rendelkezésre áll, de a vacsorarendelésben is segítünk.</p></div>
-<a class="room-next" href="#merulo"><span>Udvari merülő</span><svg><use href="#down"/></svg></a>
 </section>
-<nav class="chapters" aria-label="A bemutató helyszínei"><a href="#haz" aria-current="location"><span>A ház</span></a><a href="#elmeny"><span>Az élmény</span></a><a href="#szobak" data-chapter="1"><span>Szobák</span></a><a href="#tarsalgo" data-chapter="2"><span>Társalgó</span></a><a href="#merulo"><span>Udvar</span></a><a href="#soszoba"><span>Sószoba</span></a><a href="#szauna"><span>Szauna</span></a><a href="#jakuzzi"><span>Jacuzzi</span></a></nav>
 </div>
 </div>
 <section class="salt-room courtyard" id="merulo" aria-labelledby="courtyard-title">
 <img src="../assets/merulo-1280.webp" srcset="../assets/merulo-640.webp 640w, ../assets/merulo-960.webp 960w, ../assets/merulo-1280.webp 1280w" sizes="100vw" width="1280" height="960" alt="Fa burkolatú udvari merülő, mellette parajdi sóval teli zsákok és sódarabok" loading="lazy">
-<div class="salt-room-shade"></div><div class="salt-room-heading reveal-copy"><h2 id="courtyard-title">Udvari merülő</h2><p>A szauna után jöhet a parajdi sós, hideg vizes, udvari merülő.</p></div>
-<a href="#soszoba" class="salt-discover">Sószoba <svg><use href="#down"/></svg></a>
+<div class="salt-room-shade"></div><div class="courtyard-studio"><h2 id="courtyard-title">Udvari merülő</h2><div class="courtyard-detail"><img class="parajd-sack" src="assets/parajd-sack-v1.webp" width="600" height="800" alt="Parajdi sóval töltött vászonzsák térbeli illusztrációja" loading="lazy"><p>A szauna után jöhet a parajdi sós, hideg vizes, udvari merülő.</p></div></div>
 </section>
 <section class="salt-feature" id="soszoba" aria-labelledby="salt-title">
 <div class="salt-room salt-room-overview">
@@ -88,21 +84,17 @@
 <section class="salt-room wellness-photo" id="szauna" aria-labelledby="sauna-title">
 <img src="../assets/szauna-1199.webp" width="1199" height="1280" alt="Faburkolatú szauna, szaunakályhával és megvilágított padokkal" loading="lazy">
 <div class="salt-room-shade"></div><div class="salt-room-heading reveal-copy"><h2 id="sauna-title">Szauna</h2><p>Nem kell alkalmazkodnotok senki máshoz. Kellemes faillat, megnyugtató fények. Két fekvőhely található a felső szinten, de ülve akár hat fő számára is kényelmes.</p></div>
-<a href="#jakuzzi" class="salt-discover">Jacuzzi <svg><use href="#down"/></svg></a>
 </section>
 <section class="salt-room wellness-photo" id="jakuzzi" aria-labelledby="jacuzzi-title">
 <img src="../assets/jakuzzi-960.webp" width="960" height="1280" alt="A Müllers 2 jakuzzija kék vízfénnyel és gyertyákkal" loading="lazy">
 <div class="salt-room-shade"></div><div class="salt-room-heading reveal-copy"><h2 id="jacuzzi-title">Jacuzzi</h2><p>Két fekvő- és egy ülőhely a pezsgőfürdőben. A hangulatvilágítás színei a jacuzziban és a szobában is választhatóak. A jacuzzihoz pihenőszoba kapcsolódik.</p></div>
-<a href="#vege" class="salt-discover">A mi hétvégénk <svg><use href="#down"/></svg></a>
 </section>
 
 <section class="ending booking-ending" id="vege" aria-labelledby="booking-title">
-<a class="restart" href="#haz">Vissza az elejére <svg><use href="#arrow"/></svg></a>
 <div class="booking-layout">
 <div class="booking-intro">
 <h2 id="booking-title">Melyik hétvége<br>legyen a tiétek?</h2>
-<p>Válasszátok ki az érkezés és a távozás napját. A részleteket személyesen egyeztetjük veletek.</p>
-<p class="booking-personal">Egy név, egy időszak, egy közös hétvége. Hagyjátok meg az elérhetőségeteket; mi felvesszük veletek a kapcsolatot.</p>
+<p>Válasszatok érkezési és távozási dátumot, adjátok meg az adataitokat, és kollégánk felveszi veletek a kapcsolatot.</p>
 </div>
 <div class="booking-calendar-wrap">
 <div class="booking-calendar" hidden>
