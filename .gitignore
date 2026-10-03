@@ -1,9 +1,10 @@
 # Vercel
 .vercel
+.env*
+!.env.example
 
 # Node
 node_modules/
-package-lock.json
 
 # Python
 .venv/

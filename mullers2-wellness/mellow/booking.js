@@ -32,11 +32,11 @@
   }
   function validateFields(values) {
     const errors = {};
-    if (values.name.trim().length < 2) errors.name = 'Adjátok meg a teljes nevet.';
-    if (values.address.trim().length < 8) errors.address = 'Adjátok meg a teljes lakcímet.';
+    if (values.name.trim().length < 2 || values.name.length > 120 || /[\u0000-\u001f\u007f]/.test(values.name)) errors.name = 'Adjátok meg a teljes nevet.';
+    if (values.address.trim().length < 8 || values.address.length > 300) errors.address = 'Adjátok meg a teljes lakcímet.';
     const digits = values.phone.replace(/\D/g, '');
-    if (digits.length < 7 || digits.length > 15 || !/^[+\d\s()./-]+$/.test(values.phone.trim())) errors.phone = 'Adjátok meg a hívható telefonszámot.';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) errors.email = 'Adjátok meg az e-mail-címet.';
+    if (digits.length < 7 || digits.length > 15 || values.phone.length > 40 || !/^[+\d ()./-]+$/.test(values.phone.trim())) errors.phone = 'Adjátok meg a hívható telefonszámot.';
+    if (values.email.length > 254 || !/^[^\s@<>(),;:\\"]+@[^\s@<>(),;:\\"]+\.[^\s@<>(),;:\\"]+$/.test(values.email.trim())) errors.email = 'Adjátok meg az e-mail-címet.';
     const guests = Number(values.guests);
     if (!/^\d+$/.test(values.guests) || !Number.isSafeInteger(guests) || guests < 1 || guests > 999) errors.guests = 'Adjátok meg az érkezők számát egész számmal.';
     return errors;
@@ -98,6 +98,10 @@
   let loadController;
   let sendController;
   let sendAttempt = 0;
+  let serviceEnabled = demo;
+  let requestId;
+  let lastPayload;
+  let prepareController;
 
   function arrivalSelectable(key) { return key >= today && key < lastDate && available.has(key) && nights.has(key); }
   function selectable(key) {
@@ -189,6 +193,28 @@
     dialog.scrollTop = 0;
     // Focus the title first, avoiding an unsolicited iPhone keyboard on opening.
     dialog.querySelector('h2').focus({preventScroll:true});
+    requestId = crypto.randomUUID();
+    lastPayload = null;
+    if (!demo && typeof adapter.prepareInquiry === 'function') {
+      prepareController?.abort();
+      prepareController = new AbortController();
+      serviceEnabled = false;
+      submit.disabled = true;
+      feedback.textContent = 'A küldés előkészítése…';
+      const controller = prepareController;
+      withinDeadline(signal => adapter.prepareInquiry(signal), controller).then(data => {
+        if (!dialog.open || controller !== prepareController) return;
+        serviceEnabled = data.enabled === true;
+        submit.disabled = !serviceEnabled;
+        dialog.querySelector('.inquiry-contact').hidden = serviceEnabled;
+        feedback.textContent = serviceEnabled ? '' : 'Az online küldés még nem elérhető. Keressetek bennünket telefonon vagy e-mailben.';
+      }).catch(() => {
+        if (!dialog.open || controller !== prepareController) return;
+        serviceEnabled = false;
+        dialog.querySelector('.inquiry-contact').hidden = false;
+        feedback.textContent = 'A küldés most nem elérhető. Zárjátok be, majd nyissátok meg újra az adatlapot, vagy hívjatok bennünket.';
+      });
+    }
   }
   async function load() {
     const attempt = ++loadAttempt;
@@ -199,8 +225,8 @@
     retry.hidden = true;
     section.querySelector('.booking-no-script').hidden = true;
     previous.disabled = next.disabled = true;
-    status.textContent = demo ? '' : 'Az elérhető érkezési napok betöltése…';
-    dataNote.textContent = demo ? 'Mintaidőpontok; az érdeklődést még nem továbbítjuk.' : 'A dátumválasztás érdeklődés. A foglalást személyes egyeztetés után véglegesítjük.';
+    status.textContent = demo ? '' : 'A dátumválasztó betöltése…';
+    dataNote.textContent = demo ? 'Mintaidőpontok; az érdeklődést még nem továbbítjuk.' : 'A dátumok egyeztetésre választhatók; az elérhetőséget személyesen visszajelezzük.';
     try {
       if (demo) {
         available = new Set();
@@ -217,6 +243,8 @@
         if (data.availableNights.some(key => typeof key !== 'string' || !dateOf(key))) throw new Error('Invalid stay date');
         available = new Set(data.availableArrivalDates.filter(key => key >= today && key < lastDate));
         nights = new Set(data.availableNights.filter(key => key >= today && key <= lastDate));
+        serviceEnabled = data.enabled !== false;
+        if (!serviceEnabled) dataNote.textContent = 'Az online küldés még nem elérhető; az időpontot telefonon vagy e-mailben egyeztethetitek.';
       }
       calendar.classList.remove('is-unavailable');
       status.textContent = available.size ? '' : 'Jelenleg nincs választható érkezési nap. Keressetek bennünket telefonon, és egyeztetünk veletek.';
@@ -227,7 +255,7 @@
       available.clear();
       nights.clear();
       section.querySelector('.booking-no-script').hidden = false;
-      status.textContent = 'Az elérhetőségeket most nem tudtuk betölteni. Próbáljátok újra, vagy keressetek bennünket telefonon.';
+      status.textContent = 'A dátumválasztót most nem tudtuk betölteni. Próbáljátok újra, vagy keressetek bennünket telefonon.';
       retry.hidden = false;
     } finally {
       if (attempt === loadAttempt) calendar.setAttribute('aria-busy', 'false');
@@ -253,13 +281,18 @@
   async function send(event) {
     event.preventDefault();
     if (sending) return;
+    if (!demo && !serviceEnabled) { feedback.textContent = 'Az online küldés még nem elérhető. Keressetek bennünket telefonon vagy e-mailben.'; return; }
     clearErrors();
     const values = Object.fromEntries(fields.map(name => [name, String(form.elements[name].value).trim()]));
     const errors = validateFields(values);
     if (!form.elements.email.validity.valid) errors.email = 'Ellenőrizzétek az e-mail-címet.';
     if (Object.keys(errors).length) { showErrors(errors); return; }
     if (!selected || !departure || !arrivalSelectable(selected) || !stayAvailable(selected, departure, nights)) { feedback.textContent = 'Válasszatok elérhető érkezési és távozási napot a naptárban.'; return; }
-    const payload = {arrivalDate:selected, departureDate:departure, fullName:values.name, address:values.address, phone:values.phone, email:values.email, guests:Number(values.guests), source:'mullers2-mellow'};
+    const payload = {arrivalDate:selected, departureDate:departure, fullName:values.name, address:values.address, phone:values.phone, email:values.email, guests:Number(values.guests), source:'mullers2-mellow', website:String(form.elements.website?.value || '')};
+    const fingerprint = JSON.stringify(payload);
+    if (lastPayload && lastPayload !== fingerprint) requestId = crypto.randomUUID();
+    lastPayload = fingerprint;
+    payload.requestId = requestId;
     if (demo) {
       // Validate the complete flow without sending or persisting personal details.
       form.reset();
@@ -289,7 +322,9 @@
       resultPanel.scrollIntoView({block:'nearest', behavior:'instant'});
     } catch (error) {
       if (attempt !== sendAttempt || !dialog.open) return;
-      feedback.textContent = 'Nem tudtuk megerősíteni az érdeklődés fogadását. Az adataitok itt maradtak; próbáljátok újra, vagy keressetek bennünket telefonon.';
+      if (error.fields) showErrors(error.fields);
+      dialog.querySelector('.inquiry-contact').hidden = false;
+      feedback.textContent = error.name === 'AbortError' ? 'A küldést nem tudtuk megerősíteni. Az adataitok itt maradtak; próbáljátok újra később, vagy hívjatok bennünket.' : error.message || 'Nem sikerült a küldés. Próbáljátok újra később.';
     } finally {
       if (attempt === sendAttempt) {
         sending = false;
@@ -339,11 +374,13 @@
   dialog.addEventListener('close', () => {
     ++sendAttempt;
     sendController?.abort();
+    prepareController?.abort();
     sending = false;
     submit.disabled = false;
     form.reset();
     form.hidden = false;
     resultPanel.hidden = true;
+    dialog.querySelector('.inquiry-contact').hidden = true;
     clearErrors();
     document.documentElement.classList.remove('booking-modal-open');
     if (departure) focusDay(departure);

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="location.css?v=simple-scroll1">
 <link rel="stylesheet" href="mobile-hero-copy.css?v=centered-copy1" media="(max-width:760px)">
 <link rel="stylesheet" href="desktop.css?v=hero-copy1" media="(min-width:1100px), (min-width:761px) and (min-aspect-ratio:4/3)">
-<link rel="stylesheet" href="booking.css?v=calendar2"><script src="booking.js?v=full-screen1" defer></script>
+<link rel="stylesheet" href="booking.css?v=gmail1"><script src="booking-adapter.js?v=gmail1" defer></script><script src="booking.js?v=gmail1" defer></script>
 <link rel="stylesheet" href="entrance.css?v=room-copy1"><link rel="stylesheet" href="chapters.css?v=full-screen1"><script src="entrance.js?v=full-screen1" defer></script>
 <script src="mellow.js?v=full-screen1" defer></script><script src="salt.js" defer></script><script src="../../assets/consent.js" defer></script>
 </head>
@@ -127,8 +127,9 @@
 <button class="booking-close" type="button" aria-label="Adatlap bezárása"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
 <h2 id="inquiry-title" tabindex="-1">A ti hétvégétek</h2>
 <p class="inquiry-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm-2 5h18M8 2v4m8-4v4"/></svg><span class="inquiry-date-label"></span></p>
-<p class="inquiry-intro" id="inquiry-intro">Hagyjátok meg az elérhetőségeteket, és személyesen egyeztetünk veletek.</p>
+<p class="inquiry-intro" id="inquiry-intro">Minden mező kitöltése kötelező. Küldés után személyesen egyeztetünk veletek.</p>
 <form class="inquiry-form" novalidate>
+<div class="inquiry-trap" aria-hidden="true"><label for="inquiry-website">Weboldal</label><input id="inquiry-website" name="website" autocomplete="off" tabindex="-1"></div>
 <p class="inquiry-disclosure inquiry-demo-note">Bemutató: az adatokat nem küldjük el és nem tároljuk. Használjatok kitalált adatokat.</p>
 <div class="inquiry-fields">
 <div class="inquiry-field"><label for="inquiry-name">Teljes név</label><input id="inquiry-name" name="name" autocomplete="name" maxlength="120" required aria-describedby="inquiry-error-name"><p class="inquiry-error" id="inquiry-error-name"></p></div>
@@ -139,6 +140,7 @@
 </div>
 <button class="inquiry-submit" type="submit"><span>Érdeklődés küldése</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
 <p class="inquiry-feedback" role="alert"></p>
+<p class="inquiry-disclosure inquiry-contact" hidden><a href="tel:+36204131146">Hívjatok: +36 20 413 1146</a> · <a href="mailto:mullers106@gmail.com">Írjatok nekünk</a></p>
 <p class="inquiry-disclosure">Ez érdeklődés, nem végleges foglalás. <a href="../../adatkezeles.html" target="_blank" rel="noopener">Adatkezelési tájékoztató</a></p>
 
 </form>
