@@ -3,7 +3,6 @@ body.neighborhood-fan{--entry-height:1160px}
 .neighborhood-fan .entry-journey{height:auto}
 .neighborhood-fan .entry-stage{position:relative;height:var(--entry-height);overflow:hidden}
 body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-height);min-height:0;background:var(--sand)}
-.neighborhood-fan .entry-veil{display:none}
 .neighborhood-fan .house-title{top:96px;left:0;right:0;z-index:3;pointer-events:none}
 .neighborhood-fan .house-title h1{font:400 108px/1.05 'Pinyon Script',cursive;letter-spacing:0}
 .neighborhood-fan .hero-sidecopy .house-promise{font-size:17px;letter-spacing:.04em;margin:8px auto 0;max-width:none;font-weight:500}
@@ -106,7 +105,6 @@ body.neighborhood-fan .entry-stage .house{position:relative;height:var(--entry-h
 /* Reserve the entrance scroll range before images or deferred scripts finish loading. */
 html.entry-animated .neighborhood-fan .entry-journey{height:calc(var(--entry-height) + 110svh)}
 html.entry-animated .neighborhood-fan .entry-stage{position:sticky;top:0;height:var(--entry-height)}
-html.entry-animated .neighborhood-fan .entry-veil{display:block;position:absolute;inset:0;background:var(--private);opacity:0;pointer-events:none;z-index:11}
 
 /* Each mobile illustration is composed for its exposed area, not the hidden card tail. */
 .place-card picture{display:block;width:100%;height:100%}

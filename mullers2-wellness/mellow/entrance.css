@@ -1,6 +1,5 @@
 :root{--private:#654938;--private-background:linear-gradient(#35262266,#35262266),url(assets/sunset-clouds-v1.webp)}
 .entry-stage{position:relative;background:var(--private)}
-.entry-veil{display:none}
 .private-intro{position:relative;background-color:var(--private);background-image:var(--private-background);background-position:center;background-size:cover;color:#fff8eb;padding:40px max(6vw,24px) 36px;min-height:100svh;scroll-margin-top:0}
 .private-opening{max-width:1060px;margin:0 auto 30px;text-align:center}
 .private-opening h2{font:400 clamp(52px,8svh,76px)/1.06 'Pinyon Script',cursive;margin:0 0 20px;letter-spacing:0}
@@ -14,8 +13,9 @@
 .motion .entry-journey{height:260svh}
 .motion .entry-stage{position:sticky;top:0;height:100svh;overflow:hidden}
 .motion .entry-stage .house{position:relative;height:100%;min-height:0}
-.motion .entry-veil{display:block;position:absolute;inset:0;opacity:0;z-index:5;pointer-events:none}
-html.entry-animated .neighborhood-fan .entry-veil{background-color:var(--private);background-image:var(--private-background);background-position:center;background-size:cover}
+html.entry-animated .neighborhood-fan .private-intro{margin-top:calc(-1 * var(--entry-height));z-index:12;transform:translateY(var(--intro-shift,0px));opacity:var(--intro-opacity,1);pointer-events:none}
+html.entry-animated .neighborhood-fan .private-intro.intro-visible{pointer-events:auto}
+.private-intro .reveal-copy>*{opacity:1!important;transform:none!important;animation:none!important}
 .motion .journey{height:280svh}
 .motion .bedroom{clip-path:none}
 .motion.is-entry .header{color:var(--cream)}
@@ -51,4 +51,3 @@ html.entry-animated .neighborhood-fan .entry-veil{background-color:var(--private
  .motion .entry-journey{height:240svh}
  .motion .journey{height:260svh}
 }
-@media(prefers-reduced-motion:reduce){.entry-veil{display:none!important}}
