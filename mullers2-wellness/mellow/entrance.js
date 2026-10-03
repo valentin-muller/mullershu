@@ -11,7 +11,6 @@
   const sideCopy = track.querySelector('.hero-sidecopy');
   const enter = track.querySelector('.enter');
   const note = track.querySelector('.walking-note');
-  const door = track.querySelector('.entry-door');
   const veil = track.querySelector('.entry-veil');
   const intro = document.querySelector('.private-intro');
   const chapterNav = document.querySelector('.chapters').cloneNode(true);
@@ -39,7 +38,7 @@
     const active = root.classList.contains('entry-animated');
     body.classList.toggle('in-neighborhood', track.getBoundingClientRect().bottom > 80);
     const p = active ? clamp(-track.getBoundingClientRect().top / Math.max(1,track.offsetHeight-stage.offsetHeight)) : 0;
-    const camera = ease((p-.035)/.66);
+    const camera = ease((p-.035)/.8);
     art.style.setProperty('--entry-zoom', String(1+camera*4.6));
     art.style.setProperty('--entry-pan-x', `${geometry.x*camera}px`);
     art.style.setProperty('--entry-pan-y', `${geometry.y*camera}px`);
@@ -50,9 +49,9 @@
     cards.style.opacity=String(1-ease((p-.04)/.25));
     cards.inert=p>.18;
     art.querySelectorAll('.hero-foliage').forEach(node => { node.style.opacity=String(1-ease((p-.08)/.28)); });
-    door.style.opacity=String(ease((p-.38)/.23));
-    door.style.transform=`scale(${1+ease((p-.45)/.43)*1.7})`;
-    veil.style.opacity=String(ease((p-.74)/.22));
+    // The actual hero house approaches once, then meets the introduction.
+    // There is no second doorway illustration or separate camera sequence.
+    veil.style.opacity=String(ease((p-.8)/.2));
     const introRect=intro.getBoundingClientRect();
     body.classList.toggle('is-entry', (p>.58 || introRect.top<=80) && introRect.bottom>80);
   }
