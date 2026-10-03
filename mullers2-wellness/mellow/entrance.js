@@ -1,96 +1,26 @@
 (() => {
   'use strict';
-  const root = document.documentElement;
   const body = document.body;
   const track = document.querySelector('.entry-journey');
-  const stage = track.querySelector('.entry-stage');
-  const art = track.querySelector('.house-art');
-  const building = art.querySelector('.fan-house');
-  const cards = art.querySelector('.neighborhood-cards');
-  const title = track.querySelector('.house-title');
-  const sideCopy = track.querySelector('.hero-sidecopy');
-  const enter = track.querySelector('.enter');
-  const note = track.querySelector('.walking-note');
   const intro = document.querySelector('.private-intro');
   const chapterNav = document.querySelector('.chapters').cloneNode(true);
   chapterNav.classList.add('entry-chapters');
   track.querySelector('.house').append(chapterNav);
-  const clamp = v => Math.max(0, Math.min(1, v));
-  const ease = v => { const t = clamp(v); return t*t*(3-2*t); };
   let queued = false;
-  let geometry = {width:0,height:0,x:0,y:0};
 
-  function measure() {
-    // CSS owns the starting size. Only camera offsets are measured here.
-    art.style.setProperty('--entry-zoom', '1');
-    art.style.setProperty('--entry-pan-x', '0px');
-    art.style.setProperty('--entry-pan-y', '0px');
-    const room = stage.getBoundingClientRect();
-    const photo = building.getBoundingClientRect();
-    const doorX = photo.left + photo.width * .585;
-    const doorY = photo.top + photo.height * .765;
-    art.style.transformOrigin = `${building.offsetLeft + building.offsetWidth * .085}px ${building.offsetTop + building.offsetHeight * .765}px`;
-    geometry = {width:room.width,height:room.height,x:room.left + room.width*.5-doorX,y:room.top + Math.min(room.height,innerHeight)*.55-doorY};
-  }
+  // The hero and introduction stay in normal flow. Only header colours track
+  // the current surface; no camera, opacity choreography or custom anchor jump.
   function draw() {
     queued = false;
-    const active = root.classList.contains('entry-animated');
     body.classList.toggle('in-neighborhood', track.getBoundingClientRect().bottom > 80);
-    const p = active ? clamp(-track.getBoundingClientRect().top / Math.max(1,track.offsetHeight-stage.offsetHeight)) : 0;
-    const camera = ease((p-.035)/.8);
-    art.style.setProperty('--entry-zoom', String(1+camera*4.6));
-    art.style.setProperty('--entry-pan-x', `${geometry.x*camera}px`);
-    art.style.setProperty('--entry-pan-y', `${geometry.y*camera}px`);
-    const fade = 1-ease(p/.18);
-    [title,sideCopy,enter,note,chapterNav].forEach(node => { node.style.opacity=String(fade); });
-    enter.inert = p>.18;
-    chapterNav.inert = p>.18;
-    cards.style.opacity=String(1-ease((p-.04)/.25));
-    cards.inert=p>.18;
-    art.querySelectorAll('.hero-foliage').forEach(node => { node.style.opacity=String(1-ease((p-.08)/.28)); });
-    // Fade the real introduction (background AND text) into the same viewport.
-    // Its normal-flow top meets the viewport at the end of the camera range;
-    // after that, ordinary scrolling carries the whole section upward.
-    const arrival = active ? ease((p-.72)/.2) : 1;
-    const remaining = track.getBoundingClientRect().bottom-stage.offsetHeight;
-    intro.style.setProperty('--intro-shift', `${active ? -Math.max(0,remaining) : 0}px`);
-    intro.style.setProperty('--intro-opacity', String(arrival));
-    intro.classList.toggle('intro-visible', arrival>.5);
-    intro.inert=arrival<=.5;
-    const introRect=intro.getBoundingClientRect();
-    body.classList.toggle('is-entry', (p>.58 || introRect.top<=80) && introRect.bottom>80);
+    const rect = intro.getBoundingClientRect();
+    body.classList.toggle('is-entry', rect.top<=80 && rect.bottom>80);
   }
-  const update = () => { if (!queued) { queued=true; requestAnimationFrame(draw); } };
-  const resize = () => {
-    // Safari toolbar expansion changes innerHeight, but not the CSS small viewport.
-    // Do not refit or move the camera when the underlying stage is unchanged.
-    if (stage.clientWidth!==geometry.width || Math.abs(stage.clientHeight-geometry.height)>1) measure();
-    update();
+  const update = () => {
+    if (!queued) { queued=true; requestAnimationFrame(draw); }
   };
   window.addEventListener('scroll',update,{passive:true});
-  window.addEventListener('resize',resize);
-  window.addEventListener('mellow-motion',() => {
-    root.classList.toggle('entry-animated',body.classList.contains('motion'));
-    measure();
-    update();
-  });
-  function goToIntro(behavior='smooth') {
-    if (!root.classList.contains('entry-animated')) {
-      intro.scrollIntoView({behavior});
-      return;
-    }
-    // Anchor destinations use the normal-flow arrival, never the temporary
-    // transition transform (which deliberately holds the intro at top: 0).
-    window.scrollTo({top:window.scrollY+track.getBoundingClientRect().bottom-stage.offsetHeight,behavior});
-  }
-  document.querySelectorAll('a[href="#elmeny"]').forEach(link => link.addEventListener('click',event => {
-    if (!root.classList.contains('entry-animated') || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    goToIntro();
-    history.pushState(null,'','#elmeny');
-  }));
-  window.addEventListener('mellow-intro',event => goToIntro(event.detail || 'instant'));
-  window.addEventListener('hashchange',() => { if (location.hash==='#elmeny') goToIntro('instant'); });
-  measure();
+  window.addEventListener('resize',update);
+  window.addEventListener('mellow-motion',update);
   draw();
 })();
