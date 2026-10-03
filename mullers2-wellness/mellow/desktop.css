@@ -3,7 +3,7 @@
  body.neighborhood-fan{--entry-height:100svh;--desktop-height:min(100svh,1080px);--desktop-offset:calc((100svh - var(--desktop-height))*.5);--fan-top:clamp(182px,calc(var(--desktop-height)*.21),226px);--scene-height:calc(var(--desktop-height) - var(--fan-top) - 108px)}
  .neighborhood-fan .house-title{top:calc(var(--desktop-offset) + 20px);z-index:6}
  .neighborhood-fan .house-wordmark{width:clamp(300px,calc(var(--desktop-height)*.43),430px)}
- .neighborhood-fan .hero-sidecopy{top:calc(var(--desktop-offset) + var(--fan-top) - 62px)}
+ .neighborhood-fan .hero-sidecopy{top:calc(var(--desktop-offset) + var(--fan-top) - 82px)}
  .neighborhood-fan .hero-sidecopy .house-promise{font-size:16px;margin-top:0}
  .neighborhood-fan .hero-sidecopy .house-location{font-size:13px;margin-top:6px}
  .neighborhood-fan .house-art{top:calc(var(--desktop-offset) + var(--fan-top));width:min(1600px,calc(100vw - 120px),calc(var(--scene-height)*2.08));height:var(--scene-height)}
@@ -39,7 +39,7 @@
  .base-right{right:8%;bottom:3%;width:28%;height:41%;transform:scaleX(-1) rotate(-49deg)}
  @media(max-height:750px){
   body.neighborhood-fan{--fan-top:162px;--scene-height:calc(var(--desktop-height) - var(--fan-top) - 72px)}
-  .neighborhood-fan .hero-sidecopy{top:calc(var(--desktop-offset) + 96px)}
+  .neighborhood-fan .hero-sidecopy{top:calc(var(--desktop-offset) + 84px)}
   .neighborhood-fan .enter{bottom:calc(var(--desktop-offset) + 20px)}
   .edge-left{left:-10%}
   .edge-right{right:-10%}
@@ -48,7 +48,7 @@
   .neighborhood-fan .place-name{font-size:min(34px,calc(var(--scene-height)*.08))}
   .neighborhood-fan .place-promenade .place-name{font-size:min(31px,calc(var(--scene-height)*.075))}
   .neighborhood-fan .place-caption{inset:13px 4px auto;gap:4px}
-  .neighborhood-fan .hero-sidecopy .house-promise{font-size:16px;line-height:1.5;letter-spacing:.02em}
-  .neighborhood-fan .hero-sidecopy .house-location{font-size:14px;line-height:1.5;letter-spacing:.01em}
+  .neighborhood-fan .hero-sidecopy .house-promise{font-size:16px;line-height:1.25;letter-spacing:.02em}
+  .neighborhood-fan .hero-sidecopy .house-location{font-size:14px;line-height:1.25;letter-spacing:.01em}
  }
 }
