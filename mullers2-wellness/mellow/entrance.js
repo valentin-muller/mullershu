@@ -11,7 +11,6 @@
   const sideCopy = track.querySelector('.hero-sidecopy');
   const enter = track.querySelector('.enter');
   const note = track.querySelector('.walking-note');
-  const veil = track.querySelector('.entry-veil');
   const intro = document.querySelector('.private-intro');
   const chapterNav = document.querySelector('.chapters').cloneNode(true);
   chapterNav.classList.add('entry-chapters');
@@ -49,9 +48,15 @@
     cards.style.opacity=String(1-ease((p-.04)/.25));
     cards.inert=p>.18;
     art.querySelectorAll('.hero-foliage').forEach(node => { node.style.opacity=String(1-ease((p-.08)/.28)); });
-    // The actual hero house approaches once, then meets the introduction.
-    // There is no second doorway illustration or separate camera sequence.
-    veil.style.opacity=String(ease((p-.8)/.2));
+    // Fade the real introduction (background AND text) into the same viewport.
+    // Its normal-flow top meets the viewport at the end of the camera range;
+    // after that, ordinary scrolling carries the whole section upward.
+    const arrival = active ? ease((p-.72)/.2) : 1;
+    const remaining = track.getBoundingClientRect().bottom-stage.offsetHeight;
+    intro.style.setProperty('--intro-shift', `${active ? -Math.max(0,remaining) : 0}px`);
+    intro.style.setProperty('--intro-opacity', String(arrival));
+    intro.classList.toggle('intro-visible', arrival>.5);
+    intro.inert=arrival<=.5;
     const introRect=intro.getBoundingClientRect();
     body.classList.toggle('is-entry', (p>.58 || introRect.top<=80) && introRect.bottom>80);
   }
