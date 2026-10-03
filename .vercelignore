@@ -1,5 +1,5 @@
 # Local development files and offline rendering sources are not website assets.
-.git/
+.git
 .vercel/
 .env
 .env.*
@@ -19,3 +19,5 @@ mullers2-wellness/DESIGN.md
 mullers2-wellness/proba/DESIGN.md
 mullers2-wellness/proba/source/
 mullers2-wellness/koncepcio/DESIGN.md
+
+output/
