@@ -1,0 +1,10 @@
+/* Restore the approved hero copy below the mobile wordmark. The house keeps
+   its width and lower anchor; only the space above the bouquet is reserved. */
+@media(max-width:760px){
+ body.neighborhood-fan{--roof:calc(100svh - 142px - 62vw)}
+ .neighborhood-fan .hero-sidecopy{display:block;top:62px;left:12px;right:12px;text-align:center}
+ .neighborhood-fan .hero-sidecopy .house-promise{margin:0;font-size:14px;line-height:1.35;letter-spacing:0;font-weight:500}
+ .neighborhood-fan .hero-sidecopy .house-location{margin:4px 0 0;font-size:12px;line-height:1.4;letter-spacing:0}
+ .neighborhood-fan .house-art{top:128px;height:calc(100svh - 142px)}
+ .neighborhood-fan .enter{top:152px}
+}
