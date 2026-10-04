@@ -3,9 +3,6 @@
   const body = document.body;
   const track = document.querySelector('.entry-journey');
   const intro = document.querySelector('.private-intro');
-  const chapterNav = document.querySelector('.chapters').cloneNode(true);
-  chapterNav.classList.add('entry-chapters');
-  track.querySelector('.house').append(chapterNav);
   let queued = false;
 
   // The hero and introduction stay in normal flow. Only header colours track
