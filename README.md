@@ -32,3 +32,7 @@ Warm-instance throttling and request deduplication are best-effort, not global o
 ## Primary visual target
 
 Design and verify iPhone Safari first, then smaller phones, iPad and desktop. Simulator or physical iPhone screenshots are required to claim Safari validation; desktop viewport emulation is supplementary. Check actual usable height and browser bars, loading, first/reverse scroll and readable titles. Latest v3 courtyard illustration was inspected in iPhone17Pro iOS26.4 Simulator Safari on2026-10-04; physical-device and full native touch/scroll checks remain unverified. Consent omission in local screenshot fixtures does not alter shipped consent.
+
+## Mellow release check — 2026-10-04
+
+All21 calendar/inquiry tests and affected JavaScript syntax checks pass. The v3 courtyard sack is inspected in actual iPhone17Pro Simulator Safari with browser controls. GitHub authentication is restored. Production Gmail credentials remain unconfigured, so the inquiry sender must stay disabled and contact alternatives remain available. GitHub's signed commit flow is used for the release record because Vercel correctly rejects unsigned preview commits.
