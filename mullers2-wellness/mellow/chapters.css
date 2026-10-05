@@ -1,4 +1,6 @@
 /* Chapters fill the usable Safari viewport; the approved hero is untouched. */
+.courtyard-photo{position:absolute;inset:0;display:block;width:100%;height:100%}
+.courtyard-photo>img{display:block;width:100%;height:100%;object-fit:cover;object-position:95% 65%}
 .courtyard-studio{position:absolute;left:6vw;bottom:7%;width:min(680px,65%);color:var(--cream)}
 .courtyard-detail{display:flex;align-items:center;gap:24px;margin-top:20px}
 .courtyard-detail .parajd-sack{display:block;width:140px;height:190px;object-fit:contain;flex:none;filter:drop-shadow(6px 10px 12px #30291f26)}
@@ -37,7 +39,8 @@
  .lounge .room-title p{font-size:15px}
 
  .courtyard{height:100lvh;min-height:0;display:flex;flex-direction:column;color:var(--ink);padding-bottom:var(--chapter-bleed)}
- .courtyard>img{height:54%;width:100%;object-fit:cover;object-position:50% 50%;flex:none}
+ .courtyard>.courtyard-photo{position:static;height:54%;width:100%;flex:none}
+ .courtyard-photo>img{object-position:80% 50%}
  .courtyard-studio{position:relative;inset:auto;width:auto;flex:1;padding:20px 22px 16px;display:flex;flex-direction:column;color:var(--ink)}
  .courtyard h2{font-size:clamp(31px,8.7vw,40px)}
  .courtyard-detail{flex:1;min-height:0;gap:18px;margin-top:10px}
@@ -82,7 +85,7 @@
  .salt-room-overview{height:30%}
  .salt-cloud-copy p{font-size:14px;line-height:1.55}
  .salt-feature .salt-studio{padding-top:14px}
- .courtyard>img{height:52%}
+ .courtyard>.courtyard-photo{height:52%}
  .courtyard-studio{padding-top:16px}
  .booking-ending{padding-top:10px;padding-bottom:10px}
  .booking-layout{gap:6px}

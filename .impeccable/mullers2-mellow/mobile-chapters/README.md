@@ -33,3 +33,11 @@ Rendered with local Blender5.1.1/Cycles96 samples in a separate background proce
 ### Release checks resumed — 2026-10-04
 
 GitHub CLI now authenticates as valentin-muller. Actual iPhone17Pro iOS26.4 Simulator Safari v3 local screenshot saved to `output/parajd-v3/courtyard-safari.png`: full photo/title/sack/copy composition inspected with browser bars. The locked-Mac limitation above is resolved for this static render; physical-device and full native touch/scroll testing remain unverified. Syntax checks and all21 calendar/inquiry tests pass. Gmail application-password configuration is still absent; production must retain disabled sending/contact fallback until configured and a real test is read back. Release status will be verified after merge/deployment.
+
+## Owner-supplied courtyard image — 2026-10-05
+
+The owner requested replacing only the courtyard/plunge scene with `ChatGPT Image Oct 5, 2026, 10_37_29 AM.png` from their Desktop. This supplied illustration is not presented as a newly verified property photograph. Original PNG remains unchanged outside the repository (1448×1086, 2,855,138 bytes). `optimize-courtyard-photo.py` produces 640/960/1280px-wide AVIF and WebP assets with Lanczos resizing, AVIF quality55/speed6, WebP quality82/method6. The preferred largest AVIF is133,881bytes, about95% smaller; fallback WebP248,138bytes.
+
+A picture element selects responsive AVIF with responsive WebP fallback. Explicit1280×960 dimensions, lazy loading and async decoding are retained. Existing chapter heights, text, sack and all other scenes remain unchanged. Mobile focus80%50% keeps the waterfall and wooden plunge recognizable; portrait tablet focus95%65% prioritizes the plunge at the right. Original merulo assets remain for other routes.
+
+Actual iPhone17Pro iOS26.4 Simulator Safari local screenshot inspected with browser bars: full title/sack/copy fit, courtyard subjects recognizable. Supplementary Chrome desktop and portrait tablet checks inspect responsive loading and overflow. Syntax and diff checks pass. Screenshot fixture omits consent for clean inspection only; shipping consent unchanged. Physical-device/native touch testing is not claimed. Release and live asset verification follow before delivery.
