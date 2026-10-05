@@ -91,3 +91,9 @@
  .booking-layout{gap:6px}
  .booking-intro h2{font-size:36px}
 }
+
+/* Independent sack motion; the original chapter dimensions and copy stay fixed. */
+.courtyard-detail{position:relative;isolation:isolate}
+.courtyard-detail .parajd-sack{position:relative;z-index:1;transform-origin:50% 50%}
+.courtyard-detail p{position:relative;z-index:3}
+.sack-salt{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
