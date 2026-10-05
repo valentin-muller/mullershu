@@ -473,6 +473,93 @@
           "bytes": 140188
         }
       ]
+    },
+    {
+      "id": "breakfast-buffet",
+      "source": "ChatGPT Image Oct 5, 2026, 01_12_26 PM.png",
+      "sha256": "ccad87ddf447dec1c92982913b9de8a4045ea3303250a07f6056a1889f714dec",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2336037,
+      "alt": "Közös reggelihez előkészített büféasztal",
+      "variants": [
+        {
+          "src": "breakfast-buffet-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 23022
+        },
+        {
+          "src": "breakfast-buffet-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 66492
+        },
+        {
+          "src": "breakfast-buffet-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 144666
+        }
+      ]
+    },
+    {
+      "id": "terrace-blue",
+      "source": "ChatGPT Image Oct 5, 2026, 01_12_36 PM.png",
+      "sha256": "4a26bcf177a8ec383cb84616b498340dd117c8be94aa66bf0b227f202722c397",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalBytes": 2715036,
+      "alt": "Fedett terasz kék kanapéval és közös asztallal",
+      "variants": [
+        {
+          "src": "terrace-blue-400.webp",
+          "width": 400,
+          "height": 267,
+          "bytes": 21276
+        },
+        {
+          "src": "terrace-blue-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 71180
+        },
+        {
+          "src": "terrace-blue-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 196614
+        }
+      ]
+    },
+    {
+      "id": "house-aerial",
+      "source": "ChatGPT Image Oct 5, 2026, 01_14_53 PM.png",
+      "sha256": "d4dfaac22d8cb19f7d5e32a3f88bd6342d2cc1181036d3829d0de62d13f6a4e5",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 3117180,
+      "alt": "A Müller’s épülete a sétálóutca felől, erkéllyel és vörös cseréptetővel",
+      "variants": [
+        {
+          "src": "house-aerial-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 35074
+        },
+        {
+          "src": "house-aerial-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 124498
+        },
+        {
+          "src": "house-aerial-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 304460
+        }
+      ]
     }
   ]
 }
