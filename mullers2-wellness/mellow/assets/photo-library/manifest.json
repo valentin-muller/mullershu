@@ -1,0 +1,478 @@
+{
+  "version": 1,
+  "description": "A tulajdonos által 2026-10-05-én biztosított képek webes változatai. Az eredeti PNG-k változatlanok.",
+  "format": "WebP",
+  "quality": 79,
+  "photos": [
+    {
+      "id": "relax-chairs",
+      "source": "ChatGPT Image Oct 5, 2026, 01_03_27 PM.png",
+      "sha256": "c5ce47dda63d98843327bc8fdaa5fc70fca3fc97c64310cbcb9b1dc8d6f33c92",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2021174,
+      "alt": "Pihenőszékek a wellnessrészben",
+      "variants": [
+        {
+          "src": "relax-chairs-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 14126
+        },
+        {
+          "src": "relax-chairs-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 38876
+        },
+        {
+          "src": "relax-chairs-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 87922
+        }
+      ]
+    },
+    {
+      "id": "lounge-tv",
+      "source": "ChatGPT Image Oct 5, 2026, 01_03_32 PM.png",
+      "sha256": "2e0226e2dddd2d674816b2e52f534dc0a08339a4e58d11afd74ecabdd92fe85e",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2604125,
+      "alt": "Tévésarok és fotók a társalgóban",
+      "variants": [
+        {
+          "src": "lounge-tv-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 23598
+        },
+        {
+          "src": "lounge-tv-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 83992
+        },
+        {
+          "src": "lounge-tv-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 224632
+        }
+      ]
+    },
+    {
+      "id": "relax-swing-close",
+      "source": "ChatGPT Image Oct 5, 2026, 01_03_40 PM.png",
+      "sha256": "e5dcd34f8b8169bb76377d0a962cbf9aab4ea7ff0c92653d38665b54005570df",
+      "originalWidth": 1086,
+      "originalHeight": 1448,
+      "originalBytes": 2342909,
+      "alt": "Fehér függőfotel a pihenőrészben",
+      "variants": [
+        {
+          "src": "relax-swing-close-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 30308
+        },
+        {
+          "src": "relax-swing-close-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 105782
+        },
+        {
+          "src": "relax-swing-close-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 161544
+        }
+      ]
+    },
+    {
+      "id": "courtyard-plunge",
+      "source": "ChatGPT Image Oct 5, 2026, 10_37_29 AM.png",
+      "sha256": "ba211f14cd82a4a6265c7c0a2f45699d145693c0445a142599343fd8d457a20d",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2855138,
+      "alt": "Napsütötte udvar csobogóval és fa merülővel",
+      "variants": [
+        {
+          "src": "courtyard-plunge-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 31032
+        },
+        {
+          "src": "courtyard-plunge-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 104530
+        },
+        {
+          "src": "courtyard-plunge-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 260638
+        }
+      ]
+    },
+    {
+      "id": "room-green",
+      "source": "ChatGPT Image Oct 5, 2026, 12_47_57 PM.png",
+      "sha256": "22613cd545128e61db2484d5aedce833d0cb77fbe252612b1f31ac963f73d613",
+      "originalWidth": 1535,
+      "originalHeight": 1025,
+      "originalBytes": 2228430,
+      "alt": "Négyágyas tetőtéri szoba zöld fallal",
+      "variants": [
+        {
+          "src": "room-green-400.webp",
+          "width": 400,
+          "height": 267,
+          "bytes": 12310
+        },
+        {
+          "src": "room-green-800.webp",
+          "width": 800,
+          "height": 534,
+          "bytes": 44578
+        },
+        {
+          "src": "room-green-1535.webp",
+          "width": 1535,
+          "height": 1025,
+          "bytes": 139810
+        }
+      ]
+    },
+    {
+      "id": "grill-tools",
+      "source": "ChatGPT Image Oct 5, 2026, 12_48_12 PM.png",
+      "sha256": "56a10e61ed5732d4367f249f32270799138bedd0c3b2e796b6435617e159071b",
+      "originalWidth": 1195,
+      "originalHeight": 1316,
+      "originalBytes": 2391874,
+      "alt": "Grillezéshez előkészített eszközök",
+      "variants": [
+        {
+          "src": "grill-tools-400.webp",
+          "width": 400,
+          "height": 441,
+          "bytes": 36678
+        },
+        {
+          "src": "grill-tools-800.webp",
+          "width": 800,
+          "height": 881,
+          "bytes": 101414
+        },
+        {
+          "src": "grill-tools-1195.webp",
+          "width": 1195,
+          "height": 1316,
+          "bytes": 173214
+        }
+      ]
+    },
+    {
+      "id": "grill",
+      "source": "ChatGPT Image Oct 5, 2026, 12_48_18 PM.png",
+      "sha256": "a8167d3224f3b139c51154f4007da99f74101b7d2863102c162dcdf96662ffbb",
+      "originalWidth": 1210,
+      "originalHeight": 1300,
+      "originalBytes": 2779496,
+      "alt": "Kerti grill a növények között",
+      "variants": [
+        {
+          "src": "grill-400.webp",
+          "width": 400,
+          "height": 430,
+          "bytes": 41918
+        },
+        {
+          "src": "grill-800.webp",
+          "width": 800,
+          "height": 860,
+          "bytes": 138720
+        },
+        {
+          "src": "grill-1210.webp",
+          "width": 1210,
+          "height": 1300,
+          "bytes": 248900
+        }
+      ]
+    },
+    {
+      "id": "terrace-tables",
+      "source": "ChatGPT Image Oct 5, 2026, 12_48_25 PM.png",
+      "sha256": "6253f17a180dea5d9d3b9c32a9bb0cf29395f4c3535783142633db0710bc5ab3",
+      "originalWidth": 1458,
+      "originalHeight": 1079,
+      "originalBytes": 2603429,
+      "alt": "Fedett terasz közös asztalokkal",
+      "variants": [
+        {
+          "src": "terrace-tables-400.webp",
+          "width": 400,
+          "height": 296,
+          "bytes": 24060
+        },
+        {
+          "src": "terrace-tables-800.webp",
+          "width": 800,
+          "height": 592,
+          "bytes": 77914
+        },
+        {
+          "src": "terrace-tables-1458.webp",
+          "width": 1458,
+          "height": 1079,
+          "bytes": 210032
+        }
+      ]
+    },
+    {
+      "id": "terrace-tables-alternate",
+      "source": "ChatGPT Image Oct 5, 2026, 12_48_41 PM.png",
+      "aliasOf": "terrace-tables",
+      "sha256": "6253f17a180dea5d9d3b9c32a9bb0cf29395f4c3535783142633db0710bc5ab3"
+    },
+    {
+      "id": "bathroom-sink",
+      "source": "ChatGPT Image Oct 5, 2026, 12_48_50 PM.png",
+      "sha256": "569ac70580d0e2c1c1956dd8ea573d1f595bb8192acafe031d59c8482f35bdf8",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalBytes": 2243298,
+      "alt": "Zuhanyzó és mosdó",
+      "variants": [
+        {
+          "src": "bathroom-sink-400.webp",
+          "width": 400,
+          "height": 267,
+          "bytes": 16346
+        },
+        {
+          "src": "bathroom-sink-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 42642
+        },
+        {
+          "src": "bathroom-sink-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 103288
+        }
+      ]
+    },
+    {
+      "id": "courtyard-fountain",
+      "source": "ChatGPT Image Oct 5, 2026, 12_49_05 PM.png",
+      "sha256": "f868a73793a369da9a3b7a50abd37b39c7fc5c57336454e8f269fac51e43c618",
+      "originalWidth": 1563,
+      "originalHeight": 1006,
+      "originalBytes": 2815583,
+      "alt": "Csobogó és fák a napsütötte udvaron",
+      "variants": [
+        {
+          "src": "courtyard-fountain-400.webp",
+          "width": 400,
+          "height": 257,
+          "bytes": 29950
+        },
+        {
+          "src": "courtyard-fountain-800.webp",
+          "width": 800,
+          "height": 515,
+          "bytes": 101162
+        },
+        {
+          "src": "courtyard-fountain-1563.webp",
+          "width": 1563,
+          "height": 1006,
+          "bytes": 274582
+        }
+      ]
+    },
+    {
+      "id": "house-gable",
+      "source": "ChatGPT Image Oct 5, 2026, 12_49_11 PM.png",
+      "sha256": "5c2d5ba234a6c1f90d46187875b2dc6a383c495b6966be7b6388fb6fe3d7404a",
+      "originalWidth": 1086,
+      "originalHeight": 1448,
+      "originalBytes": 2148345,
+      "alt": "M-oromdísz az épület sárga homlokzatán",
+      "variants": [
+        {
+          "src": "house-gable-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 17744
+        },
+        {
+          "src": "house-gable-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 55532
+        },
+        {
+          "src": "house-gable-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 95912
+        }
+      ]
+    },
+    {
+      "id": "room-apartment",
+      "source": "ChatGPT Image Oct 5, 2026, 12_49_17 PM.png",
+      "sha256": "a9b3e2a4007a4b35d481e1db7d29594afba8954e2031a07536e42dba3a4f587e",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalBytes": 2252638,
+      "alt": "Tetőtéri apartman ágyakkal és étkezőasztallal",
+      "variants": [
+        {
+          "src": "room-apartment-400.webp",
+          "width": 400,
+          "height": 267,
+          "bytes": 12886
+        },
+        {
+          "src": "room-apartment-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 36202
+        },
+        {
+          "src": "room-apartment-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 98444
+        }
+      ]
+    },
+    {
+      "id": "bathroom-shower",
+      "source": "ChatGPT Image Oct 5, 2026, 12_49_23 PM.png",
+      "sha256": "43db59d6168c5b9c9a86a61d5484e1511de92442c5afa16c36800e1c9e6593f5",
+      "originalWidth": 1024,
+      "originalHeight": 1536,
+      "originalBytes": 2479981,
+      "alt": "Fürdőszoba zuhanyzóval",
+      "variants": [
+        {
+          "src": "bathroom-shower-400.webp",
+          "width": 400,
+          "height": 600,
+          "bytes": 33568
+        },
+        {
+          "src": "bathroom-shower-800.webp",
+          "width": 800,
+          "height": 1200,
+          "bytes": 97340
+        },
+        {
+          "src": "bathroom-shower-1024.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 144894
+        }
+      ]
+    },
+    {
+      "id": "lounge-fireplace",
+      "source": "ChatGPT Image Oct 5, 2026, 12_56_51 PM.png",
+      "sha256": "3dde970c2446f7d0814ca5858640d47152f1dfa94c007533fa54ebc8a0b8a56a",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2936092,
+      "alt": "Kandallós társalgó közös ülőhelyekkel",
+      "variants": [
+        {
+          "src": "lounge-fireplace-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 28118
+        },
+        {
+          "src": "lounge-fireplace-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 102078
+        },
+        {
+          "src": "lounge-fireplace-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 281210
+        }
+      ]
+    },
+    {
+      "id": "lounge-dining",
+      "source": "ChatGPT Image Oct 5, 2026, 12_56_57 PM.png",
+      "sha256": "6dc100b30f2aeaa7ce89286aedd007f6d20ef852f199b309cdcbc1bd85307d1c",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2466346,
+      "alt": "Közös étkezőasztalok a társalgóban",
+      "variants": [
+        {
+          "src": "lounge-dining-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 21988
+        },
+        {
+          "src": "lounge-dining-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 69010
+        },
+        {
+          "src": "lounge-dining-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 178076
+        }
+      ]
+    },
+    {
+      "id": "relax-swing-wide",
+      "source": "ChatGPT Image Oct 5, 2026, 12_57_07 PM.png",
+      "sha256": "9c720b6c1ddbf3add493d4bee4625ee2556a98f5b502341d85dc428de81afcef",
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "originalBytes": 2174480,
+      "alt": "Pihenőrész függőfotellel és hangulatvilágítással",
+      "variants": [
+        {
+          "src": "relax-swing-wide-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 15010
+        },
+        {
+          "src": "relax-swing-wide-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 53578
+        },
+        {
+          "src": "relax-swing-wide-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 140188
+        }
+      ]
+    }
+  ]
+}
