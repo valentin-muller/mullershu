@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "python3 -m http.server 8000 --bind 127.0.0.1",
-    "check": "node --check script.js && node --check assets/consent.js && node --check api/mellow-inquiry.js && node --check mullers2-wellness/mellow/booking-adapter.js && node --check mullers2-wellness/mellow/booking.js && node --check mullers2-wellness/mellow/mellow.js && node --check mullers2-wellness/mellow/entrance.js && node --check mullers2-wellness/mellow/salt.js",
+    "check": "node --check script.js && node --check assets/consent.js && node --check api/mellow-inquiry.js && node --check mullers2-wellness/mellow/booking-adapter.js && node --check mullers2-wellness/mellow/booking.js && node --check mullers2-wellness/mellow/mellow.js && node --check mullers2-wellness/mellow/entrance.js && node --check mullers2-wellness/mellow/salt.js && node --check mullers2-wellness/mellow/sack-pour.js",
     "test:inquiry": "node --test .impeccable/mullers2-mellow/calendar-inquiry-v1/booking.test.cjs .impeccable/mullers2-mellow/calendar-inquiry-v1/inquiry-api.test.cjs"
   },
   "dependencies": {
