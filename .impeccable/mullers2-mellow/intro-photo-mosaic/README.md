@@ -10,9 +10,9 @@ The cloud backdrop is the existing sunset-clouds-v1.webp. Cream text #fff8eb ove
 
 Copy: “„Az egész ház. / Csak Nektek.””; the existing question about the whole experience being theirs; the supplied 10–16 / up-to-30 guest sentence. Existing “Nézzetek körül” action goes to the existing room chapter.
 
-## Photo sources
+## Initial edition photo sources
 
-Property photos: original assets/mullers2 and existing mullers2-wellness/assets photographs. New WebP copies live in mellow/assets/intro. No AI images in this collage.
+Property photos: original assets/mullers2 and existing mullers2-wellness/assets photographs. New WebP copies live in mellow/assets/intro. This describes the initial edition; the supplied-image follow-up below supersedes selected property frames.
 
 - tower: Szilas, Water tower of Siófok, 2013. Public-domain dedication. https://commons.wikimedia.org/wiki/File:Water_tower_of_Si%C3%B3fok.jpg ; original 2649×4592. Resized WebP, CSS crop.
 - harbour: Pierre Bona, Siofok-passe du port, 2009. Selected license CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Siofok-passe_du_port.jpg ; original 4032×3024. Resized WebP, CSS crop. Attribution, original, license, modification and derivative-download links on public foto-forrasok.html, linked from page footer. Modified image copies share the same license.
@@ -24,3 +24,14 @@ All other frames have filenames matching their subject (house, room, lounge, cou
 Bounded inspection and correction: iPhone 17 Pro, iOS26.4 Simulator Safari with actual bars; supplemental Chrome at360×640,390×664,820×1180,1366×650. Native Safari shows top3 + center + bottom6 simultaneously. Tablet was corrected from narrow side strips to the mobile top/bottom structure. Water tower crop corrected to preserve the tower top. Desktop room-link activation arrives at#szobak with top0. Syntax/diff checks passed; HTML comparison confirms the hero and following chapters are unchanged. Original assets are untouched.
 
 Primary screenshot is native Simulator Safari, not desktop emulation. Physical iPhone gesture/bar collapse testing has not been performed; native Simulator scrolling is unavailable to this automation. Supplemental Chrome provides navigation checks. No claim of physical iPhone validation. Local screenshots are in output/intro-mosaic (not deployed).
+
+
+## Supplied image library follow-up — 2026-10-05
+
+User requested optimizing all 17 supplied PNG attachments and using them around the existing short building introduction. Sixteen are unique: terrace-tables-alternate is an exact duplicate, mapped through aliasOf in the public photo-library/manifest.json. Original files are preserved outside the repository. No assertion is made that supplied pictures are unedited photography.
+
+All sixteen unique images have 400px, 800px and up-to-1600px WebP width variants, preserving aspect ratio and avoiding upscaling. Pillow EXIF transpose, LANCZOS resize, quality79/method6 WebP; metadata stripped. Source basename, SHA256, dimensions, byte sizes, Hungarian alt text, variant paths and the duplicate mapping are in the manifest. Unique source bytes:39,343,338; all48 optimized variants:4,466,276 bytes. Only selected responsive variants load on the page, not the entire library. Future chapters should select the actual width descriptors listed in the manifest and use sizes appropriate to their layouts.
+
+Mosaic subjects now include the M gable, green bedroom, fireplace, courtyard plunge, swing and terrace, plus desktop fountain, dining room and grill. Tower/harbour Commons license attribution and the existing salt-room frame remain. Small cards use400/800px srcset, explicit intrinsic dimensions and lazy decoding/loading. Individual object-position values keep their subjects in frame. Intro copy, approved first hero, later chapters, booking behavior and consent are unchanged.
+
+Verified native iPhone17Pro iOS26.4 Simulator Safari with real browser chrome: all9 photos and center copy fit together. Native Chrome desktop1840×901 checked visually. Geometry is unchanged from the previous smaller-phone/tablet verification; no new smaller-device or physical-iPhone gesture/bar-collapse claim. Screenshots:output/intro-photo-library/iphone-safari.png and desktop.png (local QA, not deployed). Source hashes,48 variant sizes/bytes, byte-identical hero/following chapters, npm run check and git diff --check pass.
