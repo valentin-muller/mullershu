@@ -28,9 +28,7 @@
 
 @media(max-width:760px){
  body{--chapter-bleed:calc(100lvh - 100dvh)}
- .motion .stage{height:100lvh}
  .scene.bedroom,.scene.lounge{min-height:100lvh}
- .motion .scene.bedroom,.motion .scene.lounge{min-height:0}
  .salt-room.wellness-photo{height:100lvh;min-height:0}
  .room-title,.lounge .room-title,.salt-room-heading{bottom:calc(max(28px,7%) + var(--chapter-bleed))}
  .room-title h2,.salt-room-heading h2{font-size:clamp(36px,10vw,44px)}
