@@ -23,12 +23,9 @@
 .note-detail{left:4%;top:143vw;transform:rotate(-7deg)}
 .note-home{right:3%;top:135vw;transform:rotate(4deg)}
 .collage-signature{position:absolute;left:35%;bottom:1vw;text-align:center;font:400 8px/1.7 Georgia,serif;letter-spacing:.15em;text-transform:uppercase;color:#e4c8a8}
-.motion .journey{height:280svh}
-.motion .bedroom{clip-path:none}
 .motion.is-entry .header{color:var(--cream)}
 .motion.is-entry .brand img{filter:brightness(0) invert(1);mix-blend-mode:screen}
 .motion.is-entry .brand{background:none;padding:0}
-@media(max-width:760px){.motion .journey{height:260svh}}
 @media(min-width:761px) and (max-width:1100px){
  .intro-mosaic{height:239vw}
  .intro-photo{border-width:3px}
