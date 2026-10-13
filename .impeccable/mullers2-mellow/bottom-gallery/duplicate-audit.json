@@ -1,0 +1,80 @@
+{
+  "scope": "Each displayed photo group; complete bottom gallery may repeat chapter/collage sources.",
+  "collageReplacements": [
+    {
+      "removedCollageId": "bathroom-shower",
+      "replacementId": "wellness-jacuzzi",
+      "sourceGalleryId": "chapter-jakuzzi"
+    },
+    {
+      "removedCollageId": "grill-tools",
+      "replacementId": "wellness-saltroom",
+      "sourceGalleryId": "chapter-soszoba"
+    },
+    {
+      "removedCollageId": "grill",
+      "replacementId": "wellness-sauna",
+      "sourceGalleryId": "chapter-szauna"
+    },
+    {
+      "removedCollageId": "relax-swing-wide",
+      "replacementId": "terrace-covered",
+      "sourceGalleryId": "mullers2-building4"
+    },
+    {
+      "removedCollageId": "house-gable",
+      "replacementId": "courtyard-plunge-detail",
+      "sourceGalleryId": "chapter-merulo"
+    }
+  ],
+  "galleryDuplicatePairsRemoved": [
+    {
+      "removedId": "mullers2-4personcomfort",
+      "retainedId": "room-green",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-4personcomfort4",
+      "retainedId": "room-apartment",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-4personcomfrot-bathroom2",
+      "retainedId": "bathroom-shower",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-breakfast1",
+      "retainedId": "breakfast-buffet",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-building5",
+      "retainedId": "grill",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-building7",
+      "retainedId": "grill-tools",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-4personapartment-terrace",
+      "retainedId": "terrace-blue",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-building",
+      "retainedId": "house-aerial",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    },
+    {
+      "removedId": "mullers2-building3",
+      "retainedId": "courtyard-fountain",
+      "reason": "Same original photograph or camera view, with enhancement/geometry correction."
+    }
+  ],
+  "retainedGalleryCount": 36,
+  "retainedCollageCount": 19,
+  "collageBathroomCount": 1
+}

@@ -5,7 +5,7 @@
 .intro-photo{position:absolute;left:calc(var(--mx)*1%);top:calc(var(--my)*1vw);width:calc(var(--mw)*1%);margin:0;padding:0;border:2px solid #e7d0ac;background:#e7d0ac;transform:rotate(var(--turn));box-shadow:3px 6px 12px #21171155;z-index:1}
 .intro-photo img{display:block;width:100%;height:auto}
 .intro-photo.is-taped::after{content:"";position:absolute;width:28%;height:13px;left:5%;top:-7px;background:#d1b68dd9;transform:rotate(-17deg);pointer-events:none}
-.intro-photo[data-photo="room-green"],.intro-photo[data-photo="grill-tools"]{z-index:2}
+.intro-photo[data-photo="room-green"],.intro-photo[data-photo="wellness-saltroom"]{z-index:2}
 .private-opening{position:absolute;left:18%;top:81vw;width:64%;text-align:center;z-index:3}
 .private-opening h2{font:italic 400 clamp(32px,9vw,44px)/1.16 Georgia,'Times New Roman',serif;margin:0;letter-spacing:-.025em;text-wrap:balance}
 .private-opening h2::after{content:"";display:block;width:32px;height:1px;background:#e7d0ac;margin:18px auto 24px}
