@@ -1,33 +1,5 @@
 [
   {
-    "id": "mullers2-4personcomfort",
-    "category": "rooms",
-    "title": "Négyágyas szoba",
-    "alt": "Négyágyas szoba – Müller’s 2",
-    "source": "assets/mullers2/mullers2-4personcomfort.jpeg",
-    "sourceSha256": "e7ed98b3f91bef27af5fd0deafa6830dec405d2b45e442ea8254adb2c1c1d48d",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-4personcomfort-320.webp",
-        "width": 320,
-        "height": 214,
-        "bytes": 7724
-      },
-      {
-        "src": "assets/gallery/mullers2-4personcomfort-640.webp",
-        "width": 640,
-        "height": 427,
-        "bytes": 25300
-      },
-      {
-        "src": "assets/gallery/mullers2-4personcomfort-1600.webp",
-        "width": 1600,
-        "height": 1068,
-        "bytes": 117922
-      }
-    ]
-  },
-  {
     "id": "mullers2-4personcomfort2",
     "category": "rooms",
     "title": "Négyágyas szoba",
@@ -80,34 +52,6 @@
         "width": 1600,
         "height": 1067,
         "bytes": 82686
-      }
-    ]
-  },
-  {
-    "id": "mullers2-4personcomfort4",
-    "category": "rooms",
-    "title": "Négyágyas szoba",
-    "alt": "Négyágyas szoba – Müller’s 2",
-    "source": "assets/mullers2/mullers2-4personcomfort4.jpg",
-    "sourceSha256": "d8f9dd5d666766b057137c02524e1f759c5d483f76fdb616d204bd9711b9bf80",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-4personcomfort4-320.webp",
-        "width": 320,
-        "height": 213,
-        "bytes": 8294
-      },
-      {
-        "src": "assets/gallery/mullers2-4personcomfort4-640.webp",
-        "width": 640,
-        "height": 427,
-        "bytes": 21094
-      },
-      {
-        "src": "assets/gallery/mullers2-4personcomfort4-1600.webp",
-        "width": 1600,
-        "height": 1067,
-        "bytes": 72832
       }
     ]
   },
@@ -220,34 +164,6 @@
         "width": 1600,
         "height": 2400,
         "bytes": 204012
-      }
-    ]
-  },
-  {
-    "id": "mullers2-4personcomfrot-bathroom2",
-    "category": "rooms",
-    "title": "Fürdőszoba",
-    "alt": "Fürdőszoba – Müller’s 2",
-    "source": "assets/mullers2/mullers2-4personcomfrot-bathroom2.jpg",
-    "sourceSha256": "2aed9d3512eb1d733e7b7444fb72767a2ccec51302faa85561fb42eddcf4c0eb",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-4personcomfrot-bathroom2-320.webp",
-        "width": 320,
-        "height": 480,
-        "bytes": 19706
-      },
-      {
-        "src": "assets/gallery/mullers2-4personcomfrot-bathroom2-640.webp",
-        "width": 640,
-        "height": 960,
-        "bytes": 53290
-      },
-      {
-        "src": "assets/gallery/mullers2-4personcomfrot-bathroom2-1600.webp",
-        "width": 1600,
-        "height": 2400,
-        "bytes": 271264
       }
     ]
   },
@@ -441,34 +357,6 @@
     ]
   },
   {
-    "id": "mullers2-breakfast1",
-    "category": "shared",
-    "title": "Reggeli",
-    "alt": "Reggeli – Müller’s 2",
-    "source": "assets/mullers2/mullers2-breakfast1.jpg",
-    "sourceSha256": "8afced40ed43c0b908527896d99f2fafa193f168ad56cf10e222a6862d8f7bad",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-breakfast1-320.webp",
-        "width": 320,
-        "height": 240,
-        "bytes": 17050
-      },
-      {
-        "src": "assets/gallery/mullers2-breakfast1-640.webp",
-        "width": 640,
-        "height": 480,
-        "bytes": 51514
-      },
-      {
-        "src": "assets/gallery/mullers2-breakfast1-1600.webp",
-        "width": 1600,
-        "height": 1200,
-        "bytes": 193026
-      }
-    ]
-  },
-  {
     "id": "mullers2-building4",
     "category": "shared",
     "title": "Fedett terasz",
@@ -493,90 +381,6 @@
         "width": 1600,
         "height": 1313,
         "bytes": 139632
-      }
-    ]
-  },
-  {
-    "id": "mullers2-building5",
-    "category": "shared",
-    "title": "Kerti grill",
-    "alt": "Kerti grill – Müller’s 2",
-    "source": "assets/mullers2/mullers2-building5.jpg",
-    "sourceSha256": "756824625431256f73db1d4101321b986310d71db4c197f3085d19b958f8354f",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-building5-320.webp",
-        "width": 320,
-        "height": 343,
-        "bytes": 25914
-      },
-      {
-        "src": "assets/gallery/mullers2-building5-640.webp",
-        "width": 640,
-        "height": 687,
-        "bytes": 87978
-      },
-      {
-        "src": "assets/gallery/mullers2-building5-1600.webp",
-        "width": 1600,
-        "height": 1717,
-        "bytes": 383488
-      }
-    ]
-  },
-  {
-    "id": "mullers2-building7",
-    "category": "shared",
-    "title": "Grilleszközök",
-    "alt": "Grilleszközök – Müller’s 2",
-    "source": "assets/mullers2/mullers2-building7.jpeg",
-    "sourceSha256": "c6f35a3c5edb2344ef21b9e97292ac649789a91c4631d1000da70bd0f6fda4f9",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-building7-320.webp",
-        "width": 320,
-        "height": 352,
-        "bytes": 21656
-      },
-      {
-        "src": "assets/gallery/mullers2-building7-640.webp",
-        "width": 640,
-        "height": 705,
-        "bytes": 61878
-      },
-      {
-        "src": "assets/gallery/mullers2-building7-1600.webp",
-        "width": 1600,
-        "height": 1762,
-        "bytes": 242762
-      }
-    ]
-  },
-  {
-    "id": "mullers2-4personapartment-terrace",
-    "category": "shared",
-    "title": "Apartman terasza",
-    "alt": "Apartman terasza – Müller’s 2",
-    "source": "assets/mullers2/mullers2-4personapartment-terrace.jpeg",
-    "sourceSha256": "311433f9778fc5ebf4bcc8d522ad84d914b6b122124c4219f23fe3604c8a8c11",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-4personapartment-terrace-320.webp",
-        "width": 320,
-        "height": 213,
-        "bytes": 14796
-      },
-      {
-        "src": "assets/gallery/mullers2-4personapartment-terrace-640.webp",
-        "width": 640,
-        "height": 427,
-        "bytes": 47110
-      },
-      {
-        "src": "assets/gallery/mullers2-4personapartment-terrace-1600.webp",
-        "width": 1600,
-        "height": 1067,
-        "bytes": 188804
       }
     ]
   },
@@ -826,34 +630,6 @@
     ]
   },
   {
-    "id": "mullers2-building",
-    "category": "courtyard",
-    "title": "Az épület",
-    "alt": "Az épület – Müller’s 2",
-    "source": "assets/mullers2/mullers2-building.jpeg",
-    "sourceSha256": "c2cc220825b740235b5724a53498e0cff7366fe61fd9054b928ba8eb06e5f5e7",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-building-320.webp",
-        "width": 320,
-        "height": 240,
-        "bytes": 22464
-      },
-      {
-        "src": "assets/gallery/mullers2-building-640.webp",
-        "width": 640,
-        "height": 480,
-        "bytes": 80944
-      },
-      {
-        "src": "assets/gallery/mullers2-building-1600.webp",
-        "width": 1600,
-        "height": 1200,
-        "bytes": 382806
-      }
-    ]
-  },
-  {
     "id": "mullers2-building2",
     "category": "courtyard",
     "title": "Udvar",
@@ -878,34 +654,6 @@
         "width": 1600,
         "height": 1198,
         "bytes": 170424
-      }
-    ]
-  },
-  {
-    "id": "mullers2-building3",
-    "category": "courtyard",
-    "title": "Udvari csobogó",
-    "alt": "Udvari csobogó – Müller’s 2",
-    "source": "assets/mullers2/mullers2-building3.JPG",
-    "sourceSha256": "94e5dc74aa2a21e4a1bf3fc490715195b2845d103b8dc783a49d30451cdaf6a3",
-    "variants": [
-      {
-        "src": "assets/gallery/mullers2-building3-320.webp",
-        "width": 320,
-        "height": 206,
-        "bytes": 16778
-      },
-      {
-        "src": "assets/gallery/mullers2-building3-640.webp",
-        "width": 640,
-        "height": 412,
-        "bytes": 51400
-      },
-      {
-        "src": "assets/gallery/mullers2-building3-1600.webp",
-        "width": 1600,
-        "height": 1030,
-        "bytes": 206990
       }
     ]
   },
