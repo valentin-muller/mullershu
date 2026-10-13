@@ -1,0 +1,1238 @@
+[
+  {
+    "id": "mullers2-4personcomfort",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas szoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort.jpeg",
+    "sourceSha256": "e7ed98b3f91bef27af5fd0deafa6830dec405d2b45e442ea8254adb2c1c1d48d",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-320.webp",
+        "width": 320,
+        "height": 214,
+        "bytes": 7724
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 25300
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-1600.webp",
+        "width": 1600,
+        "height": 1068,
+        "bytes": 117922
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort2",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas szoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort2.jpeg",
+    "sourceSha256": "c17a8249607fcd72208d26401175a84632d0111f37d700acfd0908ac5358c0f6",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort2-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 10136
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort2-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 26538
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort2-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 112342
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort3",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas szoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort3.jpeg",
+    "sourceSha256": "70fe0fa808e3b4f09b95f923fc9310cafb9fc3ac782a5297d28e7450a9b4d295",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort3-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 7866
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort3-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 21190
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort3-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 82686
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort4",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas szoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort4.jpg",
+    "sourceSha256": "d8f9dd5d666766b057137c02524e1f759c5d483f76fdb616d204bd9711b9bf80",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort4-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 8294
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort4-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 21094
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort4-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 72832
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort5",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas szoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort5.JPG",
+    "sourceSha256": "5a1fb3bcdf046ef0b205b0806554f5f2c421edfd2661dc43eb1addb7f1bb6dc7",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort5-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 12064
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort5-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 29726
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort5-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 94508
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort6",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas szoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort6.JPG",
+    "sourceSha256": "94d087a41838c82108737006b24aa1237b35c31a84d46c77c664b7301bf69466",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort6-320.webp",
+        "width": 320,
+        "height": 250,
+        "bytes": 10198
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort6-640.webp",
+        "width": 640,
+        "height": 501,
+        "bytes": 27020
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort6-1600.webp",
+        "width": 1600,
+        "height": 1252,
+        "bytes": 92118
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personapartment-bathroom",
+    "category": "rooms",
+    "title": "Fürdőszoba",
+    "alt": "Fürdőszoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personapartment-bathroom.JPG",
+    "sourceSha256": "1500ce5250fbc16a09c90cc6b7c2b42a724a7d8adb9a432fa0eb45d7eb68a895",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personapartment-bathroom-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 20680
+      },
+      {
+        "src": "assets/gallery/mullers2-4personapartment-bathroom-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 56884
+      },
+      {
+        "src": "assets/gallery/mullers2-4personapartment-bathroom-1600.webp",
+        "width": 1600,
+        "height": 2400,
+        "bytes": 306898
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort-bathroom",
+    "category": "rooms",
+    "title": "Fürdőszoba",
+    "alt": "Fürdőszoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort-bathroom.jpg",
+    "sourceSha256": "21a387cdcae8accf086e36d5eab0bada04182c8454f5c9366f7358a97569354c",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-bathroom-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 19380
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-bathroom-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 49664
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-bathroom-1600.webp",
+        "width": 1600,
+        "height": 2400,
+        "bytes": 204012
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfrot-bathroom2",
+    "category": "rooms",
+    "title": "Fürdőszoba",
+    "alt": "Fürdőszoba – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfrot-bathroom2.jpg",
+    "sourceSha256": "2aed9d3512eb1d733e7b7444fb72767a2ccec51302faa85561fb42eddcf4c0eb",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfrot-bathroom2-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 19706
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfrot-bathroom2-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 53290
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfrot-bathroom2-1600.webp",
+        "width": 1600,
+        "height": 2400,
+        "bytes": 271264
+      }
+    ]
+  },
+  {
+    "id": "room-green",
+    "category": "rooms",
+    "title": "Négyágyas szoba",
+    "alt": "Négyágyas tetőtéri szoba zöld fallal",
+    "source": "ChatGPT Image Oct 5, 2026, 12_47_57 PM.png",
+    "sourceSha256": "22613cd545128e61db2484d5aedce833d0cb77fbe252612b1f31ac963f73d613",
+    "variants": [
+      {
+        "src": "assets/photo-library/room-green-400.webp",
+        "width": 400,
+        "height": 267,
+        "bytes": 12310
+      },
+      {
+        "src": "assets/photo-library/room-green-800.webp",
+        "width": 800,
+        "height": 534,
+        "bytes": 44578
+      },
+      {
+        "src": "assets/photo-library/room-green-1535.webp",
+        "width": 1535,
+        "height": 1025,
+        "bytes": 139810
+      }
+    ]
+  },
+  {
+    "id": "room-apartment",
+    "category": "rooms",
+    "title": "Apartman",
+    "alt": "Tetőtéri apartman ágyakkal és étkezőasztallal",
+    "source": "ChatGPT Image Oct 5, 2026, 12_49_17 PM.png",
+    "sourceSha256": "a9b3e2a4007a4b35d481e1db7d29594afba8954e2031a07536e42dba3a4f587e",
+    "variants": [
+      {
+        "src": "assets/photo-library/room-apartment-400.webp",
+        "width": 400,
+        "height": 267,
+        "bytes": 12886
+      },
+      {
+        "src": "assets/photo-library/room-apartment-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 36202
+      },
+      {
+        "src": "assets/photo-library/room-apartment-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 98444
+      }
+    ]
+  },
+  {
+    "id": "bathroom-sink",
+    "category": "rooms",
+    "title": "Fürdőszoba",
+    "alt": "Zuhanyzó és mosdó",
+    "source": "ChatGPT Image Oct 5, 2026, 12_48_50 PM.png",
+    "sourceSha256": "569ac70580d0e2c1c1956dd8ea573d1f595bb8192acafe031d59c8482f35bdf8",
+    "variants": [
+      {
+        "src": "assets/photo-library/bathroom-sink-400.webp",
+        "width": 400,
+        "height": 267,
+        "bytes": 16346
+      },
+      {
+        "src": "assets/photo-library/bathroom-sink-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 42642
+      },
+      {
+        "src": "assets/photo-library/bathroom-sink-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 103288
+      }
+    ]
+  },
+  {
+    "id": "bathroom-shower",
+    "category": "rooms",
+    "title": "Zuhanyzó",
+    "alt": "Fürdőszoba zuhanyzóval",
+    "source": "ChatGPT Image Oct 5, 2026, 12_49_23 PM.png",
+    "sourceSha256": "43db59d6168c5b9c9a86a61d5484e1511de92442c5afa16c36800e1c9e6593f5",
+    "variants": [
+      {
+        "src": "assets/photo-library/bathroom-shower-400.webp",
+        "width": 400,
+        "height": 600,
+        "bytes": 33568
+      },
+      {
+        "src": "assets/photo-library/bathroom-shower-800.webp",
+        "width": 800,
+        "height": 1200,
+        "bytes": 97340
+      },
+      {
+        "src": "assets/photo-library/bathroom-shower-1024.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 144894
+      }
+    ]
+  },
+  {
+    "id": "chapter-szobak",
+    "category": "rooms",
+    "title": "Szobák",
+    "alt": "Szobák – Müller’s 2",
+    "source": "mullers2-wellness/assets/szobak",
+    "variants": [
+      {
+        "src": "../assets/szobak-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 63396
+      },
+      {
+        "src": "../assets/szobak-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 136086
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personcomfort-communalarea",
+    "category": "shared",
+    "title": "Közös terek",
+    "alt": "Közös terek – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personcomfort-communalarea.jpeg",
+    "sourceSha256": "ed4ffd5b727bb0e28d2c764eb67137192045ee0ebc3920dbb3377969c782ba07",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-communalarea-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 23120
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-communalarea-640.webp",
+        "width": 640,
+        "height": 960,
+        "bytes": 62870
+      },
+      {
+        "src": "assets/gallery/mullers2-4personcomfort-communalarea-1600.webp",
+        "width": 1600,
+        "height": 2400,
+        "bytes": 288792
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building6",
+    "category": "shared",
+    "title": "Társalgó",
+    "alt": "Társalgó – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building6.jpeg",
+    "sourceSha256": "4dfaba0e9c16f4a8183e16f23ac33dad920e1ad6afd561d83fa30afb999856e4",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building6-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 9760
+      },
+      {
+        "src": "assets/gallery/mullers2-building6-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 27544
+      },
+      {
+        "src": "assets/gallery/mullers2-building6-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 105242
+      }
+    ]
+  },
+  {
+    "id": "mullers2-breakfast1",
+    "category": "shared",
+    "title": "Reggeli",
+    "alt": "Reggeli – Müller’s 2",
+    "source": "assets/mullers2/mullers2-breakfast1.jpg",
+    "sourceSha256": "8afced40ed43c0b908527896d99f2fafa193f168ad56cf10e222a6862d8f7bad",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-breakfast1-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 17050
+      },
+      {
+        "src": "assets/gallery/mullers2-breakfast1-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 51514
+      },
+      {
+        "src": "assets/gallery/mullers2-breakfast1-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 193026
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building4",
+    "category": "shared",
+    "title": "Fedett terasz",
+    "alt": "Fedett terasz – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building4.JPG",
+    "sourceSha256": "9d010a16ea6785ce1d92471dba8d6e6cebaa19d4ca9f68c983dae6b9f82b67be",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building4-320.webp",
+        "width": 320,
+        "height": 263,
+        "bytes": 13574
+      },
+      {
+        "src": "assets/gallery/mullers2-building4-640.webp",
+        "width": 640,
+        "height": 525,
+        "bytes": 38092
+      },
+      {
+        "src": "assets/gallery/mullers2-building4-1600.webp",
+        "width": 1600,
+        "height": 1313,
+        "bytes": 139632
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building5",
+    "category": "shared",
+    "title": "Kerti grill",
+    "alt": "Kerti grill – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building5.jpg",
+    "sourceSha256": "756824625431256f73db1d4101321b986310d71db4c197f3085d19b958f8354f",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building5-320.webp",
+        "width": 320,
+        "height": 343,
+        "bytes": 25914
+      },
+      {
+        "src": "assets/gallery/mullers2-building5-640.webp",
+        "width": 640,
+        "height": 687,
+        "bytes": 87978
+      },
+      {
+        "src": "assets/gallery/mullers2-building5-1600.webp",
+        "width": 1600,
+        "height": 1717,
+        "bytes": 383488
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building7",
+    "category": "shared",
+    "title": "Grilleszközök",
+    "alt": "Grilleszközök – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building7.jpeg",
+    "sourceSha256": "c6f35a3c5edb2344ef21b9e97292ac649789a91c4631d1000da70bd0f6fda4f9",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building7-320.webp",
+        "width": 320,
+        "height": 352,
+        "bytes": 21656
+      },
+      {
+        "src": "assets/gallery/mullers2-building7-640.webp",
+        "width": 640,
+        "height": 705,
+        "bytes": 61878
+      },
+      {
+        "src": "assets/gallery/mullers2-building7-1600.webp",
+        "width": 1600,
+        "height": 1762,
+        "bytes": 242762
+      }
+    ]
+  },
+  {
+    "id": "mullers2-4personapartment-terrace",
+    "category": "shared",
+    "title": "Apartman terasza",
+    "alt": "Apartman terasza – Müller’s 2",
+    "source": "assets/mullers2/mullers2-4personapartment-terrace.jpeg",
+    "sourceSha256": "311433f9778fc5ebf4bcc8d522ad84d914b6b122124c4219f23fe3604c8a8c11",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-4personapartment-terrace-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 14796
+      },
+      {
+        "src": "assets/gallery/mullers2-4personapartment-terrace-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 47110
+      },
+      {
+        "src": "assets/gallery/mullers2-4personapartment-terrace-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 188804
+      }
+    ]
+  },
+  {
+    "id": "lounge-fireplace",
+    "category": "shared",
+    "title": "Kandallós társalgó",
+    "alt": "Kandallós társalgó közös ülőhelyekkel",
+    "source": "ChatGPT Image Oct 5, 2026, 12_56_51 PM.png",
+    "sourceSha256": "3dde970c2446f7d0814ca5858640d47152f1dfa94c007533fa54ebc8a0b8a56a",
+    "variants": [
+      {
+        "src": "assets/photo-library/lounge-fireplace-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 28118
+      },
+      {
+        "src": "assets/photo-library/lounge-fireplace-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 102078
+      },
+      {
+        "src": "assets/photo-library/lounge-fireplace-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 281210
+      }
+    ]
+  },
+  {
+    "id": "lounge-tv",
+    "category": "shared",
+    "title": "Tévésarok",
+    "alt": "Tévésarok és fotók a társalgóban",
+    "source": "ChatGPT Image Oct 5, 2026, 01_03_32 PM.png",
+    "sourceSha256": "2e0226e2dddd2d674816b2e52f534dc0a08339a4e58d11afd74ecabdd92fe85e",
+    "variants": [
+      {
+        "src": "assets/photo-library/lounge-tv-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 23598
+      },
+      {
+        "src": "assets/photo-library/lounge-tv-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 83992
+      },
+      {
+        "src": "assets/photo-library/lounge-tv-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 224632
+      }
+    ]
+  },
+  {
+    "id": "lounge-dining",
+    "category": "shared",
+    "title": "Közös étkező",
+    "alt": "Közös étkezőasztalok a társalgóban",
+    "source": "ChatGPT Image Oct 5, 2026, 12_56_57 PM.png",
+    "sourceSha256": "6dc100b30f2aeaa7ce89286aedd007f6d20ef852f199b309cdcbc1bd85307d1c",
+    "variants": [
+      {
+        "src": "assets/photo-library/lounge-dining-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 21988
+      },
+      {
+        "src": "assets/photo-library/lounge-dining-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 69010
+      },
+      {
+        "src": "assets/photo-library/lounge-dining-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 178076
+      }
+    ]
+  },
+  {
+    "id": "breakfast-buffet",
+    "category": "shared",
+    "title": "Reggeli",
+    "alt": "Közös reggelihez előkészített büféasztal",
+    "source": "ChatGPT Image Oct 5, 2026, 01_12_26 PM.png",
+    "sourceSha256": "ccad87ddf447dec1c92982913b9de8a4045ea3303250a07f6056a1889f714dec",
+    "variants": [
+      {
+        "src": "assets/photo-library/breakfast-buffet-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 23022
+      },
+      {
+        "src": "assets/photo-library/breakfast-buffet-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 66492
+      },
+      {
+        "src": "assets/photo-library/breakfast-buffet-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 144666
+      }
+    ]
+  },
+  {
+    "id": "terrace-tables",
+    "category": "shared",
+    "title": "Fedett terasz",
+    "alt": "Fedett terasz közös asztalokkal",
+    "source": "ChatGPT Image Oct 5, 2026, 12_48_25 PM.png",
+    "sourceSha256": "6253f17a180dea5d9d3b9c32a9bb0cf29395f4c3535783142633db0710bc5ab3",
+    "variants": [
+      {
+        "src": "assets/photo-library/terrace-tables-400.webp",
+        "width": 400,
+        "height": 296,
+        "bytes": 24060
+      },
+      {
+        "src": "assets/photo-library/terrace-tables-800.webp",
+        "width": 800,
+        "height": 592,
+        "bytes": 77914
+      },
+      {
+        "src": "assets/photo-library/terrace-tables-1458.webp",
+        "width": 1458,
+        "height": 1079,
+        "bytes": 210032
+      }
+    ]
+  },
+  {
+    "id": "terrace-blue",
+    "category": "shared",
+    "title": "Apartman terasza",
+    "alt": "Fedett terasz kék kanapéval és közös asztallal",
+    "source": "ChatGPT Image Oct 5, 2026, 01_12_36 PM.png",
+    "sourceSha256": "4a26bcf177a8ec383cb84616b498340dd117c8be94aa66bf0b227f202722c397",
+    "variants": [
+      {
+        "src": "assets/photo-library/terrace-blue-400.webp",
+        "width": 400,
+        "height": 267,
+        "bytes": 21276
+      },
+      {
+        "src": "assets/photo-library/terrace-blue-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 71180
+      },
+      {
+        "src": "assets/photo-library/terrace-blue-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 196614
+      }
+    ]
+  },
+  {
+    "id": "grill",
+    "category": "shared",
+    "title": "Kerti grill",
+    "alt": "Kerti grill a növények között",
+    "source": "ChatGPT Image Oct 5, 2026, 12_48_18 PM.png",
+    "sourceSha256": "a8167d3224f3b139c51154f4007da99f74101b7d2863102c162dcdf96662ffbb",
+    "variants": [
+      {
+        "src": "assets/photo-library/grill-400.webp",
+        "width": 400,
+        "height": 430,
+        "bytes": 41918
+      },
+      {
+        "src": "assets/photo-library/grill-800.webp",
+        "width": 800,
+        "height": 860,
+        "bytes": 138720
+      },
+      {
+        "src": "assets/photo-library/grill-1210.webp",
+        "width": 1210,
+        "height": 1300,
+        "bytes": 248900
+      }
+    ]
+  },
+  {
+    "id": "grill-tools",
+    "category": "shared",
+    "title": "Grilleszközök",
+    "alt": "Grillezéshez előkészített eszközök",
+    "source": "ChatGPT Image Oct 5, 2026, 12_48_12 PM.png",
+    "sourceSha256": "56a10e61ed5732d4367f249f32270799138bedd0c3b2e796b6435617e159071b",
+    "variants": [
+      {
+        "src": "assets/photo-library/grill-tools-400.webp",
+        "width": 400,
+        "height": 441,
+        "bytes": 36678
+      },
+      {
+        "src": "assets/photo-library/grill-tools-800.webp",
+        "width": 800,
+        "height": 881,
+        "bytes": 101414
+      },
+      {
+        "src": "assets/photo-library/grill-tools-1195.webp",
+        "width": 1195,
+        "height": 1316,
+        "bytes": 173214
+      }
+    ]
+  },
+  {
+    "id": "chapter-tarsalgo",
+    "category": "shared",
+    "title": "Kandallós társalgó",
+    "alt": "Kandallós társalgó – Müller’s 2",
+    "source": "mullers2-wellness/assets/tarsalgo",
+    "variants": [
+      {
+        "src": "../assets/tarsalgo-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 76006
+      },
+      {
+        "src": "../assets/tarsalgo-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 154598
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building",
+    "category": "courtyard",
+    "title": "Az épület",
+    "alt": "Az épület – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building.jpeg",
+    "sourceSha256": "c2cc220825b740235b5724a53498e0cff7366fe61fd9054b928ba8eb06e5f5e7",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 22464
+      },
+      {
+        "src": "assets/gallery/mullers2-building-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 80944
+      },
+      {
+        "src": "assets/gallery/mullers2-building-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 382806
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building2",
+    "category": "courtyard",
+    "title": "Udvar",
+    "alt": "Udvar – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building2.png",
+    "sourceSha256": "8d21ef9f99f9f9c84586ab3ede69d7a836ee86641d848227d239e7719799c41e",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building2-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 18050
+      },
+      {
+        "src": "assets/gallery/mullers2-building2-640.webp",
+        "width": 640,
+        "height": 479,
+        "bytes": 53564
+      },
+      {
+        "src": "assets/gallery/mullers2-building2-1600.webp",
+        "width": 1600,
+        "height": 1198,
+        "bytes": 170424
+      }
+    ]
+  },
+  {
+    "id": "mullers2-building3",
+    "category": "courtyard",
+    "title": "Udvari csobogó",
+    "alt": "Udvari csobogó – Müller’s 2",
+    "source": "assets/mullers2/mullers2-building3.JPG",
+    "sourceSha256": "94e5dc74aa2a21e4a1bf3fc490715195b2845d103b8dc783a49d30451cdaf6a3",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-building3-320.webp",
+        "width": 320,
+        "height": 206,
+        "bytes": 16778
+      },
+      {
+        "src": "assets/gallery/mullers2-building3-640.webp",
+        "width": 640,
+        "height": 412,
+        "bytes": 51400
+      },
+      {
+        "src": "assets/gallery/mullers2-building3-1600.webp",
+        "width": 1600,
+        "height": 1030,
+        "bytes": 206990
+      }
+    ]
+  },
+  {
+    "id": "mullers2-kert",
+    "category": "courtyard",
+    "title": "Kert és udvar",
+    "alt": "Kert és udvar – Müller’s 2",
+    "source": "assets/mullers2/mullers2-kert.JPG",
+    "sourceSha256": "32af8c7f7fb9882bdcb342cc25a8cc52330ef70de831908d2dc2bf290447b488",
+    "variants": [
+      {
+        "src": "assets/gallery/mullers2-kert-320.webp",
+        "width": 320,
+        "height": 459,
+        "bytes": 42982
+      },
+      {
+        "src": "assets/gallery/mullers2-kert-640.webp",
+        "width": 640,
+        "height": 918,
+        "bytes": 140180
+      },
+      {
+        "src": "assets/gallery/mullers2-kert-1600.webp",
+        "width": 1600,
+        "height": 2294,
+        "bytes": 563482
+      }
+    ]
+  },
+  {
+    "id": "house-aerial",
+    "category": "courtyard",
+    "title": "Az épület",
+    "alt": "A Müller’s épülete a sétálóutca felől, erkéllyel és vörös cseréptetővel",
+    "source": "ChatGPT Image Oct 5, 2026, 01_14_53 PM.png",
+    "sourceSha256": "d4dfaac22d8cb19f7d5e32a3f88bd6342d2cc1181036d3829d0de62d13f6a4e5",
+    "variants": [
+      {
+        "src": "assets/photo-library/house-aerial-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 35074
+      },
+      {
+        "src": "assets/photo-library/house-aerial-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 124498
+      },
+      {
+        "src": "assets/photo-library/house-aerial-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 304460
+      }
+    ]
+  },
+  {
+    "id": "house-gable",
+    "category": "courtyard",
+    "title": "Az épület részlete",
+    "alt": "M-oromdísz az épület sárga homlokzatán",
+    "source": "ChatGPT Image Oct 5, 2026, 12_49_11 PM.png",
+    "sourceSha256": "5c2d5ba234a6c1f90d46187875b2dc6a383c495b6966be7b6388fb6fe3d7404a",
+    "variants": [
+      {
+        "src": "assets/photo-library/house-gable-400.webp",
+        "width": 400,
+        "height": 533,
+        "bytes": 17744
+      },
+      {
+        "src": "assets/photo-library/house-gable-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 55532
+      },
+      {
+        "src": "assets/photo-library/house-gable-1086.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 95912
+      }
+    ]
+  },
+  {
+    "id": "courtyard-fountain",
+    "category": "courtyard",
+    "title": "Udvari csobogó",
+    "alt": "Csobogó és fák a napsütötte udvaron",
+    "source": "ChatGPT Image Oct 5, 2026, 12_49_05 PM.png",
+    "sourceSha256": "f868a73793a369da9a3b7a50abd37b39c7fc5c57336454e8f269fac51e43c618",
+    "variants": [
+      {
+        "src": "assets/photo-library/courtyard-fountain-400.webp",
+        "width": 400,
+        "height": 257,
+        "bytes": 29950
+      },
+      {
+        "src": "assets/photo-library/courtyard-fountain-800.webp",
+        "width": 800,
+        "height": 515,
+        "bytes": 101162
+      },
+      {
+        "src": "assets/photo-library/courtyard-fountain-1563.webp",
+        "width": 1563,
+        "height": 1006,
+        "bytes": 274582
+      }
+    ]
+  },
+  {
+    "id": "courtyard-plunge",
+    "category": "courtyard",
+    "title": "Udvar és merülő",
+    "alt": "Napsütötte udvar csobogóval és fa merülővel",
+    "source": "ChatGPT Image Oct 5, 2026, 10_37_29 AM.png",
+    "sourceSha256": "ba211f14cd82a4a6265c7c0a2f45699d145693c0445a142599343fd8d457a20d",
+    "variants": [
+      {
+        "src": "assets/photo-library/courtyard-plunge-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 31032
+      },
+      {
+        "src": "assets/photo-library/courtyard-plunge-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 104530
+      },
+      {
+        "src": "assets/photo-library/courtyard-plunge-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 260638
+      }
+    ]
+  },
+  {
+    "id": "chapter-merulo",
+    "category": "courtyard",
+    "title": "Udvari merülő",
+    "alt": "Udvari merülő – Müller’s 2",
+    "source": "mullers2-wellness/assets/merulo",
+    "variants": [
+      {
+        "src": "../assets/merulo-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 64652
+      },
+      {
+        "src": "../assets/merulo-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 129402
+      },
+      {
+        "src": "../assets/merulo-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "bytes": 214304
+      }
+    ]
+  },
+  {
+    "id": "chapter-szauna",
+    "category": "wellness",
+    "title": "Szauna",
+    "alt": "Szauna – Müller’s 2",
+    "source": "mullers2-wellness/assets/szauna",
+    "variants": [
+      {
+        "src": "../assets/szauna-640.webp",
+        "width": 640,
+        "height": 683,
+        "bytes": 61742
+      },
+      {
+        "src": "../assets/szauna-960.webp",
+        "width": 960,
+        "height": 1025,
+        "bytes": 100780
+      },
+      {
+        "src": "../assets/szauna-1199.webp",
+        "width": 1199,
+        "height": 1280,
+        "bytes": 136940
+      }
+    ]
+  },
+  {
+    "id": "chapter-soszoba",
+    "category": "wellness",
+    "title": "Sószoba",
+    "alt": "Sószoba – Müller’s 2",
+    "source": "mullers2-wellness/assets/soszoba",
+    "variants": [
+      {
+        "src": "../assets/soszoba-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 50732
+      },
+      {
+        "src": "../assets/soszoba-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 98008
+      },
+      {
+        "src": "../assets/soszoba-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "bytes": 157566
+      }
+    ]
+  },
+  {
+    "id": "chapter-jakuzzi",
+    "category": "wellness",
+    "title": "Jacuzzi",
+    "alt": "Jacuzzi – Müller’s 2",
+    "source": "mullers2-wellness/assets/jakuzzi",
+    "variants": [
+      {
+        "src": "../assets/jakuzzi-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 72020
+      },
+      {
+        "src": "../assets/jakuzzi-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 143236
+      }
+    ]
+  },
+  {
+    "id": "relax-chairs",
+    "category": "wellness",
+    "title": "Wellness pihenő",
+    "alt": "Pihenőszékek a wellnessrészben",
+    "source": "ChatGPT Image Oct 5, 2026, 01_03_27 PM.png",
+    "sourceSha256": "c5ce47dda63d98843327bc8fdaa5fc70fca3fc97c64310cbcb9b1dc8d6f33c92",
+    "variants": [
+      {
+        "src": "assets/photo-library/relax-chairs-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 14126
+      },
+      {
+        "src": "assets/photo-library/relax-chairs-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 38876
+      },
+      {
+        "src": "assets/photo-library/relax-chairs-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 87922
+      }
+    ]
+  },
+  {
+    "id": "relax-swing-close",
+    "category": "wellness",
+    "title": "Függőfotel",
+    "alt": "Fehér függőfotel a pihenőrészben",
+    "source": "ChatGPT Image Oct 5, 2026, 01_03_40 PM.png",
+    "sourceSha256": "e5dcd34f8b8169bb76377d0a962cbf9aab4ea7ff0c92653d38665b54005570df",
+    "variants": [
+      {
+        "src": "assets/photo-library/relax-swing-close-400.webp",
+        "width": 400,
+        "height": 533,
+        "bytes": 30308
+      },
+      {
+        "src": "assets/photo-library/relax-swing-close-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 105782
+      },
+      {
+        "src": "assets/photo-library/relax-swing-close-1086.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 161544
+      }
+    ]
+  },
+  {
+    "id": "relax-swing-wide",
+    "category": "wellness",
+    "title": "Pihenőrész",
+    "alt": "Pihenőrész függőfotellel és hangulatvilágítással",
+    "source": "ChatGPT Image Oct 5, 2026, 12_57_07 PM.png",
+    "sourceSha256": "9c720b6c1ddbf3add493d4bee4625ee2556a98f5b502341d85dc428de81afcef",
+    "variants": [
+      {
+        "src": "assets/photo-library/relax-swing-wide-400.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 15010
+      },
+      {
+        "src": "assets/photo-library/relax-swing-wide-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 53578
+      },
+      {
+        "src": "assets/photo-library/relax-swing-wide-1448.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 140188
+      }
+    ]
+  }
+]

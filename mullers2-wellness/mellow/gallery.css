@@ -1,0 +1,24 @@
+/* The original Müller’s 2 gallery: three columns, five from 900px, 4:5 tiles. */
+.mellow-gallery{padding:48px 0 0;background:var(--sand);color:var(--ink)}
+.mellow-gallery h2{text-align:right;margin:0 6vw 32px;font:400 clamp(32px,4vw,48px)/1.15 Sora,sans-serif;letter-spacing:-.025em}
+.mellow-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5px;background:#000b}
+.mellow-gallery-item{position:relative;aspect-ratio:4/5;overflow:hidden;margin:0;background:#0a2238}
+.mellow-gallery-item a{display:block;width:100%;height:100%;transition:filter .2s ease}
+.mellow-gallery-item img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(1.05);transition:transform .3s ease}
+.mellow-gallery-item figcaption{position:absolute;left:6px;bottom:6px;max-width:calc(100% - 12px);padding:4px 8px;color:#fff;background:#0009;border-radius:4px;font:400 11px/1.35 'Work Sans',sans-serif;text-shadow:0 1px 4px #0006;pointer-events:none}
+.mellow-gallery-item a:focus-visible{outline:3px solid #fff8eb;outline-offset:-5px}
+@media(hover:hover){.mellow-gallery-item a:hover{filter:brightness(.92)}.mellow-gallery-item a:hover img{transform:scale(1.01)}}
+@media(min-width:900px){.mellow-gallery-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.mellow-gallery-viewer{outline:0;width:min(92vw,980px);max-width:none;max-height:calc(100dvh - 32px);padding:56px 40px 76px;border:0;border-radius:22px;background:#0c1f33;color:#fff8eb;box-shadow:0 24px 60px #0006;overscroll-behavior:contain}
+.mellow-gallery-viewer::backdrop{background:#09141ed9}
+.mellow-gallery-viewer img{display:block;width:100%;height:min(65dvh,620px);max-height:calc(100dvh - 200px);object-fit:contain;border-radius:16px;background:#081624;touch-action:pan-y pinch-zoom}
+.mellow-gallery-viewer .gallery-caption{margin:16px 0 0;text-align:center;font:400 15px/1.4 'Work Sans',sans-serif}
+.mellow-gallery-viewer .gallery-count{position:absolute;bottom:28px;left:80px;right:80px;margin:0;text-align:center;font:400 13px/1.5 'Work Sans',sans-serif;font-variant-numeric:tabular-nums}
+.mellow-gallery-viewer button{position:absolute;width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;border-radius:12px;background:#fff2;color:#fff8eb;cursor:pointer}
+.mellow-gallery-viewer button:hover{background:#fff3}
+.mellow-gallery-viewer button:focus-visible{outline:2px solid #fff8eb;outline-offset:4px}
+.gallery-close{top:12px;right:16px}.gallery-prev{bottom:16px;left:20px}.gallery-next{bottom:16px;right:20px}.gallery-prev svg{transform:rotate(180deg)}
+.mellow-gallery-viewer .gallery-load-error{margin:16px 0 0;color:#fff8eb;text-align:center;font-size:14px}
+.mellow-gallery-viewer .gallery-load-error[hidden]{display:none}
+@media(max-width:760px){.mellow-gallery{padding-top:32px}.mellow-gallery h2{margin-bottom:24px}.mellow-gallery-item figcaption{left:4px;bottom:4px;max-width:calc(100% - 8px);padding:3px 5px;font-size:10px}.mellow-gallery-viewer{outline:0;width:calc(100vw - 24px);padding:56px 16px 76px}}
+@media(prefers-reduced-motion:reduce){.mellow-gallery-item a,.mellow-gallery-item img{transition:none}}
