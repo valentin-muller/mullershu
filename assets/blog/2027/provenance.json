@@ -1,0 +1,801 @@
+{
+  "owner-cover-mobile": {
+    "source": ".impeccable/blog2027/source-images/owner-covers-2026-11-02/cover-mobile.png",
+    "kind": "illustration",
+    "variants": [
+      {
+        "file": "owner-cover-mobile-480.webp",
+        "width": 480,
+        "height": 800,
+        "bytes": 202782
+      },
+      {
+        "file": "owner-cover-mobile-800.webp",
+        "width": 800,
+        "height": 1334,
+        "bytes": 485134
+      },
+      {
+        "file": "owner-cover-mobile-971.webp",
+        "width": 971,
+        "height": 1619,
+        "bytes": 650676
+      }
+    ]
+  },
+  "owner-cover-desktop": {
+    "source": ".impeccable/blog2027/source-images/owner-covers-2026-11-02/cover-desktop.png",
+    "kind": "illustration",
+    "variants": [
+      {
+        "file": "owner-cover-desktop-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 72356
+      },
+      {
+        "file": "owner-cover-desktop-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 170584
+      },
+      {
+        "file": "owner-cover-desktop-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 418684
+      }
+    ]
+  },
+  "grill": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/01-X5.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "grill-480.webp",
+        "width": 480,
+        "height": 177,
+        "bytes": 19112
+      },
+      {
+        "file": "grill-800.webp",
+        "width": 800,
+        "height": 294,
+        "bytes": 43334
+      },
+      {
+        "file": "grill-1600.webp",
+        "width": 1600,
+        "height": 589,
+        "bytes": 130468
+      }
+    ]
+  },
+  "kitchen": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/03-X19.png",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "kitchen-480.webp",
+        "width": 480,
+        "height": 253,
+        "bytes": 15600
+      },
+      {
+        "file": "kitchen-800.webp",
+        "width": 800,
+        "height": 421,
+        "bytes": 31446
+      },
+      {
+        "file": "kitchen-1506.webp",
+        "width": 1506,
+        "height": 793,
+        "bytes": 67914
+      }
+    ]
+  },
+  "m1": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/05-X28.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "m1-480.webp",
+        "width": 480,
+        "height": 257,
+        "bytes": 26852
+      },
+      {
+        "file": "m1-800.webp",
+        "width": 800,
+        "height": 429,
+        "bytes": 56800
+      },
+      {
+        "file": "m1-1006.webp",
+        "width": 1006,
+        "height": 539,
+        "bytes": 72556
+      }
+    ]
+  },
+  "m2": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/06-X29.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "m2-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 52702
+      },
+      {
+        "file": "m2-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 130746
+      },
+      {
+        "file": "m2-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 404192
+      }
+    ]
+  },
+  "room-m1": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/08-X36.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "room-m1-480.webp",
+        "width": 480,
+        "height": 374,
+        "bytes": 14876
+      },
+      {
+        "file": "room-m1-800.webp",
+        "width": 800,
+        "height": 623,
+        "bytes": 34788
+      },
+      {
+        "file": "room-m1-1600.webp",
+        "width": 1600,
+        "height": 1246,
+        "bytes": 114908
+      }
+    ]
+  },
+  "room-m2": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/07-X34.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "room-m2-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 20152
+      },
+      {
+        "file": "room-m2-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 43070
+      },
+      {
+        "file": "room-m2-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 141626
+      }
+    ]
+  },
+  "room-m3": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/09-X37.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "room-m3-480.webp",
+        "width": 480,
+        "height": 351,
+        "bytes": 16490
+      },
+      {
+        "file": "room-m3-800.webp",
+        "width": 800,
+        "height": 585,
+        "bytes": 33166
+      },
+      {
+        "file": "room-m3-1600.webp",
+        "width": 1600,
+        "height": 1170,
+        "bytes": 82780
+      }
+    ]
+  },
+  "cinema": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/11-X39.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "cinema-480.webp",
+        "width": 480,
+        "height": 570,
+        "bytes": 28732
+      },
+      {
+        "file": "cinema-800.webp",
+        "width": 800,
+        "height": 951,
+        "bytes": 51122
+      },
+      {
+        "file": "cinema-1125.webp",
+        "width": 1125,
+        "height": 1337,
+        "bytes": 75272
+      }
+    ]
+  },
+  "games": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/13-X42.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "games-480.webp",
+        "width": 480,
+        "height": 524,
+        "bytes": 44332
+      },
+      {
+        "file": "games-800.webp",
+        "width": 800,
+        "height": 873,
+        "bytes": 96792
+      },
+      {
+        "file": "games-1600.webp",
+        "width": 1600,
+        "height": 1745,
+        "bytes": 267554
+      }
+    ]
+  },
+  "beach": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/16-X46.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "beach-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 33040
+      },
+      {
+        "file": "beach-800.webp",
+        "width": 800,
+        "height": 534,
+        "bytes": 75562
+      },
+      {
+        "file": "beach-1600.webp",
+        "width": 1600,
+        "height": 1068,
+        "bytes": 220628
+      }
+    ]
+  },
+  "catamaran": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/19-X49.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "catamaran-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 38358
+      },
+      {
+        "file": "catamaran-800.webp",
+        "width": 800,
+        "height": 450,
+        "bytes": 108586
+      },
+      {
+        "file": "catamaran-1600.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 405116
+      }
+    ]
+  },
+  "wheel": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/20-X50.png",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "wheel-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 33546
+      },
+      {
+        "file": "wheel-800.webp",
+        "width": 800,
+        "height": 450,
+        "bytes": 77778
+      },
+      {
+        "file": "wheel-961.webp",
+        "width": 961,
+        "height": 541,
+        "bytes": 105906
+      }
+    ]
+  },
+  "viztorony": {
+    "source": "assets/blog/programajanlo/viztorony.webp",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "viztorony-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 29202
+      },
+      {
+        "file": "viztorony-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 64284
+      },
+      {
+        "file": "viztorony-846.webp",
+        "width": 846,
+        "height": 635,
+        "bytes": 70458
+      }
+    ]
+  },
+  "hajo": {
+    "source": "assets/blog/programajanlo/hajo.webp",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "hajo-480.webp",
+        "width": 480,
+        "height": 310,
+        "bytes": 27078
+      },
+      {
+        "file": "hajo-800.webp",
+        "width": 800,
+        "height": 516,
+        "bytes": 66462
+      },
+      {
+        "file": "hajo-1200.webp",
+        "width": 1200,
+        "height": 774,
+        "bytes": 134068
+      }
+    ]
+  },
+  "toreki": {
+    "source": "assets/blog/programajanlo/toreki.webp",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "toreki-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 62878
+      },
+      {
+        "file": "toreki-800.webp",
+        "width": 800,
+        "height": 599,
+        "bytes": 156482
+      },
+      {
+        "file": "toreki-1000.webp",
+        "width": 1000,
+        "height": 749,
+        "bytes": 236016
+      }
+    ]
+  },
+  "kalandpark": {
+    "source": "assets/blog/programajanlo/kalandpark.webp",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "kalandpark-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 46928
+      },
+      {
+        "file": "kalandpark-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 112018
+      },
+      {
+        "file": "kalandpark-1000.webp",
+        "width": 1000,
+        "height": 666,
+        "bytes": 161664
+      }
+    ]
+  },
+  "parti-hangulat": {
+    "source": ".impeccable/programajanlo/original-images/0-10.png",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "parti-hangulat-480.webp",
+        "width": 480,
+        "height": 293,
+        "bytes": 19276
+      },
+      {
+        "file": "parti-hangulat-754.webp",
+        "width": 754,
+        "height": 460,
+        "bytes": 40276
+      }
+    ]
+  },
+  "logo": {
+    "source": "assets/logo.png",
+    "kind": "brand",
+    "variants": [
+      {
+        "file": "logo-160.webp",
+        "width": 160,
+        "height": 133,
+        "bytes": 5512
+      }
+    ]
+  },
+  "school-memories-main": {
+    "source": ".impeccable/blog2027/source-images/owner-school-memories-2026-11-02/IMG_5970.jpeg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "school-memories-main-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 59746
+      },
+      {
+        "file": "school-memories-main-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 138454
+      },
+      {
+        "file": "school-memories-main-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 399400
+      }
+    ]
+  },
+  "school-memories-a": {
+    "source": ".impeccable/blog2027/source-images/owner-school-memories-2026-11-02/IMG_5969.jpeg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "school-memories-a-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 56804
+      },
+      {
+        "file": "school-memories-a-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 132322
+      },
+      {
+        "file": "school-memories-a-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 371592
+      }
+    ],
+    "orientation_note": "Incorrect EXIF orientation ignored; original pixel orientation is upright. Original source preserved."
+  },
+  "school-memories-b": {
+    "source": ".impeccable/blog2027/source-images/owner-school-memories-2026-11-02/IMG_5971.jpeg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "school-memories-b-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 53676
+      },
+      {
+        "file": "school-memories-b-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 125584
+      },
+      {
+        "file": "school-memories-b-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 376216
+      }
+    ]
+  },
+  "pizza-workshop": {
+    "source": ".impeccable/blog2027/source-images/repository/pizza-hero.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "pizza-workshop-480.webp",
+        "width": 480,
+        "height": 309,
+        "bytes": 42490
+      },
+      {
+        "file": "pizza-workshop-800.webp",
+        "width": 800,
+        "height": 516,
+        "bytes": 98030
+      },
+      {
+        "file": "pizza-workshop-1320.webp",
+        "width": 1320,
+        "height": 851,
+        "bytes": 208230
+      }
+    ]
+  },
+  "pizza-dough": {
+    "source": ".impeccable/blog2027/source-images/repository/pizza-dough.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "pizza-dough-480.webp",
+        "width": 480,
+        "height": 478,
+        "bytes": 52986
+      },
+      {
+        "file": "pizza-dough-800.webp",
+        "width": 800,
+        "height": 797,
+        "bytes": 111924
+      },
+      {
+        "file": "pizza-dough-1000.webp",
+        "width": 1000,
+        "height": 996,
+        "bytes": 158406
+      }
+    ]
+  },
+  "pizza-oven": {
+    "source": ".impeccable/blog2027/source-images/repository/pizza-oven.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "pizza-oven-480.webp",
+        "width": 480,
+        "height": 281,
+        "bytes": 28294
+      },
+      {
+        "file": "pizza-oven-800.webp",
+        "width": 800,
+        "height": 469,
+        "bytes": 58720
+      },
+      {
+        "file": "pizza-oven-1000.webp",
+        "width": 1000,
+        "height": 586,
+        "bytes": 81566
+      }
+    ]
+  },
+  "breakfast-m1": {
+    "source": "assets/mullers1/mullers-breakfast23.JPG",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "breakfast-m1-480.webp",
+        "width": 480,
+        "height": 426,
+        "bytes": 37646
+      },
+      {
+        "file": "breakfast-m1-800.webp",
+        "width": 800,
+        "height": 710,
+        "bytes": 76362
+      },
+      {
+        "file": "breakfast-m1-1600.webp",
+        "width": 1600,
+        "height": 1420,
+        "bytes": 189658
+      }
+    ]
+  },
+  "breakfast-m2": {
+    "source": "assets/mullers2/mullers2-breakfast1.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "breakfast-m2-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 41836
+      },
+      {
+        "file": "breakfast-m2-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 91564
+      },
+      {
+        "file": "breakfast-m2-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 253762
+      }
+    ]
+  },
+  "m3-facade": {
+    "source": "assets/mullers3/mullers3-building.JPG",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "m3-facade-480.webp",
+        "width": 480,
+        "height": 430,
+        "bytes": 48174
+      },
+      {
+        "file": "m3-facade-800.webp",
+        "width": 800,
+        "height": 717,
+        "bytes": 122952
+      },
+      {
+        "file": "m3-facade-1600.webp",
+        "width": 1600,
+        "height": 1433,
+        "bytes": 413258
+      }
+    ]
+  },
+  "room-extra-m1": {
+    "source": "assets/mullers1/mullers1-tripleroom.JPG",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "room-extra-m1-480.webp",
+        "width": 480,
+        "height": 298,
+        "bytes": 24004
+      },
+      {
+        "file": "room-extra-m1-800.webp",
+        "width": 800,
+        "height": 497,
+        "bytes": 54374
+      },
+      {
+        "file": "room-extra-m1-1600.webp",
+        "width": 1600,
+        "height": 994,
+        "bytes": 158486
+      }
+    ]
+  },
+  "room-extra-m2": {
+    "source": "assets/mullers2/mullers2-4personcomfort3.jpeg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "room-extra-m2-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 18158
+      },
+      {
+        "file": "room-extra-m2-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 40400
+      },
+      {
+        "file": "room-extra-m2-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 115156
+      }
+    ]
+  },
+  "room-apartment-m3": {
+    "source": "assets/mullers3/mullers3-apartment1.JPG",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "room-apartment-m3-480.webp",
+        "width": 480,
+        "height": 342,
+        "bytes": 14410
+      },
+      {
+        "file": "room-apartment-m3-800.webp",
+        "width": 800,
+        "height": 570,
+        "bytes": 29888
+      },
+      {
+        "file": "room-apartment-m3-1600.webp",
+        "width": 1600,
+        "height": 1140,
+        "bytes": 81796
+      }
+    ]
+  },
+  "grill-close": {
+    "source": ".impeccable/blog2027/source-images/drive/m2-grill-original.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "grill-close-480.webp",
+        "width": 480,
+        "height": 515,
+        "bytes": 66140
+      },
+      {
+        "file": "grill-close-800.webp",
+        "width": 800,
+        "height": 859,
+        "bytes": 162224
+      },
+      {
+        "file": "grill-close-1600.webp",
+        "width": 1600,
+        "height": 1717,
+        "bytes": 488124
+      }
+    ]
+  },
+  "pedalboat": {
+    "source": ".impeccable/blog2027/source-images/osztalykirandulas-2026/18-X48.jpg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "pedalboat-480.webp",
+        "width": 480,
+        "height": 251,
+        "bytes": 18220
+      },
+      {
+        "file": "pedalboat-800.webp",
+        "width": 800,
+        "height": 419,
+        "bytes": 42690
+      },
+      {
+        "file": "pedalboat-1200.webp",
+        "width": 1200,
+        "height": 628,
+        "bytes": 88192
+      }
+    ]
+  }
+}
