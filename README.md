@@ -72,3 +72,5 @@ a Chrome-próba nem iPhone Safari-ellenőrzés.
 Mentés/helyreállítás: nincs adatmodell, titok, új szolgáltatás vagy módosított
 GTM-/GA4-fiókbeállítás. A script és a két behivatkozás Gitből állítható vissza;
 a javítás visszavonása után a meglévő alap GA4/Clarity és a sütikezelés megmarad.
+
+A Vercel ezen a projekten ellenőrzött commit-aláírást követel. A publikáláshoz GitHub által aláírt commit szükséges; a védelmet nem kapcsoljuk ki.
