@@ -316,3 +316,11 @@ section[id],article[id]{scroll-margin-top:24px}
  .reading{width:100%;max-width:none}.photo-band{height:180px!important;break-inside:avoid}.photo-band::before,.photo-band::after,.soft-wash::before,.story-footer::before{display:none}
  .button{background:none;color:var(--ink);border:1px solid var(--ink);width:auto;min-height:0}.program-item,.plan-day{break-inside:avoid}h2,h3{break-after:avoid}a{color:inherit}.story-footer{padding-bottom:0}
 }
+
+/* Owner-confirmed 2027 offer windows, restored from the original orange notice. */
+.offer-validity{margin-top:28px;padding:24px 20px;background:#ff5e34;color:#29231f;border-radius:0}
+.offer-validity h3{font-size:22px;line-height:1.25;margin-bottom:12px}
+.offer-validity p{max-width:65ch}
+.offer-validity ul{display:grid;gap:12px;margin:18px 0;padding:0;list-style:none;font:700 18px/1.5 Manrope,sans-serif}
+.offer-validity time{display:inline-block}
+.offer-validity .offer-validity-tax{margin-top:18px;font-size:14px;line-height:1.5}
