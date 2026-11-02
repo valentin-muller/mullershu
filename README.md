@@ -42,3 +42,33 @@ All21 calendar/inquiry tests and affected JavaScript syntax checks pass. The v3 
 The owner authorized replacing the 2026 school-trip advertisement with the approved 2027 article on 2026-11-02. `/blog/osztalykirandulas/` keeps its stable URL and uses route-only `blog/2027.css`, `blog/2027.js` and responsive original/illustrated assets under `assets/blog/2027/`. Fonts are locally hosted with SIL licenses. The homepage and blog listing promote the 2027 offer. The existing program guide is retained for a separate owner review, so links to it use year-neutral wording. Other offers, Mellow pages, booking/inquiry and consent behavior are preserved.
 
 Also run `node --check blog/2027.js`. Visual review targets iPhone Safari first; the owner-approved local design and recent Simulator Safari captures are retained in the original authoring checkout. Asset provenance identifies the supplied originals; the first school-memory photo has incorrect EXIF orientation which was normalized in its web variants.
+
+## Iskolai kampány kapcsolatfelvételi mérése
+
+A két iskolai oldal a meglévő `GTM-MF6W4DVF` konténer Google-tagjával
+(`G-HLJ3B6551Z`) küldi a `school_phone_click`, `school_email_click`,
+`school_program_click`, `school_offer_click` és `school_pdf_download` eseményt.
+A `assets/school-campaign-analytics.js` nem tölt be új követőkódot, és csak a
+jelenlegi sütidöntés elfogadása után mér. Elutasítás, visszavonás vagy nem
+olvasható tároló mellett nem küld eseményt.
+
+A jóváhagyott `mullers/email/osztalykirandulas_2027` kampány öt UTM-mezője
+szűk értékellenőrzés után megmarad a két iskolai oldal közötti linkeken és az
+aktuális böngészőmunkamenetben. Név, e-mail, telefonszám, levéltartalom és
+leiratkozási token nem kerül az új eseményparaméterekbe. A jelölés egy iskolai
+üzenetre utal, nem igazolja a kattintó személyét. Az e-mail-/telefonkattintás
+érdeklődési szándék, nem beérkezett ajánlatkérés vagy megtörtént telefonhívás.
+Ezeken az oldalakon nincs ajánlatkérő űrlap; sikeres érdeklődést a valóban
+beérkezett Gmail-levélből vagy rögzített telefonos egyeztetésből számolunk.
+
+Ellenőrzés: `npm run check` és `npm run test:school-analytics` (6 teszt a
+hozzájárulásról, visszavonásról, adatminimalizálásról, hibás kampányjelölésről,
+linkátadásról és ismételt betöltésről). A helyi Chrome-próba `sc27_b00_00`
+azonosítója kizárólag teszt; nem valódi iskola. A kampányriport csak a valódi
+weboldali hostot és az adott köteg ismert üzenetazonosítóit veheti figyelembe.
+A 2026-11-02-i új iPhone Safari-ellenőrzés a zárolt Mac miatt még függőben;
+a Chrome-próba nem iPhone Safari-ellenőrzés.
+
+Mentés/helyreállítás: nincs adatmodell, titok, új szolgáltatás vagy módosított
+GTM-/GA4-fiókbeállítás. A script és a két behivatkozás Gitből állítható vissza;
+a javítás visszavonása után a meglévő alap GA4/Clarity és a sütikezelés megmarad.
