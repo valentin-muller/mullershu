@@ -36,3 +36,9 @@ Design and verify iPhone Safari first, then smaller phones, iPad and desktop. Si
 ## Mellow release check — 2026-10-04
 
 All21 calendar/inquiry tests and affected JavaScript syntax checks pass. The v3 courtyard sack is inspected in actual iPhone17Pro Simulator Safari with browser controls. GitHub authentication is restored. Production Gmail credentials remain unconfigured, so the inquiry sender must stay disabled and contact alternatives remain available. GitHub's signed commit flow is used for the release record because Vercel correctly rejects unsigned preview commits.
+
+## School-trip offer 2027
+
+The owner authorized replacing the 2026 school-trip advertisement with the approved 2027 article on 2026-11-02. `/blog/osztalykirandulas/` keeps its stable URL and uses route-only `blog/2027.css`, `blog/2027.js` and responsive original/illustrated assets under `assets/blog/2027/`. Fonts are locally hosted with SIL licenses. The homepage and blog listing promote the 2027 offer. The existing program guide is retained for a separate owner review, so links to it use year-neutral wording. Other offers, Mellow pages, booking/inquiry and consent behavior are preserved.
+
+Also run `node --check blog/2027.js`. Visual review targets iPhone Safari first; the owner-approved local design and recent Simulator Safari captures are retained in the original authoring checkout. Asset provenance identifies the supplied originals; the first school-memory photo has incorrect EXIF orientation which was normalized in its web variants.
