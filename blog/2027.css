@@ -274,8 +274,8 @@ section[id],article[id]{scroll-margin-top:24px}
 .grill-main img{height:auto;aspect-ratio:2766/1018;object-fit:cover}
 .pizza-main img{height:auto;aspect-ratio:1320/851;object-fit:cover}
 .returning-schools{margin-top:36px}
-.memories-main img{height:auto;aspect-ratio:4/3;object-fit:contain}
-.memories-gallery .grill-details img{height:auto;aspect-ratio:4/3;object-fit:contain}
+.memories-gallery{height:auto;--fade-top:0px;--fade-bottom:0px}
+.memories-gallery img{height:auto;object-fit:contain}
 .returning-copy{padding-top:24px;padding-bottom:24px}
 .returning-copy .button{margin-top:26px}
 .pizza-gallery .grill-details img:first-child{object-position:center top}

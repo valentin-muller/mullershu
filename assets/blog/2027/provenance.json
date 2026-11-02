@@ -797,5 +797,35 @@
         "bytes": 88192
       }
     ]
+  },
+  "school-memories-board": {
+    "source": ".impeccable/blog2027/source-images/owner-school-memories-2026-11-02/RenderedImage.jpeg",
+    "kind": "original-photo",
+    "variants": [
+      {
+        "file": "school-memories-board-480.webp",
+        "width": 480,
+        "height": 328,
+        "bytes": 70368
+      },
+      {
+        "file": "school-memories-board-800.webp",
+        "width": 800,
+        "height": 546,
+        "bytes": 180156
+      },
+      {
+        "file": "school-memories-board-1600.webp",
+        "width": 1600,
+        "height": 1093,
+        "bytes": 638374
+      },
+      {
+        "file": "school-memories-board-2400.webp",
+        "width": 2400,
+        "height": 1639,
+        "bytes": 1276656
+      }
+    ]
   }
 }
