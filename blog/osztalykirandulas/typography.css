@@ -31,3 +31,32 @@
  .story-page--school .breakfast-options .breakfast-price{font-size:21px}
  .story-page--school .story-footer h2{font-size:20px}
 }
+
+/* Keep related details together and give new sections a clearer pause. */
+.story-page--school h2{margin-bottom:20px}
+.story-page--school p+p{margin-top:16px}
+.story-page--school .section{padding-top:48px}
+.story-page--school .price-list{margin-top:16px}
+.story-page--school .price-list>div{min-height:88px;padding-block:12px}
+.story-page--school .offer-validity{margin-top:24px;padding:24px 20px}
+.story-page--school .offer-validity ul{margin-top:16px;gap:12px}
+.story-page--school :is(.breakfast,.meal-options){margin-top:40px}
+.story-page--school :is(.breakfast h3,.meal-options h3){margin-bottom:16px}
+.story-page--school .breakfast-options{gap:32px}
+.story-page--school .breakfast-options .breakfast-description{margin-top:12px}
+.story-page--school .meal-note{margin-bottom:32px}
+.story-page--school .experience-heading{margin-bottom:20px}
+.story-page--school .experience-heading h2{margin-bottom:0}
+.story-page--school .experience-copy{margin-top:20px;margin-bottom:48px}
+.story-page--school .returning-copy{padding-top:32px;padding-bottom:32px}
+.story-page--school .returning-copy .button{margin-top:24px}
+@media(min-width:1000px){
+ .story-page--school h2{margin-bottom:24px}
+ .story-page--school .section{padding-top:64px}
+ .story-page--school .price-list{margin-top:24px}
+ .story-page--school .price-list>div{min-height:0;padding-block:0}
+ .story-page--school .price-list dt{margin-bottom:16px}
+ .story-page--school .breakfast-options{gap:36px}
+ .story-page--school .experience-heading h2{margin-bottom:0}
+ .story-page--school .returning-copy{padding-top:40px;padding-bottom:40px}
+}
