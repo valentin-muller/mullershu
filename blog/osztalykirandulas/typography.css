@@ -3,10 +3,31 @@
 .story-page--school{line-height:1.65;letter-spacing:0}
 .story-page--school :is(h1,h2,h3,h4,strong,.button,.category-links,.price-list,.site-header,.building-caption,.edition,.teacher-note,.xbox-copy,.teaser-footer p,.contact-details,.chapter-label,.program-source,.plan-day dt,.related-link,.offer-validity ul,.breakfast-price){font-family:'Sora School',sans-serif}
 .story-page--school :is(h1,h2,h3){font-weight:600;letter-spacing:-.02em;line-height:1.3}
-.story-page--school .story-hero--owner-cover .hero-heading h1{line-height:1.3}
+.story-page--school .story-hero--owner-cover .hero-heading h1{font-size:clamp(26px,6.8vw,30px);line-height:1.3}
 .story-page--school :is(strong,.button,.price-list dt,.price-list strong,.breakfast-options h4,.breakfast-price,.teacher-note,.contact-details,.related-link,.offer-validity ul){font-weight:600}
 .story-page--school .site-header{font-weight:500}
-.story-page--school .price-list strong{letter-spacing:-.02em}
+.story-page--school .price-list strong{font-size:32px;letter-spacing:-.02em}
 .story-page--school .breakfast-options .breakfast-description{line-height:1.65}
-.story-page--school .offer-validity h3{font-size:20px;line-height:1.4}
-.story-page--school .offer-validity ul{font-size:17px;line-height:1.6;letter-spacing:0;margin-bottom:0}
+.story-page--school .offer-validity{padding:20px 18px;border-radius:6px}
+.story-page--school .offer-validity h3{font-size:18px;line-height:1.4}
+.story-page--school .offer-validity ul{font-size:16px;line-height:1.55;letter-spacing:0;margin-bottom:0}
+
+/* A steadier type scale; reading text retains its existing size. */
+.story-page--school h2{font-size:26px}
+.story-page--school h3:not(.building-labels){font-size:21px}
+.story-page--school :is(.breakfast h3,.meal-options h3){font-size:22px}
+.story-page--school .offer-validity h3{font-size:18px}
+.story-page--school .breakfast-options h4{font-size:16px}
+.story-page--school .breakfast-options .breakfast-price{font-size:18px}
+.story-page--school .story-footer h2{font-size:20px}
+@media(min-width:1000px){
+ .story-page--school .story-hero--owner-cover .hero-heading h1{font-size:clamp(36px,3.1vw,48px)}
+ .story-page--school h2{font-size:32px}
+ .story-page--school h3:not(.building-labels){font-size:23px}
+ .story-page--school :is(.breakfast h3,.meal-options h3){font-size:25px}
+ .story-page--school .offer-validity h3{font-size:18px}
+ .story-page--school .price-list strong{font-size:42px}
+ .story-page--school .breakfast-options h4{font-size:18px}
+ .story-page--school .breakfast-options .breakfast-price{font-size:21px}
+ .story-page--school .story-footer h2{font-size:20px}
+}
