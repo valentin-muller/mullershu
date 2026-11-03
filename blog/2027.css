@@ -323,4 +323,3 @@ section[id],article[id]{scroll-margin-top:24px}
 .offer-validity p{max-width:65ch}
 .offer-validity ul{display:grid;gap:12px;margin:18px 0;padding:0;list-style:none;font:700 18px/1.5 Manrope,sans-serif}
 .offer-validity time{display:inline-block}
-.offer-validity .offer-validity-tax{margin-top:18px;font-size:14px;line-height:1.5}
