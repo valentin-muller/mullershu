@@ -74,3 +74,7 @@ GTM-/GA4-fiókbeállítás. A script és a két behivatkozás Gitből állíthat
 a javítás visszavonása után a meglévő alap GA4/Clarity és a sütikezelés megmarad.
 
 A Vercel ezen a projekten ellenőrzött commit-aláírást követel. A publikáláshoz GitHub által aláírt commit szükséges; a védelmet nem kapcsoljuk ki.
+
+## School article typography - 2026-11-03
+
+The school-trip article loads its own typography.css after blog/2027.css. Sora variable headings and emphasis (weight 600) match the main site, paired with the existing Work Sans reading face and 1.65 body line height. The font is self-hosted from the official google/fonts Sora source with the SIL license; Hungarian accents are included. The owner removed the IFA sentence. Offer dates stay unchanged. Only the school article loads this typography override. iPhone 17 Pro / iOS 26.4 Simulator Safari and supplementary 375/1440px layouts were checked; full native gesture/bar transitions remain unverified.
