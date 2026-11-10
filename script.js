@@ -398,6 +398,7 @@ const initEntityPickers = () => {
       }
     });
     const hasSlugs = slugToEntity.size > 0;
+    const primaryButton = buttons.find((button) => button.dataset.entity === picker.dataset.entityDefault);
 
     const setEntity = (value, { updateHash = false } = {}) => {
       buttons.forEach((button) => {
@@ -424,8 +425,24 @@ const initEntityPickers = () => {
     };
 
     buttons.forEach((button) => {
-      button.addEventListener("click", () => setEntity(button.dataset.entity, { updateHash: true }));
+      button.addEventListener("click", () => setEntity(button.dataset.entity, { updateHash: !primaryButton }));
     });
+
+    // These legal pages always reopen on their designated primary provider.
+    // Keep other documents selectable, without persisting a different provider in the URL.
+    if (primaryButton) {
+      const resetPrimary = () => {
+        setEntity(primaryButton.dataset.entity);
+        if (slugToEntity.has(window.location.hash.replace(/^#/, ""))) {
+          history.replaceState(history.state, "", window.location.pathname + window.location.search);
+        }
+      };
+      resetPrimary();
+      window.addEventListener("pageshow", (event) => {
+        if (event.persisted) resetPrimary();
+      });
+      return;
+    }
 
     let initial = buttons[0].dataset.entity;
     if (hasSlugs && window.location.hash) {
