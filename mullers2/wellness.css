@@ -1,0 +1,195 @@
+/* The original site's sand, navy, Sora and Work Sans remain authoritative. */
+.m2-page { background: var(--sand-100); }
+.m2-page [data-animate] { opacity: 1; transform: none; }
+.m2-page ::selection { color: var(--white); background: var(--blue-700); }
+.m2-page :focus-visible { outline: 3px solid var(--blue-700); outline-offset: 5px; }
+.m2-page .property-hero h1 { font-family: "Sora", sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin: 0; }
+.m2-page .m2-gallery { max-width: 1120px; padding: 30px 20px 0; }
+.m2-page .m2-gallery .section-heading { position: static; color: var(--blue-900); text-shadow: none; text-align: left; margin-bottom: 18px; }
+.m2-page .m2-gallery .gallery-grid, .m2-gallery-rest { display: grid; gap: 8px; background: transparent; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.m2-gallery-more { grid-column: 1 / -1; }
+.m2-gallery .gallery-item { border-radius: 12px; aspect-ratio: 4 / 5; }
+.m2-gallery .gallery-item img { filter: none; }
+.m2-gallery .gallery-item--map img { object-fit: contain; background: var(--sand-200); }
+.m2-gallery-more summary { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; margin: 20px auto 0; width: fit-content; padding: 8px 4px; font-weight: 600; text-decoration: underline; text-underline-offset: 5px; cursor: pointer; list-style: none; }
+.m2-gallery-more summary::-webkit-details-marker { display: none; }
+.m2-gallery-more summary span { font-size: .85rem; font-weight: 400; }
+.m2-gallery-more summary svg { width: 18px; height: 18px; }
+.m2-gallery-more[open] summary { margin-bottom: 20px; }
+.m2-gallery-more[open] summary svg { transform: rotate(180deg); }
+.m2-page main > .m2-wellness { max-width: 1160px; margin-top: 46px; padding: 0 20px 20px; }
+.wellness-intro h2, .m2-wellness h3 { font-family: "Sora", sans-serif; letter-spacing: -.025em; text-wrap: balance; }
+.wellness-intro h2 { font-size: clamp(1.9rem, 7vw, 3.4rem); line-height: 1.15; margin: 0 0 20px; }
+.wellness-intro-copy > p { max-width: 38ch; font-size: 1.05rem; line-height: 1.65; margin: 0; }
+.wellness-intro { display: grid; gap: 12px; }
+.wellness-room-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; }
+.wellness-room-links a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: .95rem; font-weight: 600; text-decoration: underline; text-decoration-color: var(--sunset-dark); text-underline-offset: 7px; }
+.wellness-room-links svg { width: 18px; height: 18px; color: var(--sunset-dark); }
+.wellness-room-links a:hover { color: var(--blue-700); }
+.wellness-model { min-width: 0; }
+.wellness-model-controls { margin: 0 0 12px; }
+.model-followup { min-height: 76px; text-align: center; }
+.model-photo-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; font-size: .9rem; text-decoration: underline; text-decoration-color: var(--sunset-dark); text-underline-offset: 5px; }
+.model-photo-link[hidden] { display: none; }
+.m2-page.wellness-exploring .mobile-cta { visibility: hidden; pointer-events: none; }
+.wellness-model-stage { aspect-ratio: 16 / 11; display: grid; align-items: center; }
+.wellness-model-stage img { width: 100%; height: auto; aspect-ratio: 16 / 11; object-fit: contain; }
+.model-unavailable .wellness-model-stage { display: none; }
+.wellness-model figcaption { text-align: center; font-size: .75rem; line-height: 1.5; margin: 0 0 16px; color: #40566a; }
+.wellness-model-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; }
+.wellness-model-controls[hidden] { display: none; }
+.wellness-model-controls button { font: inherit; font-size: .82rem; font-weight: 600; min-height: 44px; padding: 9px 11px; border: 1px solid transparent; border-radius: 12px; color: var(--blue-900); background: transparent; cursor: pointer; }
+.wellness-model-controls button[aria-pressed="true"] { background: var(--blue-900); color: var(--white); }
+.wellness-model-controls button:hover:not([aria-pressed="true"]) { background: var(--sand-200); }
+.wellness-model-controls button:disabled { opacity: .6; cursor: default; }
+.model-status { min-height: 1.5em; margin: 7px 0 0; text-align: center; font-size: .8rem; line-height: 1.5; color: #40566a; }
+.wellness-photo-story { display: grid; gap: 42px; margin-top: 26px; }
+.wellness-room { display: grid; gap: 20px; scroll-margin-top: 106px; }
+.wellness-room figure { overflow: hidden; border-radius: 18px; }
+.wellness-room figure a { display: block; }
+.wellness-room img { display: block; width: 100%; height: auto; }
+.wellness-room-copy h3 { margin: 0 0 12px; font-size: clamp(1.65rem, 4vw, 2.4rem); line-height: 1.2; }
+.wellness-room-copy p, .wellness-together p { max-width: 40ch; font-size: 1rem; line-height: 1.75; margin: 0; }
+.wellness-together { display: grid; gap: 24px; margin-top: 56px; padding-top: 32px; border-top: 1px solid #d5cbbb; }
+.wellness-together > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
+.wellness-together h3 { font-size: 1.65rem; line-height: 1.25; margin: 0 0 16px; }
+.wellness-together a { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; margin-top: 16px; font-weight: 600; text-decoration: underline; text-underline-offset: 5px; }
+.wellness-together a svg { width: 18px; height: 18px; transform: rotate(180deg); }
+.m2-page #gallery-title, .m2-page #wellness { scroll-margin-top: 106px; }
+.m2-page main > .room-section { margin-top: 30px; }
+@media (max-width: 699px) {
+ .wellness-model-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+ .wellness-model-controls button { padding: 10px 8px; min-height: 48px; font-size: .9rem; border-color: #d5cbbb; }
+ .wellness-model-controls button[aria-pressed="true"] { border-color: var(--blue-900); }
+ .wellness-intro { gap: 22px; }
+}
+@media (min-width: 700px) {
+ .m2-page .m2-gallery { padding: 36px 32px 0; }
+ .m2-gallery .gallery-item { aspect-ratio: 4 / 3; }
+ .m2-gallery .gallery-item figcaption { font-size: .8rem; left: 10px; bottom: 10px; }
+ .m2-page main > .m2-wellness { padding: 0 32px 24px; margin-top: 60px; }
+ .wellness-photo-story { gap: 56px; }
+ .wellness-room { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); align-items: center; gap: 36px; }
+ .wellness-room-copy p { font-size: 1.05rem; }
+ .wellness-together { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 40px; }
+ .wellness-together h3 { font-size: 2rem; }
+}
+@media (min-width: 960px) {
+ .wellness-intro { grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr); align-items: center; gap: 24px; }
+ .wellness-intro h2 { font-size: 2.7rem; }
+ .wellness-photo-story { margin-top: 50px; }
+ .wellness-room { grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 48px; }
+ .wellness-room:not(.wellness-room--landscape) figure { max-height: 600px; }
+ .wellness-room:not(.wellness-room--landscape) img { max-height: 600px; object-fit: cover; object-position: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ .m2-page .gallery-item, .m2-page .gallery-item img { transition: none; }
+}
+
+/* Whole-page council: a working discovery path, legible actions and larger photos. */
+.m2-page .btn-primary { color: var(--blue-900); }
+.m2-page .mobile-cta .btn { color: var(--blue-900); background: var(--sand-100); box-shadow: 0 6px 18px rgba(11, 43, 74, .14); }
+.m2-page .mobile-cta .btn:hover { color: var(--blue-900); background: var(--sand-200); }
+.model-guide { margin: 0 0 12px; text-align: center; font-size: .9rem; font-weight: 600; line-height: 1.5; }
+.m2-contact-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 699px) {
+ .m2-page .m2-gallery .gallery-grid, .m2-gallery-rest { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Complete M2 page refinement, retaining the original site tokens. */
+.m2-page .m2-hero { width: 100%; margin: 0; padding: 0; min-height: 0; background: var(--sand-100); color: var(--blue-900); }
+.m2-hero-photo { margin: 0; min-width: 0; overflow: hidden; }
+.m2-hero-photo img { display: block; width: 100%; height: clamp(230px, 34svh, 340px); object-fit: cover; object-position: center 56%; }
+.m2-page .m2-hero .hero-content { max-width: none; margin: 0; padding: 26px 20px 30px; gap: 18px; animation: none; }
+.m2-page .m2-hero h1 { font-size: clamp(2rem, 7.5vw, 3.5rem); line-height: 1.1; text-wrap: balance; }
+.m2-hero .hero-subtitle { max-width: 42ch; font-size: 1rem; line-height: 1.65; }
+.m2-hero .hero-actions { gap: 16px; }
+.m2-booking-link { display: inline-flex; min-height: 44px; align-items: center; width: fit-content; padding-right: 12px; font-weight: 600; font-size: .9rem; text-decoration: underline; text-underline-offset: 5px; }
+.m2-page .m2-booking-link .btn-hamarosan-badge { position: static; transform: none; margin-left: 10px; font-size: .55rem; }
+.m2-page-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 20px; padding: 12px 20px; border-block: 1px solid #d5cbbb; }
+.m2-page-nav a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: .92rem; text-decoration: underline; text-decoration-color: var(--sunset-dark); text-underline-offset: 5px; }
+.m2-amenities { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: center; list-style: none; margin: 0; padding: 22px 20px 0; font-size: .85rem; }
+.m2-amenities li { display: flex; align-items: center; gap: 8px; }
+.m2-amenities li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--sunset-dark); flex: none; }
+.m2-page main > .m2-gallery { margin-top: 0; }
+.wellness-links-label { flex-basis: 100%; font-size: .85rem; font-weight: 600; }
+.wellness-room-links { gap: 0 22px; }
+.m2-page.hero-in-view .mobile-cta, .m2-page.rooms-in-view .mobile-cta, .m2-page.contact-in-view .mobile-cta { visibility: hidden; pointer-events: none; }
+.m2-page .mobile-cta { pointer-events: none; }
+.m2-page .mobile-cta a { pointer-events: auto; }
+.m2-page.hero-in-view .mobile-cta a, .m2-page.contact-in-view .mobile-cta a, .m2-page.wellness-exploring .mobile-cta a { pointer-events: none; }
+/* JS reserves exactly the controls' existing layout while the lazy overview loads. */
+.model-enhanced .wellness-model-controls[hidden] { display: flex; visibility: hidden; }
+.model-enhanced.model-unavailable .wellness-model-controls[hidden] { display: none; }
+.model-unavailable .model-guide { display: none; }
+.m2-page main > .m2-rooms { max-width: 1120px; padding: 38px 20px 0; margin-top: 38px; scroll-margin-top: 106px; }
+.m2-rooms .section-heading { margin-bottom: 26px; }
+.m2-rooms .section-heading h2 { font-family: "Sora", sans-serif; font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1.15; margin-bottom: 14px; text-wrap: balance; }
+.m2-rooms .section-heading p { max-width: 52ch; line-height: 1.7; margin: 0; }
+.m2-room-grid { display: grid; gap: 36px; }
+.m2-room-option figure { position: relative; overflow: hidden; border-radius: 18px; margin: 0 0 20px; }
+.m2-room-option figure img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.m2-room-option figcaption { position: absolute; inset: auto 12px 12px auto; color: white; background: rgba(11,43,74,.9); padding: 5px 10px; border-radius: 6px; font-size: .75rem; }
+.m2-room-option h3, .m2-room-note h3 { font-family: "Sora", sans-serif; font-size: 1.35rem; line-height: 1.3; margin: 0 0 10px; }
+.m2-room-option p, .m2-room-note p { line-height: 1.7; margin: 0; max-width: 46ch; }
+.m2-room-option a, .m2-room-note a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; font-weight: 600; font-size: .95rem; text-decoration: underline; text-underline-offset: 5px; }
+.m2-room-note { padding-top: 28px; margin-top: 34px; border-top: 1px solid #d5cbbb; }
+.m2-large-apartments { display: grid; gap: 0 28px; }
+.m2-large-apartments .m2-room-note { display: block; min-width: 0; scroll-margin-top: 106px; }
+.m2-room-note a { max-width: 100%; }
+.m2-room-note a svg { flex: none; }
+@media (min-width: 700px) {
+ .m2-large-apartments { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.m2-page main > .m2-contact { display: grid; gap: 28px; padding: 34px 24px; margin: 56px 20px 0; width: calc(100% - 40px); max-width: 1080px; background: var(--blue-900); color: var(--sand-100); border-radius: 18px; scroll-margin-top: 106px; }
+.m2-contact h2 { font-family: "Sora", sans-serif; font-size: clamp(1.8rem, 5vw, 2.4rem); margin: 0 0 18px; line-height: 1.2; text-wrap: balance; }
+.m2-contact p { max-width: 42ch; font-size: 1rem; line-height: 1.75; margin: 0; }
+.m2-contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; min-width: 0; }
+.m2-contact-actions .btn { font-size: .9rem; width: 100%; padding-inline: 10px; }
+.m2-email, .m2-address { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; line-height: 1.6; overflow-wrap: anywhere; }
+.m2-email { font-size: .95rem; }
+.m2-address { margin-top: 18px; font-size: .9rem; }
+.m2-contact-actions > p { margin-top: 10px; font-size: .85rem; }
+.m2-contact .m2-booking-link { margin-top: -12px; }
+.m2-page .m2-contact :focus-visible { outline-color: var(--sand-100); }
+.m2-page svg.m2-arrow { width: 18px; height: 18px; flex: none; }
+.m2-page .site-footer { margin-top: 56px; }
+@media (max-width: 699px) {
+ .model-enhanced .wellness-model-controls[hidden] { display: grid; }
+ .model-enhanced.model-unavailable .wellness-model-controls[hidden] { display: none; }
+}
+@media (min-width: 700px) {
+ .m2-page .m2-hero .hero-content { padding: 36px 32px 44px; }
+ .m2-page main > .m2-rooms { padding-inline: 32px; }
+ .m2-room-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+ .m2-room-note { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+ .m2-room-note h3 { grid-row: span 2; }
+ .m2-page main > .m2-contact { padding: 44px 32px; margin-inline: 32px; width: calc(100% - 64px); grid-template-columns: 1.1fr 1fr; gap: 36px; }
+}
+@media (min-width: 960px) {
+ .m2-page .m2-hero { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
+ .m2-hero-photo { grid-column: 2; grid-row: 1; }
+ .m2-hero-photo img { height: 100%; min-height: 600px; max-height: 720px; }
+ .m2-page .m2-hero .hero-content { grid-column: 1; grid-row: 1; align-self: center; padding: 48px max(32px, calc((100vw - 1120px) / 2)); padding-right: 32px; }
+ .m2-page .m2-hero h1 { font-size: clamp(2.4rem, 3.5vw, 3.6rem); }
+ .m2-page main > .m2-contact { margin-inline: auto; width: calc(100% - 64px); }
+}
+@media (prefers-reduced-motion: reduce) {
+ .m2-page .hero-content, .m2-page .btn { animation: none; transition: none; }
+}
+
+.model-interactive-hint { display: none; }
+.model-enhanced .model-interactive-hint { display: inline; }
+
+/* Owner-confirmed C7 → I1 and C8 → I2 photo selection. */
+.m2-apartment { min-width: 0; padding-top: 28px; margin-top: 34px; border-top: 1px solid #d5cbbb; scroll-margin-top: 106px; }
+.m2-apartment h3 { font-family: "Sora", sans-serif; font-size: 1.35rem; line-height: 1.3; margin: 0 0 10px; }
+.m2-apartment p { max-width: 46ch; line-height: 1.7; margin: 0; }
+.m2-apartment-copy { margin-bottom: 20px; }
+.m2-page .m2-apartment-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; background: transparent; }
+.m2-apartment-gallery .gallery-item { border-radius: 12px; aspect-ratio: 3 / 4; }
+.m2-apartment-gallery .gallery-item:first-child { grid-column: 1 / -1; }
+.m2-apartment-gallery .gallery-item img { filter: none; object-fit: contain; }
+.m2-apartment-gallery .gallery-item figcaption { inset: auto 8px 8px 8px; width: fit-content; max-width: calc(100% - 16px); font-size: .75rem; }
+.m2-apartment-enquiry { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; max-width: 100%; margin-top: 16px; font-weight: 600; font-size: .95rem; text-decoration: underline; text-underline-offset: 5px; }

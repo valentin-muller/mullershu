@@ -16,12 +16,13 @@
     >
     <link rel="icon" href="../assets/logo.ico">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="wellness.css?v=9">
     <link rel="stylesheet" href="../assets/consent.css">
   </head>
-  <body class="property-page">
+  <body class="property-page m2-page">
     <header class="site-header">
       <a class="logo" href="../index.html" aria-label="Müller's Panzió Siófok">
-        <img src="../assets/logo.png" alt="Müller's Panzió Siófok logó">
+        <img src="../assets/logo.png" alt="Müller's Panzió Siófok logó" width="1289" height="1070">
       </a>
       <nav class="site-nav" aria-label="Fő navigáció">
         <a href="../index.html#hotelek">Épületek</a>
@@ -35,148 +36,102 @@
     </header>
 
     <main>
-      <section
-        class="section property-hero"
-        style="--hero-image: url('../images/mullers2/mullers2-building.jpeg'); --hero-overlay: linear-gradient(180deg, rgba(190, 88, 24, 0.92) 0%, rgba(214, 120, 60, 0.8) 55%, rgba(214, 120, 60, 0) 100%);"
-        data-animate
-      >
+      <section class="section property-hero m2-hero" id="attekintes" aria-labelledby="m2-title">
+        <figure class="m2-hero-photo"><img src="assets/wellness/foto-jakuzzi-640.webp" srcset="assets/wellness/foto-jakuzzi-640.webp 640w, assets/wellness/foto-jakuzzi.webp 960w" sizes="(min-width: 960px) 55vw, 100vw" width="960" height="1280" alt="A Müller’s 2 jakuzzija meleg fényekkel és kéken megvilágított vízzel" fetchpriority="high" decoding="async"></figure>
         <div class="hero-content">
-          <p class="hero-kicker">Müller's 2</p>
-          <h1>Spa 🛁 <span class="hero-badge hero-badge--inline">HAMAROSAN</span></h1>
-          <p class="hero-subtitle">
-            Boutique hotel stílusú apartmanházunk exkluzív kikapcsolódást kínál saját wellness részleggel.
-            Modern, klimatizált szobáink Siófok szívében, az ikonikus Víztoronytól mindössze 150 méterre várják a pihenni vágyókat.
-            Tökéletes választás, ha évszaktól függetlenül szeretnél kikapcsolódni.
-          </p>
+          <h1 id="m2-title">Wellness a<br>Müller’s 2-ben</h1>
+          <p class="hero-subtitle">Jakuzzi, finn szauna és sószoba Siófok szívében. Modern, klimatizált szobák, a Víztoronytól 150 méterre.</p>
           <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              href="../blog/hamarosan.html" data-booking-url="https://ibe.sabeeapp.com/v3/p/Müllers-Panzió-Siófok?p=a81c8f0208486761&lang=Hu"
-            >
-              📅 Foglalás a Müller's 2-be
-            </a>
-            <a class="btn btn-ghost" href="../index.html#hotelek">Vissza a főoldalra</a>
-          </div>
-          <div class="info-chips">
-            <span class="chip">📶 1 Gbps Wifi</span>
-            <span class="chip">🐾 Állatbarát</span>
-            <span class="chip">❄️ Klíma</span>
-            <span class="chip">🗓️ Egész évben nyitva</span>
-            <span class="chip">🔥 Finn szauna</span>
-            <span class="chip">💦 Jakuzzi</span>
-            <span class="chip">🧂 Sószoba</span>
-            <span class="chip">🛋️ Relax Room</span>
+            <a class="btn btn-primary" href="#wellness">Fedezd fel a wellnesst</a>
+            <a class="m2-booking-link" href="../blog/hamarosan.html" data-booking-url="https://ibe.sabeeapp.com/v3/p/Müllers-Panzió-Siófok?p=a81c8f0208486761&lang=Hu">Online foglalás</a>
           </div>
         </div>
       </section>
+      <nav class="m2-page-nav" aria-label="Müller’s 2 az oldalon"><a href="#wellness">Wellness</a><a href="#szobak">Szobák</a><a href="#gallery-title">Fényképek</a><a href="#erdeklodes">Érdeklődés</a></nav>
+      <ul class="m2-amenities" aria-label="A szállás szolgáltatásai"><li>Egész évben nyitva</li><li>Klimatizált szobák</li><li>Állatbarát szállás</li><li>1 Gbps wifi</li></ul>
 
-      <section class="section gallery-section" data-animate>
-        <div class="section-heading">
-          <h2>Képgaléria</h2>
-        </div>
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building.jpeg" alt="Müller's 2 – Épület" loading="lazy">
-            <figcaption>Épület</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building2.png" alt="Müller's 2 – Épület 2" loading="lazy">
+<section class="section gallery-section m2-gallery" aria-labelledby="gallery-title">
+<div class="section-heading"><h2 id="gallery-title">Képgaléria</h2></div>
+<div class="gallery-grid"><figure class="gallery-item"><img src="assets/kandallos-tarsalgo-640.webp" data-full="assets/kandallos-tarsalgo.webp" width="640" height="480" alt="Müller's 2 – Kandallós társalgó" loading="lazy" decoding="async"><figcaption>Kandallós társalgó</figcaption></figure><figure class="gallery-item"><img src="assets/comfort-agyak-640.webp" data-full="assets/comfort-agyak.webp" width="640" height="427" alt="Müller's 2 – Comfort szoba – ágyak" loading="lazy" decoding="async"><figcaption>Comfort szoba – ágyak</figcaption></figure><figure class="gallery-item"><img src="assets/grillterasz-640.webp" data-full="assets/grillterasz.webp" width="640" height="474" alt="Müller's 2 – Grillterasz" loading="lazy" decoding="async"><figcaption>Grillterasz</figcaption></figure><figure class="gallery-item"><img src="assets/pihenoter-640.webp" data-full="assets/pihenoter.webp" width="640" height="480" alt="Müller's 2 – Pihenőtér" loading="lazy" decoding="async"><figcaption>Pihenőtér</figcaption></figure><figure class="gallery-item"><img src="assets/udvari-piheno-640.webp" data-full="assets/udvari-piheno.webp" width="640" height="480" alt="Müller's 2 – Udvari pihenő" loading="lazy" decoding="async"><figcaption>Udvari pihenő</figcaption></figure><figure class="gallery-item"><img src="assets/epulet-640.webp" data-full="assets/epulet.webp" width="640" height="480" alt="Müller's 2 – Az épület" loading="lazy" decoding="async"><figcaption>Az épület</figcaption></figure>
+<details class="m2-gallery-more"><summary>Összes fénykép <span>29 kép</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.6"/></svg></summary>
+<div class="m2-gallery-rest"><figure class="gallery-item"><img src="assets/apartman-terasz-640.webp" data-full="assets/apartman-terasz.webp" width="640" height="427" alt="Müller's 2 – Apartmanterasz" loading="lazy" decoding="async"><figcaption>Apartmanterasz</figcaption></figure><figure class="gallery-item"><img src="assets/reggeli-640.webp" data-full="assets/reggeli.webp" width="640" height="480" alt="Müller's 2 – Reggeli" loading="lazy" decoding="async"><figcaption>Reggeli</figcaption></figure><figure class="gallery-item"><img src="assets/pihenoter-fuggoszek-640.webp" data-full="assets/pihenoter-fuggoszek.webp" width="480" height="640" alt="Müller's 2 – Függőszék a pihenőtérben" loading="lazy" decoding="async"><figcaption>Függőszék a pihenőtérben</figcaption></figure><figure class="gallery-item"><img src="assets/kozos-ter-640.webp" data-full="assets/kozos-ter.webp" width="640" height="480" alt="Müller's 2 – Közös tér" loading="lazy" decoding="async"><figcaption>Közös tér</figcaption></figure><figure class="gallery-item"><img src="assets/pihenoter-asztal-640.webp" data-full="assets/pihenoter-asztal.webp" width="640" height="480" alt="Müller's 2 – Pihenősarok" loading="lazy" decoding="async"><figcaption>Pihenősarok</figcaption></figure><figure class="gallery-item"><img src="assets/etkezo-640.webp" data-full="assets/etkezo.webp" width="640" height="480" alt="Müller's 2 – Étkező" loading="lazy" decoding="async"><figcaption>Étkező</figcaption></figure><figure class="gallery-item"><img src="assets/furdoszoba-zuhany-640.webp" data-full="assets/furdoszoba-zuhany.webp" width="427" height="640" alt="Müller's 2 – Fürdőszoba – zuhanyzó" loading="lazy" decoding="async"><figcaption>Fürdőszoba – zuhanyzó</figcaption></figure><figure class="gallery-item"><img src="assets/comfort-szoba-640.webp" data-full="assets/comfort-szoba.webp" width="640" height="427" alt="Müller's 2 – Comfort szoba" loading="lazy" decoding="async"><figcaption>Comfort szoba</figcaption></figure><figure class="gallery-item"><img src="assets/epulet-reszlet-640.webp" data-full="assets/epulet-reszlet.webp" width="480" height="640" alt="Müller's 2 – Az épület részlete" loading="lazy" decoding="async"><figcaption>Az épület részlete</figcaption></figure><figure class="gallery-item"><img src="assets/udvar-640.webp" data-full="assets/udvar.webp" width="640" height="412" alt="Müller's 2 – Udvar" loading="lazy" decoding="async"><figcaption>Udvar</figcaption></figure><figure class="gallery-item"><img src="assets/furdoszoba-mosdo-640.webp" data-full="assets/furdoszoba-mosdo.webp" width="640" height="427" alt="Müller's 2 – Fürdőszoba – mosdó" loading="lazy" decoding="async"><figcaption>Fürdőszoba – mosdó</figcaption></figure><figure class="gallery-item"><img src="assets/grill-640.webp" data-full="assets/grill.webp" width="596" height="640" alt="Müller's 2 – Grill" loading="lazy" decoding="async"><figcaption>Grill</figcaption></figure><figure class="gallery-item"><img src="assets/grill-eszkozok-640.webp" data-full="assets/grill-eszkozok.webp" width="581" height="640" alt="Müller's 2 – Grilleszközök" loading="lazy" decoding="async"><figcaption>Grilleszközök</figcaption></figure><figure class="gallery-item gallery-item--map"><img src="assets/siofok-illusztralt-terkep-640.webp" data-full="assets/siofok-illusztralt-terkep.webp" width="640" height="337" alt="Müller's 2 – Siófok – illusztrált térkép" loading="lazy" decoding="async"><figcaption>Siófok – illusztrált térkép</figcaption></figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-building2.png" alt="Müller's 2 – Épület 2" loading="lazy" width="1920" height="1437">
             <figcaption>Épület 2</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building3.JPG" alt="Müller's 2 – Épület 3" loading="lazy">
-            <figcaption>Épület 3</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building4.JPG" alt="Müller's 2 – Épület 4" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-building4.JPG" alt="Müller's 2 – Épület 4" loading="lazy" width="1920" height="1575">
             <figcaption>Épület 4</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building5.jpg" alt="Müller's 2 – Épület 5" loading="lazy">
-            <figcaption>Épület 5</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building6.jpeg" alt="Müller's 2 – Épület 6" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-building6.jpeg" alt="Müller's 2 – Épület 6" loading="lazy" width="1920" height="1280">
             <figcaption>Épület 6</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-building7.jpeg" alt="Müller's 2 – Épület 7" loading="lazy">
-            <figcaption>Épület 7</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personapartment-bathroom.JPG" alt="Müller's 2 – 4 fős apartman – fürdőszoba" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-4personapartment-bathroom.JPG" alt="Müller's 2 – 4 fős apartman – fürdőszoba" loading="lazy" width="1920" height="2880">
             <figcaption>4 fős apartman – fürdőszoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personapartment-terrace.jpeg" alt="Müller's 2 – 4 fős apartman – terasz" loading="lazy">
-            <figcaption>4 fős apartman – terasz</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort.jpeg" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-4personcomfort2.jpeg" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy" width="1920" height="1280">
             <figcaption>4 fős Comfort szoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort2.jpeg" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-4personcomfort3.jpeg" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy" width="1920" height="1280">
             <figcaption>4 fős Comfort szoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort3.jpeg" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-4personcomfort5.JPG" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy" width="1920" height="1280">
             <figcaption>4 fős Comfort szoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort4.jpg" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-4personcomfort6.JPG" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy" width="1920" height="1502">
             <figcaption>4 fős Comfort szoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort5.JPG" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy">
-            <figcaption>4 fős Comfort szoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort6.JPG" alt="Müller's 2 – 4 fős Comfort szoba" loading="lazy">
-            <figcaption>4 fős Comfort szoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfort-bathroom.jpg" alt="Müller's 2 – 4 fős Comfort szoba – fürdőszoba" loading="lazy">
+          </figure><figure class="gallery-item">
+            <img src="../images/mullers2/mullers2-4personcomfort-bathroom.jpg" alt="Müller's 2 – 4 fős Comfort szoba – fürdőszoba" loading="lazy" width="1920" height="2880">
             <figcaption>4 fős Comfort szoba – fürdőszoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-4personcomfrot-bathroom2.jpg" alt="Müller's 2 – 4 fős Comfort szoba – fürdőszoba" loading="lazy">
-            <figcaption>4 fős Comfort szoba – fürdőszoba</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="../images/mullers2/mullers2-breakfast1.jpg" alt="Müller's 2 – Reggeli" loading="lazy">
-            <figcaption>Reggeli</figcaption>
-          </figure>
-        </div>
-      </section>
+          </figure></div></details></div></section>
+<section class="section m2-wellness" id="wellness" aria-labelledby="wellness-title">
+ <div class="wellness-intro">
+  <div class="wellness-intro-copy"><h2 id="wellness-title">A wellness terei</h2><p>Jakuzzi, finn szauna és sószoba. Fedezd fel a pihenés tereit, Siófok szívében.</p>
+   <nav class="wellness-room-links" aria-label="A wellness fényképei"><span class="wellness-links-label">Fényképek</span><a href="#jakuzzi">Jakuzzi <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.6"/></svg></a><a href="#szauna">Szauna <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.6"/></svg></a><a href="#soszoba">Sószoba <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.6"/></svg></a></nav>
+  </div>
+  <div class="wellness-model" data-wellness-model>
+   <p class="model-guide">Térbeli bemutató<span class="model-interactive-hint"> · Válassz egy nézetet</span></p>
 
-      <section class="section room-section" data-animate>
-        <div class="section-heading">
-          <h2>Szobatípusok</h2>
+   <div class="wellness-model-controls" data-model-controls hidden role="group" aria-label="A térbeli bemutató nézetei">
+    <button type="button" data-model-view="overview" aria-pressed="true" aria-label="A teljes wellness áttekintése">Teljes</button>
+    <button type="button" data-model-view="jakuzzi" aria-pressed="false">Jakuzzi</button>
+    <button type="button" data-model-view="piheno" aria-pressed="false">Pihenő</button>
+    <button type="button" data-model-view="soszoba" aria-pressed="false">Sószoba</button>
+    <button type="button" data-model-view="szauna" aria-pressed="false">Szauna</button>
+    <button type="button" data-model-view="folyoso" aria-pressed="false">Folyosó</button>
+   </div>
+   <figure><div class="wellness-model-stage"><img data-model-image src="assets/wellness/model-v3-overview.webp" width="1600" height="1100" alt="A wellness térbeli illusztrációja: fényfüzéres pihenő, jakuzzi, borostyánszínű sófalak, szauna, két zuhanyzó és két külön WC kézmosóval" loading="lazy" decoding="async"></div><figcaption>Illusztratív térbeli bemutató</figcaption></figure>
+   <div class="model-followup"><p class="model-status" data-model-status role="status"></p><a class="model-photo-link" data-model-photo hidden>Nézd meg fényképen <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
+  </div>
+ </div>
+ <div class="wellness-photo-story">
+  <article class="wellness-room" id="jakuzzi" aria-labelledby="jacuzzi-title"><figure><a href="assets/wellness/foto-jakuzzi.webp" aria-label="A jakuzzi fényképének megnyitása"><img src="assets/wellness/foto-jakuzzi-640.webp" srcset="assets/wellness/foto-jakuzzi-640.webp 640w, assets/wellness/foto-jakuzzi.webp 960w" sizes="(min-width: 900px) 700px, 100vw" width="960" height="1280" alt="Kéken megvilágított, faburkolatú jakuzzi a meleg fényű wellnesshelyiségben" loading="lazy" decoding="async"></a></figure><div class="wellness-room-copy"><h3 id="jacuzzi-title">Jakuzzi</h3><p>Pezsgő víz, meghitt fények. Merülj el a pihenésben, és élvezd a ráérős pillanatokat.</p></div></article>
+  <article class="wellness-room" id="szauna" aria-labelledby="sauna-title"><figure><a href="assets/wellness/foto-szauna.webp" aria-label="A szauna fényképének megnyitása"><img src="assets/wellness/foto-szauna-640.webp" srcset="assets/wellness/foto-szauna-640.webp 640w, assets/wellness/foto-szauna.webp 1199w" sizes="(min-width: 900px) 700px, 100vw" width="1199" height="1280" alt="Faburkolatú finn szauna, szaunakályhával és kék padvilágítással" loading="lazy" decoding="async"></a></figure><div class="wellness-room-copy"><h3 id="sauna-title">Finn szauna</h3><p>A fa melege, lágy fények és csend. Egy nyugodt megálló a közös programok között.</p></div></article>
+  <article class="wellness-room wellness-room--landscape" id="soszoba" aria-labelledby="salt-title"><figure><a href="assets/wellness/foto-soszoba.webp" aria-label="A sószoba fényképének megnyitása"><img src="assets/wellness/foto-soszoba-640.webp" srcset="assets/wellness/foto-soszoba-640.webp 640w, assets/wellness/foto-soszoba.webp 1280w" sizes="(min-width: 900px) 700px, 100vw" width="1280" height="960" alt="Megvilágított sófalak és két fekete pihenőszék a sószobában" loading="lazy" decoding="async"></a></figure><div class="wellness-room-copy"><h3 id="salt-title">Sószoba</h3><p>Meleg fényű sófalak és pihenőszékek. Itt jólesik leülni, és egy kis időre egyszerűen csak lenni.</p></div></article>
+ </div>
+ <div class="wellness-together"><img src="assets/kandallos-tarsalgo-640.webp" width="640" height="480" alt="Kandalló, kanapék és dohányzóasztal a Müller’s 2 társalgójában" loading="lazy" decoding="async"><div><h3>A pihenés itt folytatódik.</h3><p>A wellness után a kandallós társalgó és a közös terek adnak helyet a hosszú beszélgetéseknek, a nyugodt estéknek.</p><a href="#gallery-title">Nézd meg a közös tereket <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.6"/></svg></a></div></div>
+</section>
+      <section class="section room-section m2-rooms" id="szobak" aria-labelledby="rooms-title">
+        <div class="section-heading"><h2 id="rooms-title">Szobák és apartmanok</h2><p>Négyen érkeztek, vagy nagyobb társasággal? Nézd meg a szobákat és a 6, illetve 8 fős apartmanokat, és írd meg, melyik érdekel.</p></div>
+        <div class="m2-room-grid">
+          <article class="m2-room-option"><figure><img src="assets/comfort-szoba-640.webp" srcset="assets/comfort-szoba-640.webp 640w, assets/comfort-szoba.webp 1536w" sizes="(min-width: 700px) 48vw, 100vw" width="640" height="427" alt="A négyfős Comfort szoba ágyakkal és ülősarokkal" loading="lazy" decoding="async"></figure><div><h3>4 fős Comfort szoba</h3><p>Világos, tetőtéri szoba ágyakkal és ülősarokkal, legfeljebb 4 vendégnek.</p><a href="#erdeklodes">Érdeklődöm a Comfort szobáról <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
+          <article class="m2-room-option"><figure><img src="assets/apartman-terasz-640.webp" srcset="assets/apartman-terasz-640.webp 640w, assets/apartman-terasz.webp 1536w" sizes="(min-width: 700px) 48vw, 100vw" width="640" height="427" alt="A négyfős apartman terasza kerti bútorokkal" loading="lazy" decoding="async"><figcaption>Az apartman terasza</figcaption></figure><div><h3>4 fős apartman</h3><p>Legfeljebb 4 vendégnek, terasszal. A képen az apartman teraszát láthatod.</p><a href="#erdeklodes">Érdeklődöm az apartmanról <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
         </div>
-        <div class="room-grid">
-          <article class="room-card">
-            <h3>Standard 4 ágyas szoba 👨‍👩‍👧‍👦</h3>
-            <p>Családoknak kényelmes, jól tagolt tér.</p>
+        <div class="m2-large-apartments" aria-label="Apartmanok nagyobb társaságoknak">
+          <article class="m2-apartment" id="i1" aria-labelledby="i1-title">
+            <div class="m2-apartment-copy"><h3 id="i1-title">I1 apartman · 6 fő</h3><p>Galériás apartman tetőtéri hálótérrel és fedett terasszal, legfeljebb 6 vendégnek.</p></div>
+            <div class="gallery-grid m2-apartment-gallery" aria-label="I1 apartman fényképei"><figure class="gallery-item"><img src="assets/apartmanok/c7-szoba-640.webp" srcset="assets/apartmanok/c7-szoba-320.webp 320w, assets/apartmanok/c7-szoba-640.webp 640w, assets/apartmanok/c7-szoba.webp 1200w" sizes="(min-width: 1120px) 514px, (min-width: 700px) 45vw, calc(100vw - 40px)" data-full="assets/apartmanok/c7-szoba.webp" width="1200" height="1600" alt="I1 apartman – szoba az alsó szinten" loading="lazy" decoding="async"><figcaption>Szoba az alsó szinten</figcaption></figure><figure class="gallery-item"><img src="assets/apartmanok/c7-tetoter-320.webp" srcset="assets/apartmanok/c7-tetoter-320.webp 320w, assets/apartmanok/c7-tetoter-640.webp 640w, assets/apartmanok/c7-tetoter.webp 1166w" sizes="(min-width: 1120px) 253px, (min-width: 700px) 22vw, calc((100vw - 48px) / 2)" data-full="assets/apartmanok/c7-tetoter.webp" width="1166" height="1600" alt="I1 apartman – tetőtéri hálótér" loading="lazy" decoding="async"><figcaption>Tetőtéri hálótér</figcaption></figure><figure class="gallery-item"><img src="assets/apartmanok/c7-terasz-320.webp" srcset="assets/apartmanok/c7-terasz-320.webp 320w, assets/apartmanok/c7-terasz-640.webp 640w, assets/apartmanok/c7-terasz.webp 1200w" sizes="(min-width: 1120px) 253px, (min-width: 700px) 22vw, calc((100vw - 48px) / 2)" data-full="assets/apartmanok/c7-terasz.webp" width="1200" height="1600" alt="I1 apartman – fedett terasz" loading="lazy" decoding="async"><figcaption>Fedett terasz</figcaption></figure></div>
+            <a class="m2-apartment-enquiry" href="mailto:mullers106@gmail.com?subject=M%C3%BCller%E2%80%99s%202%20%E2%80%93%20I1%20apartman">Érdeklődöm az I1 apartmanról <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6"/></svg></a>
           </article>
-          <article class="room-card">
-            <h3>4 fős apartman 🏠</h3>
-            <p>Több tér, praktikus elrendezés a pihenéshez.</p>
-          </article>
-          <article class="room-card">
-            <h3>4 fős Comfort szoba ⭐</h3>
-            <p>Extra kényelem, modern kialakítás.</p>
+          <article class="m2-apartment" id="i2" aria-labelledby="i2-title">
+            <div class="m2-apartment-copy"><h3 id="i2-title">I2 apartman · 8 fő</h3><p>Galériás apartman tetőtéri hálótérrel, étkezősarokkal és teakonyhával, legfeljebb 8 vendégnek.</p></div>
+            <div class="gallery-grid m2-apartment-gallery" aria-label="I2 apartman fényképei"><figure class="gallery-item"><img src="assets/apartmanok/c8-etkezo-640.webp" srcset="assets/apartmanok/c8-etkezo-320.webp 320w, assets/apartmanok/c8-etkezo-640.webp 640w, assets/apartmanok/c8-etkezo.webp 1200w" sizes="(min-width: 1120px) 514px, (min-width: 700px) 45vw, calc(100vw - 40px)" data-full="assets/apartmanok/c8-etkezo.webp" width="1200" height="1600" alt="I2 apartman – étkező és teakonyha" loading="lazy" decoding="async"><figcaption>Étkező és teakonyha</figcaption></figure><figure class="gallery-item"><img src="assets/apartmanok/c8-tetoter-320.webp" srcset="assets/apartmanok/c8-tetoter-320.webp 320w, assets/apartmanok/c8-tetoter-640.webp 640w, assets/apartmanok/c8-tetoter.webp 1200w" sizes="(min-width: 1120px) 253px, (min-width: 700px) 22vw, calc((100vw - 48px) / 2)" data-full="assets/apartmanok/c8-tetoter.webp" width="1200" height="1600" alt="I2 apartman – tetőtéri hálótér" loading="lazy" decoding="async"><figcaption>Tetőtéri hálótér</figcaption></figure><figure class="gallery-item"><img src="assets/apartmanok/c8-furdoszoba-320.webp" srcset="assets/apartmanok/c8-furdoszoba-320.webp 320w, assets/apartmanok/c8-furdoszoba-640.webp 640w, assets/apartmanok/c8-furdoszoba.webp 1200w" sizes="(min-width: 1120px) 253px, (min-width: 700px) 22vw, calc((100vw - 48px) / 2)" data-full="assets/apartmanok/c8-furdoszoba.webp" width="1200" height="1600" alt="I2 apartman – fürdőszoba" loading="lazy" decoding="async"><figcaption>Fürdőszoba</figcaption></figure></div>
+            <a class="m2-apartment-enquiry" href="mailto:mullers106@gmail.com?subject=M%C3%BCller%E2%80%99s%202%20%E2%80%93%20I2%20apartman">Érdeklődöm az I2 apartmanról <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6"/></svg></a>
           </article>
         </div>
-        <div class="room-cta">
-          <div>
-            <h3>Spa élmény egész évben</h3>
-            <p>Foglalj kényelmes, modern szobát és kapcsolj ki nálunk bármikor.</p>
-          </div>
-          <a class="btn btn-primary" href="../blog/hamarosan.html" data-booking-url="https://ibe.sabeeapp.com/v3/p/Müllers-Panzió-Siófok?p=a81c8f0208486761&lang=Hu">
-            📅 Foglalás a Müller's 2-be
-          </a>
-        </div>
+        <div class="m2-room-note"><h3>Standard 4 ágyas szoba</h3><p>Erről a szobatípusról is szívesen adunk tájékoztatást.</p><a href="#erdeklodes">Kérdezek a Standard szobáról <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
+      </section>
+      <section class="section m2-contact" id="erdeklodes" aria-labelledby="contact-title">
+        <div><h2 id="contact-title">Tervezzük meg a pihenést.</h2><p>Írd meg, mikor érkeznétek, és hányan jönnétek. Telefonon vagy e-mailben is elérsz minket.</p><a class="m2-address" href="https://www.google.com/maps/search/?api=1&query=Si%C3%B3fok,+K%C3%A1lm%C3%A1n+Imre+s%C3%A9t%C3%A1ny+9">Müller’s 2 · Siófok, Kálmán Imre sétány 9. <svg class="m2-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
+        <div class="m2-contact-actions"><a class="btn btn-primary" href="tel:+36204131146">Hívj minket: +36 20 413 1146</a><a class="m2-email" href="mailto:mullers106@gmail.com">Írj nekünk: mullers106@gmail.com</a><p>Az online foglalás hamarosan elérhető.</p><a class="m2-booking-link" href="../blog/hamarosan.html" data-booking-url="https://ibe.sabeeapp.com/v3/p/Müllers-Panzió-Siófok?p=a81c8f0208486761&lang=Hu">Online foglalás</a></div>
       </section>
     </main>
 
@@ -263,6 +218,7 @@
     </div>
 
     <script src="../assets/consent.js" defer></script>
-    <script src="../script.js" defer></script>
+    <script src="../script.js?v=m2-7" defer></script>
+    <script src="wellness.js?v=9" defer></script>
   </body>
 </html>
