@@ -10,3 +10,22 @@
 .m2-original .room-arrow { width: 18px; height: 18px; flex: none; }
 .m2-original #i1, .m2-original #i2, .m2-original #szobak { scroll-margin-top: 110px; }
 .m2-original .room-photos :focus-visible, .m2-original .room-enquiry:focus-visible { outline: 3px solid var(--blue-700); outline-offset: 4px; }
+
+/* Overview rows remain complete at both original column counts. */
+.m2-original .gallery-section > .gallery-grid {
+  --photo-columns: 3;
+  --photo-gap: .5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--photo-gap);
+}
+.m2-original .gallery-section > .gallery-grid > .gallery-item {
+  flex: 1 1 calc((100% - (var(--photo-columns) - 1) * var(--photo-gap)) / var(--photo-columns));
+  height: calc((100vw - (var(--photo-columns) - 1) * var(--photo-gap)) / var(--photo-columns) * 1.25);
+  aspect-ratio: auto;
+  min-width: 0;
+}
+@media (min-width: 900px) {
+  .m2-original .gallery-section > .gallery-grid { --photo-columns: 5; }
+}
+.m2-original .room-photos--single img { object-fit: cover; object-position: center 60%; }
