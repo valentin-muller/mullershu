@@ -251,12 +251,12 @@ const initGalleryLightbox = () => {
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
   lightbox.innerHTML = `
-    <div class="lightbox-panel" role="dialog" aria-modal="true">
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-lightbox-caption">
       <button class="lightbox-close" type="button" aria-label="Bezárás">×</button>
       <button class="lightbox-nav prev" type="button" aria-label="Előző">‹</button>
       <img class="lightbox-image" alt="">
       <button class="lightbox-nav next" type="button" aria-label="Következő">›</button>
-      <div class="lightbox-caption"></div>
+      <div class="lightbox-caption" id="gallery-lightbox-caption"></div>
       <div class="lightbox-counter"></div>
     </div>
   `;
@@ -273,6 +273,10 @@ const initGalleryLightbox = () => {
   let currentItems = [];
   let currentIndex = 0;
   let touchStartX = 0;
+  let opener = null;
+  let backgroundStates = [];
+  let previousOverflow = "";
+  const controls = [closeBtn, prevBtn, nextBtn];
 
   const update = () => {
     const item = currentItems[currentIndex];
@@ -281,21 +285,40 @@ const initGalleryLightbox = () => {
     }
     image.src = item.src;
     image.alt = item.alt;
-    caption.textContent = item.title;
+    caption.textContent = item.title || "Galéria";
     counter.textContent = `${currentIndex + 1} / ${currentItems.length}`;
   };
 
-  const open = (items, index) => {
+  const open = (items, index, trigger) => {
+    const wasOpen = lightbox.classList.contains("is-open");
+    opener = trigger || document.activeElement;
     currentItems = items;
     currentIndex = index;
     update();
     lightbox.classList.add("is-open");
+    closeBtn.focus({ preventScroll: true });
+    if (!wasOpen) {
+      previousOverflow = document.body.style.overflow;
+      backgroundStates = Array.from(document.body.children)
+        .filter((element) => element !== lightbox)
+        .map((element) => ({ element, inert: element.inert }));
+      backgroundStates.forEach(({ element }) => { element.inert = true; });
+    }
     document.body.style.overflow = "hidden";
   };
 
   const close = () => {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
     lightbox.classList.remove("is-open");
-    document.body.style.overflow = "";
+    document.body.style.overflow = previousOverflow;
+    backgroundStates.forEach(({ element, inert }) => { element.inert = inert; });
+    backgroundStates = [];
+    if (opener?.isConnected) {
+      opener.focus({ preventScroll: true });
+    }
+    opener = null;
   };
 
   const prev = () => {
@@ -322,12 +345,27 @@ const initGalleryLightbox = () => {
       return;
     }
     if (event.key === "Escape") {
+      event.preventDefault();
       close();
+      return;
+    }
+    if (event.key === "Tab") {
+      const activeIndex = controls.indexOf(document.activeElement);
+      if (event.shiftKey && activeIndex <= 0) {
+        event.preventDefault();
+        nextBtn.focus();
+      } else if (!event.shiftKey && (activeIndex === -1 || activeIndex === controls.length - 1)) {
+        event.preventDefault();
+        closeBtn.focus();
+      }
+      return;
     }
     if (event.key === "ArrowLeft") {
+      event.preventDefault();
       prev();
     }
     if (event.key === "ArrowRight") {
+      event.preventDefault();
       next();
     }
   });
@@ -364,11 +402,11 @@ const initGalleryLightbox = () => {
       item.tabIndex = 0;
       item.setAttribute("role", "button");
 
-      item.addEventListener("click", () => open(items, index));
+      item.addEventListener("click", () => open(items, index, item));
       item.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          open(items, index);
+          open(items, index, item);
         }
       });
     });
