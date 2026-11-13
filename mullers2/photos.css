@@ -1,0 +1,12 @@
+/* Content-only photo additions to the restored original property page. */
+.m2-original .room-grid--apartments { margin-top: 1.4rem; }
+.m2-original .room-photos { margin-top: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; background: transparent; }
+.m2-original .room-photos .gallery-item { border-radius: 10px; aspect-ratio: 3 / 4; background: var(--sand-100); }
+.m2-original .room-photos .gallery-item:first-child { grid-column: 1 / -1; }
+.m2-original .room-photos img { object-fit: contain; filter: none; }
+.m2-original .room-photos--single .gallery-item { aspect-ratio: 3 / 2; }
+.m2-original .room-photos figcaption { font-size: .72rem; left: 6px; bottom: 6px; max-width: calc(100% - 12px); }
+.m2-original .room-enquiry { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; margin-top: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.m2-original .room-arrow { width: 18px; height: 18px; flex: none; }
+.m2-original #i1, .m2-original #i2, .m2-original #szobak { scroll-margin-top: 110px; }
+.m2-original .room-photos :focus-visible, .m2-original .room-enquiry:focus-visible { outline: 3px solid var(--blue-700); outline-offset: 4px; }
