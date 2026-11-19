@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/m2wellness/privat.css">
   <link rel="stylesheet" href="/m2wellness/latvany.css">
   <link rel="stylesheet" href="/m2wellness/desktop.css">
-  <link rel="stylesheet" href="/m2wellness/asztal.css">
+  <link rel="stylesheet" href="/m2wellness/asztal.css?v=2">
 
 
 </head>
@@ -321,13 +321,28 @@
   <a href="tel:+36204131146">+36 20 413 1146</a>
   <a href="/adatkezeles.html">Adatkezelési tájékoztató</a>
 </footer>
+<dialog id="stay-dates" aria-labelledby="stay-dates-title">
+  <button type="button" class="close" aria-label="Dátumválasztó bezárása">×</button>
+  <h2 id="stay-dates-title">Válassz érkezési napot</h2>
+  <div class="stay-date-modes" role="group" aria-label="Dátumok">
+    <button type="button" data-field="arrivalDate" aria-pressed="true">Érkezés<span></span></button>
+    <button type="button" data-field="departureDate" aria-pressed="false">Távozás<span></span></button>
+  </div>
+  <div class="stay-date-month">
+    <button type="button" data-month="-1" aria-label="Előző hónap">‹</button>
+    <p aria-live="polite"></p>
+    <button type="button" data-month="1" aria-label="Következő hónap">›</button>
+  </div>
+  <div class="stay-date-week" aria-hidden="true"><span>H</span><span>K</span><span>Sze</span><span>Cs</span><span>P</span><span>Szo</span><span>V</span></div>
+  <div class="stay-date-days" role="group" aria-label="Választható napok"></div>
+</dialog>
 <dialog id="inquiry" aria-labelledby="dialog-title">
  <button type="button" class="close" aria-label="Ablak bezárása">×</button>
  <div id="contact-step"><h2 id="dialog-title">Hol érünk el?</h2><p class="summary" id="inquiry-dates"></p>
  <form method="dialog" id="details" aria-describedby="inquiry-dates" data-clarity-mask="true">
  <label>Vezetéknév<input name="familyName" autocomplete="family-name" required maxlength="60"></label>
  <label>Keresztnév<input name="givenName" autocomplete="given-name" required maxlength="60"></label>
- <label>Telefonszám<input type="tel" name="phone" autocomplete="tel" placeholder="+36 20 123 4567" required maxlength="40"></label>
+ <label><span id="phone-label">Magyar mobilszám</span><input type="tel" name="phone" autocomplete="tel" placeholder="+36301234567" aria-labelledby="phone-label" aria-describedby="phone-format" required maxlength="40"><span id="phone-format">Például +36301234567 vagy 06301234567.</span></label>
  <label>E-mail-cím<input type="email" name="email" autocomplete="email" placeholder="nev@pelda.hu" required maxlength="254"></label>
  <div class="trap" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off" aria-label="Weboldal"></div>
  <small>Ezeken az elérhetőségeken jelentkezünk az ajánlattal. Az időpontot veled egyeztetjük. <a href="/adatkezeles.html" target="_blank" rel="noopener">Adatkezelési tájékoztató</a></small>
@@ -338,6 +353,8 @@
  </form></div>
  <div id="success" hidden><b class="tick" aria-hidden="true">✓</b><h2 id="success-title" tabindex="-1">Köszönjük az érdeklődésed!</h2><p>Megnézzük a kért időpontot, és hamarosan telefonon vagy e-mailben jelentkezünk az ajánlattal.</p><button class="dark-btn done" type="button">Rendben</button></div>
 </dialog>
-<script src="/m2wellness/asztal.js"></script>
-<script src="/m2wellness/inquiry-fields.js"></script>
-<script src="/m2wellness/inquiry.js"></script></body></html>
+<script src="/m2wellness/asztal.js?v=2"></script>
+<script src="/m2wellness/inquiry-fields.js?v=2"></script>
+<script src="/m2wellness/inquiry.js?v=2"></script>
+<script src="/m2wellness/stay-dates.js"></script>
+</body></html>

@@ -114,13 +114,16 @@ test('private-house visitor names, phone and full email domain are checked befor
   for (const [name,value] of [
     ['familyName',''], ['givenName',''], ['familyName','N4gy'], ['givenName','Éva\nTeszt'],
     ['phone','12345'], ['phone','06 30 123'], ['phone','+36 1 234'], ['phone','06 20 ABC 4567'],
+    ['phone','+36 1 234 5678'], ['phone','0036 20 123 4567'], ['phone','063012345678'],
+    ['phone','+1 (202) 555-0147'], ['phone','+36401234567'], ['phone','0630-123-4567'],
     ['email','vendeg@localhost'], ['email','vendeg@example.c'], ['email','vendeg@example..hu'],
     ['email','vendeg@-example.com'], ['email','vendeg@example.123']
   ]) assert.ok(validateInquiry({...form,[name]:value},now).errors[name], name + ': ' + value);
-  for (const phone of ['+36 1 234 5678', '0036 20 123 4567', '06 20 123 4567', '06 1 234 5678', '+1 (202) 555-0147']) {
+  for (const phone of ['06301234567', '+36301234567', '06 20 123 4567', '+36311234567', '+36501234567', '06701234567']) {
     assert.deepEqual(validateInquiry({...form,phone},now).errors,{});
   }
   assert.deepEqual(validateInquiry({...form,familyName:'李',givenName:'明'},now).errors,{});
+  assert.deepEqual(validateInquiry({...valid,phone:'+1 (202) 555-0147'},now).errors,{});
 });
 
 test('a preview accepts submissions from its own deployment origin; other preview origins are refused', async () => {

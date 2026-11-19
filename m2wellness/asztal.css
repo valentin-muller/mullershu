@@ -624,3 +624,38 @@
   .hero { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
   .hero .intro { padding-left: 11px; }
 }
+
+#stay-dates {
+  width: min(440px, calc(100% - 20px));
+  padding: 20px clamp(12px, 4vw, 24px) 18px;
+  background: var(--paper-light);
+}
+#stay-dates-title {
+  margin: 0 44px 16px 0;
+  font-size: clamp(21px, 5.5vw, 28px);
+  line-height: 1.15;
+}
+#stay-dates :focus-visible { outline: 2px solid var(--rust); outline-offset: 2px; }
+.stay-date-modes, .stay-date-month { display: grid; gap: 8px; align-items: center; }
+.stay-date-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+.stay-date-month { grid-template-columns: 44px 1fr 44px; margin-top: 10px; }
+.stay-date-month p { margin: 0; text-align: center; font-weight: 700; }
+.stay-date-modes button, .stay-date-month button, .stay-date-days button {
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+}
+.stay-date-modes button { border-color: var(--rule); padding: 4px; font-weight: 650; }
+.stay-date-modes span { display: block; font-size: .8125rem; font-weight: 450; }
+.stay-date-month button { font-size: 1.65rem; line-height: 1; }
+.stay-date-week, .stay-date-days { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); text-align: center; }
+.stay-date-week { margin-block: 6px 3px; color: #5f574b; font-size: .8125rem; }
+.stay-date-days button { padding: 0; }
+#stay-dates button:disabled { opacity: .42; }
+#stay-dates button[aria-pressed="true"]:not(:disabled) { color: white; background: var(--forest); }
+@media (hover: hover) {
+  #stay-dates button:not(:disabled):not([aria-pressed="true"]):hover { background: var(--paper-deep); }
+}
+#phone-format { font-size: .8125rem; color: #5f574b; font-weight: 450; }
