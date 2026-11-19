@@ -2,6 +2,7 @@
 
 const {createHmac, timingSafeEqual, randomUUID} = require('node:crypto');
 const nodemailer = require('nodemailer');
+const {isNamePart, isPhone, isEmail} = require('../m2wellness/inquiry-fields.js');
 const MAILBOX = 'mullers106@gmail.com';
 const ORIGINS = new Set([
   'https://www.mullerssiofok.hu', 'https://mullerssiofok.hu',
@@ -26,11 +27,30 @@ function validateInquiry(body, now) {
   for (const field of ['fullName', 'address', 'phone', 'email']) {
     values[field] = typeof body[field] === 'string' ? body[field].trim() : '';
   }
-  if (!safeText(values.fullName) || values.fullName.length < 2 || values.fullName.length > 120) errors.name = 'Adjátok meg a teljes nevet.';
-  if (!values.address || values.address.length < 8 || values.address.length > 300 || /[\u0000-\u0009\u000b-\u001f\u007f]/.test(values.address)) errors.address = 'Adjátok meg a teljes lakcímet.';
-  const digits = values.phone.replace(/\D/g, '');
-  if (!safeText(values.phone) || values.phone.length > 40 || digits.length < 7 || digits.length > 15 || !/^[+\d ()./-]+$/.test(values.phone)) errors.phone = 'Adjátok meg a hívható telefonszámot.';
-  if (!safeText(values.email) || values.email.length > 254 || !/^[^\s@<>(),;:\\"]+@[^\s@<>(),;:\\"]+\.[^\s@<>(),;:\\"]+$/.test(values.email)) errors.email = 'Adjátok meg az e-mail-címet.';
+  const privateHouse = body.source === 'mullers2-privat';
+  if (privateHouse) {
+    delete values.address;
+    if ('familyName' in body || 'givenName' in body) {
+      const family = typeof body.familyName === 'string' ? body.familyName.trim() : '';
+      const given = typeof body.givenName === 'string' ? body.givenName.trim() : '';
+      if (!isNamePart(family)) errors.familyName = 'Adj meg érvényes vezetéknevet.';
+      if (!isNamePart(given)) errors.givenName = 'Adj meg érvényes keresztnevet.';
+      values.fullName = family + ' ' + given;
+    } else {
+      const parts = values.fullName.split(/ +/);
+      if (values.fullName.length > 120 || parts.length < 2 || !parts.every(isNamePart)) errors.name = 'Add meg a vezetéknevedet és a keresztnevedet.';
+    }
+    if (!isPhone(values.phone)) errors.phone = 'Adj meg hívható telefonszámot, körzetszámmal együtt.';
+    if (!isEmail(values.email)) errors.email = 'Adj meg teljes e-mail-címet, például nev@pelda.hu.';
+    if (!['dates', 'offer'].includes(body.intent)) errors.form = 'Válasszátok ki az érdeklődés típusát.';
+    values.intent = body.intent;
+  } else {
+    if (!safeText(values.fullName) || values.fullName.length < 2 || values.fullName.length > 120) errors.name = 'Adjátok meg a teljes nevet.';
+    if (!values.address || values.address.length < 8 || values.address.length > 300 || /[\u0000-\u0009\u000b-\u001f\u007f]/.test(values.address)) errors.address = 'Adjátok meg a teljes lakcímet.';
+    const digits = values.phone.replace(/\D/g, '');
+    if (!safeText(values.phone) || values.phone.length > 40 || digits.length < 7 || digits.length > 15 || !/^[+\d ()./-]+$/.test(values.phone)) errors.phone = 'Adjátok meg a hívható telefonszámot.';
+    if (!safeText(values.email) || values.email.length > 254 || !/^[^\s@<>(),;:\\"]+@[^\s@<>(),;:\\"]+\.[^\s@<>(),;:\\"]+$/.test(values.email)) errors.email = 'Adjátok meg az e-mail-címet.';
+  }
   if (!Number.isSafeInteger(body.guests) || body.guests < 1 || body.guests > 999) errors.guests = 'Adjátok meg az érkezők számát egész számmal.';
   const arrival = dateOf(body.arrivalDate);
   const departure = dateOf(body.departureDate);
@@ -38,7 +58,7 @@ function validateInquiry(body, now) {
   const first = dateOf(today);
   const last = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth() + 12, 0)).toISOString().slice(0, 10);
   if (!arrival || !departure || body.arrivalDate < today || body.departureDate > last || departure <= arrival) errors.dates = 'Válasszatok érvényes érkezési és távozási dátumot.';
-  if (body.source !== 'mullers2-mellow' || typeof body.requestId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(body.requestId)) errors.form = 'Nyissátok meg újra az adatlapot.';
+  if ((!privateHouse && body.source !== 'mullers2-mellow') || typeof body.requestId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(body.requestId)) errors.form = 'Nyissátok meg újra az adatlapot.';
   return {errors, values:{...values, guests:body.guests, arrivalDate:body.arrivalDate, departureDate:body.departureDate, requestId:body.requestId}};
 }
 function makeMail(values) {
@@ -47,12 +67,12 @@ function makeMail(values) {
   return {
     from:{name:"Müller's 2 – webes érdeklődés", address:MAILBOX}, to:MAILBOX,
     replyTo:{name:values.fullName, address:values.email},
-    subject:`Müller's 2 érdeklődés – ${values.arrivalDate} → ${values.departureDate} – ${values.guests} fő`,
+    subject:`Müller's 2 ${values.intent === 'offer' ? 'ajánlatkérés' : 'érdeklődés'} – ${values.arrivalDate} → ${values.departureDate} – ${values.guests} fő`,
     messageId:`<mellow-${values.requestId}@mullerssiofok.hu>`,
     text:["Új érdeklődés a Müller's 2 weboldaláról.", '',
       `Érkezés: ${format(values.arrivalDate)}`, `Távozás: ${format(values.departureDate)}`,
       `Éjszakák: ${nights}`, `Létszám: ${values.guests} fő`, '',
-      `Teljes név: ${values.fullName}`, `Lakcím: ${values.address}`,
+      `Teljes név: ${values.fullName}`, ...(values.address ? [`Lakcím: ${values.address}`] : []),
       `Telefonszám: ${values.phone}`, `E-mail-cím: ${values.email}`, '',
       'Ez érdeklődés, nem végleges foglalás. Az időpont és a részletek manuális egyeztetésre várnak.',
       'A levélre válaszolva közvetlenül a vendéget éritek el.', `Azonosító: ${values.requestId}`].join('\n'),

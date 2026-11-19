@@ -89,3 +89,45 @@ test('mail is plain text with attachments and remote content access disabled',()
   const mail=makeMail(valid);assert.equal(mail.html,undefined);assert.equal(mail.attachments,undefined);
   assert.equal(mail.disableFileAccess,true);assert.equal(mail.disableUrlAccess,true);
 });
+
+test('private-house offer accepts the three contact fields and preserves the Mellow address requirement', async () => {
+  const f = fixture();
+  const body = await f.payload();
+  delete body.address;
+  assert.equal((await f.call('POST', body)).status, 422);
+  body.source = 'mullers2-privat';
+  body.intent = 'offer';
+  assert.equal((await f.call('POST', body)).status, 200);
+  assert.equal(f.mail.to, 'mullers106@gmail.com');
+  assert.match(f.mail.subject, /ajánlatkérés/);
+  assert.doesNotMatch(f.mail.text, /Lakcím/);
+  assert.match(f.mail.text, /Érkezés:/);
+  assert.equal(f.mail.replyTo.address, body.email);
+});
+
+test('private-house visitor names, phone and full email domain are checked before delivery', () => {
+  const form = {...valid, source:'mullers2-privat', intent:'offer', familyName:"O’Connor-Nagy", givenName:"Éva Mária", email:'eva+hetvege@example.co.uk'};
+  delete form.fullName;
+  const result = validateInquiry(form, now);
+  assert.deepEqual(result.errors, {});
+  assert.equal(result.values.fullName, 'O’Connor-Nagy Éva Mária');
+  for (const [name,value] of [
+    ['familyName',''], ['givenName',''], ['familyName','N4gy'], ['givenName','Éva\nTeszt'],
+    ['phone','12345'], ['phone','06 30 123'], ['phone','+36 1 234'], ['phone','06 20 ABC 4567'],
+    ['email','vendeg@localhost'], ['email','vendeg@example.c'], ['email','vendeg@example..hu'],
+    ['email','vendeg@-example.com'], ['email','vendeg@example.123']
+  ]) assert.ok(validateInquiry({...form,[name]:value},now).errors[name], name + ': ' + value);
+  for (const phone of ['+36 1 234 5678', '0036 20 123 4567', '06 20 123 4567', '06 1 234 5678', '+1 (202) 555-0147']) {
+    assert.deepEqual(validateInquiry({...form,phone},now).errors,{});
+  }
+  assert.deepEqual(validateInquiry({...form,familyName:'李',givenName:'明'},now).errors,{});
+});
+
+test('a preview accepts submissions from its own deployment origin; other preview origins are refused', async () => {
+  const domain='mullershu-own-deployment.example';
+  const f=fixture(undefined,{GMAIL_APP_PASSWORD:'abcdefghijklmnop',VERCEL_ENV:'preview',VERCEL_URL:domain});
+  const body={...await f.payload(),source:'mullers2-privat',intent:'offer',familyName:'Minta',givenName:'Vendég'};
+  assert.equal((await f.call('POST',body,{origin:'https://another-preview.example'})).status,403);
+  assert.equal((await f.call('POST',body,{origin:'https://'+domain})).status,200);
+  assert.equal(f.mail.replyTo.name,'Minta Vendég');
+});
