@@ -2,7 +2,7 @@
 
 const {createHmac, timingSafeEqual, randomUUID} = require('node:crypto');
 const nodemailer = require('nodemailer');
-const {isNamePart, isPhone, isEmail} = require('../m2wellness/inquiry-fields.js');
+const {isNamePart, isPhone, isEmail, phoneError} = require('../m2wellness/inquiry-fields.js');
 const MAILBOX = 'mullers106@gmail.com';
 const ORIGINS = new Set([
   'https://www.mullerssiofok.hu', 'https://mullerssiofok.hu',
@@ -40,7 +40,7 @@ function validateInquiry(body, now) {
       const parts = values.fullName.split(/ +/);
       if (values.fullName.length > 120 || parts.length < 2 || !parts.every(isNamePart)) errors.name = 'Add meg a vezetéknevedet és a keresztnevedet.';
     }
-    if (!isPhone(values.phone)) errors.phone = 'Adj meg hívható telefonszámot, körzetszámmal együtt.';
+    if (!isPhone(values.phone)) errors.phone = phoneError;
     if (!isEmail(values.email)) errors.email = 'Adj meg teljes e-mail-címet, például nev@pelda.hu.';
     if (!['dates', 'offer'].includes(body.intent)) errors.form = 'Válasszátok ki az érdeklődés típusát.';
     values.intent = body.intent;

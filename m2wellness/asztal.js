@@ -9,7 +9,6 @@ for (let copy = 0; copy < 3; copy++) {
 occasion.classList.add('is-moving');
 
 const picker = document.querySelector('#idopont');
-const arrival = picker.elements.arrivalDate;
 const offerDock = document.querySelector('.offer-dock');
 const closingOffer = document.querySelector('.ending-actions a[href="#idopont"]');
 
@@ -68,12 +67,6 @@ if ('IntersectionObserver' in window) {
     if (event.animationName === 'offer-drop') offerDock.classList.remove('is-dropping');
   });
 }
-
-document.querySelectorAll('a[href="#idopont"]').forEach(link => {
-  link.addEventListener('click', () => {
-    requestAnimationFrame(() => arrival.focus({ preventScroll: true }));
-  });
-});
 
 const photos = [...document.querySelectorAll('.photo-open')];
 const photoDialog = document.querySelector('#photo-dialog');

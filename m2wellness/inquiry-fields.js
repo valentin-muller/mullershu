@@ -7,13 +7,10 @@
       /^\p{L}[\p{L}\p{M}]*(?:(?:[. '\u2019\u02bc-]+)[\p{L}\p{M}]+)*\.?$/u.test(value);
   }
 
+  const phoneError = 'Magyar mobilszámot adj meg, például +36301234567 vagy 06301234567.';
   function isPhone(value) {
-    if (typeof value !== 'string' || value.length > 40 || !/^\+?[\d(][\d ()./-]*\d$/.test(value)) return false;
-    const digits = value.replace(/\D/g, '').replace(/^00/, '');
-    if (digits.length < 7 || digits.length > 15) return false;
-    const international = value.startsWith('+') || value.startsWith('00');
-    const hungarian = international ? digits.startsWith('36') : digits.startsWith('06');
-    return !hungarian || (digits.length >= 10 && digits.length <= 11);
+    return typeof value === 'string' && value.length <= 40 &&
+      /^(?:06|\+36)(?:20|30|31|50|70)\d{7}$/.test(value.replace(/[ \u00a0\u202f]/g, ''));
   }
 
   function isEmail(value) {
@@ -28,7 +25,7 @@
       /^(?:[a-z]{2,63}|xn--[a-z\d-]+)$/i.test(labels[labels.length - 1]);
   }
 
-  const fields = {isNamePart, isPhone, isEmail};
+  const fields = {isNamePart, isPhone, isEmail, phoneError};
   if (typeof module !== 'undefined' && module.exports) module.exports = fields;
   else window.MullersInquiryFields = fields;
 }());

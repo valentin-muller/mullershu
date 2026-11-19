@@ -17,7 +17,7 @@
   const validators = {
     familyName: [fields.isNamePart, 'Adj meg érvényes vezetéknevet.'],
     givenName: [fields.isNamePart, 'Adj meg érvényes keresztnevet.'],
-    phone: [fields.isPhone, 'Adj meg hívható telefonszámot, körzetszámmal együtt.'],
+    phone: [fields.isPhone, fields.phoneError],
     email: [fields.isEmail, 'Adj meg teljes e-mail-címet, például nev@pelda.hu.']
   };
   let session;
@@ -36,7 +36,8 @@
   arrival.max = dateKey(+last - day);
   departure.max = dateKey(last);
   function updateDeparture() {
-    departure.min = dateKey(Date.parse((arrival.value || today) + 'T00:00:00Z') + day);
+    const earliestArrival = arrival.validity.valid ? arrival.value : today;
+    departure.min = dateKey(Date.parse(earliestArrival + 'T00:00:00Z') + day);
     if (departure.value && departure.value < departure.min) departure.value = '';
   }
   updateDeparture();
@@ -154,8 +155,13 @@
       success.hidden = false;
       dialog.setAttribute('aria-labelledby', 'success-title');
       dialog.querySelector('#success-title').focus();
+      picker.reset();
+      updateDeparture();
       details.reset();
+      resetFallback();
+      dialog.querySelector('.summary').textContent = '';
       lastPayload = null;
+      requestId = null;
     } catch {
       showMessage(error, 'A küldést nem sikerült megerősíteni. Próbáld újra, vagy küldd el az ajánlatkérést e-mailben.');
       offerEmail(data);
