@@ -1,5 +1,16 @@
 {
   "functions": {
     "api/mellow-inquiry.js": {"maxDuration": 30}
-  }
+  },
+  "redirects": [
+    {"source": "/mullers2/valtozat", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2/valtozat/", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2/valtozat/index.html", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2-wellness/mellow", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2-wellness/mellow/", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2-wellness/mellow/index.html", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2-wellness", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2-wellness/", "destination": "/mullers2/", "permanent": false},
+    {"source": "/mullers2-wellness/index.html", "destination": "/mullers2/", "permanent": false}
+  ]
 }
