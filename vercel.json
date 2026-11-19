@@ -1,5 +1,24 @@
 {
   "functions": {
-    "api/mellow-inquiry.js": {"maxDuration": 30}
-  }
+    "api/mellow-inquiry.js": {
+      "maxDuration": 30
+    }
+  },
+  "redirects": [
+    {
+      "source": "/mullers2/valtozat/:entry(index\\.html)?",
+      "destination": "/mullers2/",
+      "permanent": false
+    },
+    {
+      "source": "/mullers2-wellness/mellow/:entry(index\\.html)?",
+      "destination": "/mullers2/",
+      "permanent": false
+    },
+    {
+      "source": "/mullers2-wellness/:entry(index\\.html)?",
+      "destination": "/mullers2/",
+      "permanent": false
+    }
+  ]
 }
